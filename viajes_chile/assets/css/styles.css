@@ -1,0 +1,64 @@
+html{
+    scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
+}
+
+body {
+    font-family: Helvetica;
+    background-color: #212529;
+    color: aliceblue;
+}
+
+h1{
+    font-size: 34px;
+    font-family: "Oswald";
+}
+
+/* navbar */
+.navbar {
+    position: fixed;   /* para que el menu de navegación esté fijo */
+    width: 100vw;  /* para que recupere la anchura que perdió con fixed */
+    z-index: 1
+    /* para que siempre se sobreponga sobre cualquier otro elemento, en este caso el hero.section */
+}
+
+.navbar-brand {
+    font-family: "Oswald";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Carrucel */
+
+/* Quienes Somos  */
+#Quienes-Somos{
+    color: azure;
+    font-family: "Open Sans";
+    justify-content: center
+    /* line-height: 3; */
+}
+
+ /* Destacados */
+
+/* .card-body-td{
+    height: 250px;
+} */
+
+.card-foto{
+    width: 216px;
+    height: 144px;
+} 
+
+/* Contacto */
+
+/* Footer */
+#Footer p{
+    font-family: "Oswald";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#Footer a {
+    color: white;
+    /* elimina lo que aparece al lado del ícono */
+    text-decoration: none;
+}
