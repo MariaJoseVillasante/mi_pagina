@@ -49,7 +49,7 @@ body {
 
 #Hero-Section h1:first-child{
     font-weight: 900;
-    color: #cacbcb;
+    /* color: #cacbcb; */
 }
 
 #Hero-Section h1:last-child{
