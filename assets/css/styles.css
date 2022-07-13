@@ -9,6 +9,7 @@ body {
 /* navbar */
 .navbar {
     background-color: #660066;
+    /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
     position: fixed;   /* para que el menu de navegación esté fijo */
     width: 100vw;  /* para que recupere la anchura que perdió con fixed */
     z-index: 1; /* para que siempre se sobreponga sobre cualquier otro elemento, en este caso el hero.section */
@@ -115,6 +116,7 @@ body {
 
 /* Footer */
 #Footer{
+    /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
     background-color: #660066;
 }
 
@@ -126,4 +128,10 @@ body {
     color: white;
     /* elimina lo que aparece al lado del ícono */
     text-decoration: none;
+}
+.card-color {
+    background-image: linear-gradient(to bottom right, #660066, #e445e4);
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 1.5rem;
 }
