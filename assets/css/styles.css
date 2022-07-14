@@ -130,7 +130,8 @@ body {
     text-decoration: none;
 }
 .card-color {
-    background-image: linear-gradient(to bottom right, #660066, #e445e4);
+    /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
+    background-color: #660066;
     font-family: "Oswald";
     font-weight: bold;
     font-size: 1.5rem;
