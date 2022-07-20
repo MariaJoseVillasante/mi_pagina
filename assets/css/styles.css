@@ -21,6 +21,15 @@ body {
     font-weight: 700;
 }
 
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
 /* Hero-section */
 #Hero-Section {
     background-image: url("../img/pexels-julia-m-cameron-4144294.jpg");
