@@ -146,6 +146,48 @@ body {
     font-size: 1.5rem;
 }
 
+/* inicio whatsapp */
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: #fff; 
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.btn-wsp:hover{
+    text-decoration: none;
+    background: #fff;
+    color: #0df053;
+}
+/* .fab {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    }
+    
+    .fab:hover {
+    opacity: 0.7;
+    }
+    
+    .fa-whatsapp {
+    background: #45bbff;
+    color: white;
+    } */
+/* fin whatsapp */
+
 @media(max-width: 768px){
     #Sobre-Mi {
         line-height: 1.5;
