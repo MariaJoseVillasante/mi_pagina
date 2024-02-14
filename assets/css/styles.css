@@ -138,6 +138,11 @@ body {
     /* elimina lo que aparece al lado del ícono */
     text-decoration: none;
 }
+
+#Footer a:hover{
+    opacity: 0.7;
+}
+
 .card-color {
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
     background-color: #660066;
