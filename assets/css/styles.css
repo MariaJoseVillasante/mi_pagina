@@ -151,11 +151,11 @@ body {
     position: fixed;
     width: 55px;
     height: 55px;
-    line-height: 55px;
+    /* line-height: 55px; */
     bottom: 30px;
     right: 30px;
-    background: #0df053;
-    color: #fff; 
+    /* background: #0df053; */
+    /* color: #fff;  */
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
@@ -165,8 +165,9 @@ body {
 
 .btn-wsp:hover{
     text-decoration: none;
-    background: #fff;
-    color: #0df053;
+    /* background: #fff; */
+    /* color: #0df053; */
+    opacity: 0.7;
 }
 /* .fab {
     padding: 20px;
@@ -179,7 +180,6 @@ body {
     }
     
     .fab:hover {
-    opacity: 0.7;
     }
     
     .fa-whatsapp {
