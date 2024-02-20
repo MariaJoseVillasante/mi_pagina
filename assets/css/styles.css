@@ -1,3 +1,6 @@
+/* paleta{
+
+} */
 html{
     scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
 }
@@ -115,6 +118,7 @@ body {
 
 .link:hover {
     color: black;
+    opacity: 0.8;
 }
 
 /* Contacto */
@@ -183,15 +187,49 @@ body {
     margin: 5px 2px;
     border-radius: 50%;
     }
-    
-    .fab:hover {
-    }
-    
+        
     .fa-whatsapp {
     background: #45bbff;
     color: white;
     } */
 /* fin whatsapp */
+
+/* inicio paginas y aplicaciones web */
+#Hero-Section-Web{
+    background-image: url("../img/desarrolloWeb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 130vh;   /* lo modifiqué a la guía decía 100 */
+    position: relative;
+    opacity: 0.6;
+}
+#Hero-Section-Web div{
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.hero-line{
+    width: 345px;;
+}
+
+#Hero-Section-Web h1{
+    font-family: "Oswald";
+    font-size: 72px;
+}
+
+#Hero-Section-Web h1:first-child{
+    font-weight: 900;
+    color: black;
+}
+
+#Hero-Section-Web h1:last-child{
+    font-weight: 200;
+}
+/* fin paginas y aplicaciones web */
 
 @media(max-width: 768px){
     #Sobre-Mi {
