@@ -1,5 +1,8 @@
 /* paleta{
-
+morado: #4F2361;
+morado-claro: #7F5281
+blanco: #F9F9FF;/*evaluar
+negro: #2A292E;
 } */
 html{
     scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
@@ -11,7 +14,8 @@ body {
 
 /* navbar */
 .navbar {
-    background-color: #660066;
+    /* background-color: #660066; */
+    background-color: #4F2361;
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
     position: fixed;   /* para que el menu de navegación esté fijo */
     width: 100vw;  /* para que recupere la anchura que perdió con fixed */
@@ -71,7 +75,8 @@ body {
 
 /* Sobre mi  */
 #Sobre-Mi{
-    color: #373A3C;
+    color: #2A292E;
+    /* color: #373A3C; */
     font-family: "Open Sans";
     line-height: 3;
 }
@@ -80,6 +85,7 @@ body {
 #Experiencia div h1{
     font-family: "Oswald";
     font-size: 52px;
+    color: #2A292E;
 }
 
 #Experiencia i{
@@ -97,7 +103,7 @@ body {
  /* Mis ultimos trabajos */
 #Trabajos {
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
-    background-color: #660066;
+    background-color: #4F2361;
     font-family: "Oswald";
 }
 
@@ -113,11 +119,14 @@ body {
 
 .link {
     text-decoration: none;
-    color: #373A3C;
+    /* color: #373A3C; */
+    color: #2A292E;
+
 } 
 
 .link:hover {
-    color: black;
+    /* color: black; */
+    color: #2A292E;
     opacity: 0.8;
 }
 
@@ -130,7 +139,7 @@ body {
 /* Footer */
 #Footer{
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
-    background-color: #660066;
+    background-color: #4F2361;
 }
 
 #Footer h1{
@@ -223,7 +232,8 @@ body {
 
 #Hero-Section-Web h1:first-child{
     font-weight: 900;
-    color: black;
+    color: #2A292E;
+    /* color: black; */
 }
 
 #Hero-Section-Web h1:last-child{
