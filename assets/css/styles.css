@@ -1,9 +1,13 @@
-/* paleta{
-morado: #4F2361;
-morado-claro: #7F5281
-blanco: #F9F9FF;/*evaluar
-negro: #2A292E;
-} */
+/* valores y variables  */
+/* 
+$bgcolor: #4F2361;
+$textcolor: #2A292E;
+$colorppo: #4F2361;
+$colorppc: #7F5281
+$blanco: #F9F9FF;/*evaluar
+$negro: #2A292E; 
+*/
+
 html{
     scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
 }
