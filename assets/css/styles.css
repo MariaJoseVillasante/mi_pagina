@@ -1,15 +1,19 @@
 /* valores y variables  */
 /* 
-$bgcolor: #4F2361;
-$textcolor: #2A292E;
-$colorppo: #4F2361;
-$colorppc: #7F5281
-$blanco: #F9F9FF;/*evaluar
-$negro: #2A292E; 
+--bgcolor: #4F2361;
+--textcolor: #2A292E;
+--colorppc: #7F5281;
+--blanco: #F9F9FF;
+--blanco2: #Fe1d8e3;
 */
 
 html{
     scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
+    --bgcolor: #4F2361;
+    --textcolor: #2A292E;
+    --colorppc: #7F5281;
+    --blanco: #F9F9FF;
+    --blanco2: #Fe1d8e3;
 }
 
 body {
@@ -19,7 +23,7 @@ body {
 /* navbar */
 .navbar {
     /* background-color: #660066; */
-    background-color: #4F2361;
+    background-color: var(--bgcolor);
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
     position: fixed;   /* para que el menu de navegación esté fijo */
     width: 100vw;  /* para que recupere la anchura que perdió con fixed */
@@ -30,6 +34,12 @@ body {
     font-family: "Oswald";
     font-size: 40px;
     font-weight: 700;
+}
+
+.navbar-brand img {
+    margin: -200px 0;  /* Ajusta los márgenes negativos para eliminar el espacio sobrante */
+    max-width: 100%;
+    height: auto;  /* Mantén la proporción */
 }
 
 .scrolled-down {
@@ -79,8 +89,7 @@ body {
 
 /* Sobre mi  */
 #Sobre-Mi{
-    color: #2A292E;
-    /* color: #373A3C; */
+    color: var(--textcolor);
     font-family: "Open Sans";
     line-height: 3;
 }
@@ -89,11 +98,11 @@ body {
 #Experiencia div h1{
     font-family: "Oswald";
     font-size: 52px;
-    color: #2A292E;
+    color: var(--textcolor);
 }
 
 #Experiencia i{
-    color: #660066;
+    color: var(--bgcolor);
 }
 
 #Experiencia div:last-child article h4:first-child{
@@ -107,7 +116,7 @@ body {
  /* Mis ultimos trabajos */
 #Trabajos {
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
-    background-color: #4F2361;
+    background-color: var(--bgcolor);
     font-family: "Oswald";
 }
 
@@ -123,14 +132,12 @@ body {
 
 .link {
     text-decoration: none;
-    /* color: #373A3C; */
-    color: #2A292E;
+    color: var(--textcolor);
 
 } 
 
 .link:hover {
-    /* color: black; */
-    color: #2A292E;
+    color: var(--textcolor);
     opacity: 0.8;
 }
 
@@ -143,7 +150,7 @@ body {
 /* Footer */
 #Footer{
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
-    background-color: #4F2361;
+    background-color: var(--bgcolor);
 }
 
 #Footer h1{
@@ -151,7 +158,7 @@ body {
 }
 
 #Footer a {
-    color: white;
+    color: var(--blanco);
     /* elimina lo que aparece al lado del ícono */
     text-decoration: none;
 }
@@ -162,7 +169,7 @@ body {
 
 .card-color {
     /* background-image: linear-gradient(to bottom right, #660066, #e445e4); */
-    background-color: #660066;
+    background-color: var(--bgcolor);
     font-family: "Oswald";
     font-weight: bold;
     font-size: 1.5rem;
@@ -236,7 +243,7 @@ body {
 
 #Hero-Section-Web h1:first-child{
     font-weight: 900;
-    color: #2A292E;
+    color: var(--textcolor);
     /* color: black; */
 }
 
