@@ -6,14 +6,15 @@
 --blanco: #F9F9FF;
 --blanco2: #Fe1d8e3;
 */
-
-html{
-    scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
+:root {
     --bgcolor: #4F2361;
     --textcolor: #2A292E;
     --colorppc: #7F5281;
     --blanco: #F9F9FF;
     --blanco2: #Fe1d8e3;
+}
+html{
+    scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
 }
 
 body {
