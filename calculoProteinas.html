@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programadora especializada en el desarrollo de páginas web a medida y asesoría en estrategia de productos digitales para emprendedores y pymes.">
+        <meta name="keywords" content="programadora, programador, desarrollo web, páginas a medida, estrategia digital, asesoría, emprendedores, pymes">
+        <meta name="author" content="María José Villasante">
+        <meta name="email" content="hola@mariajosevillasante.cl">
+        <meta property="og:title" content="Portafolio de María José Villasante">
+        <meta property="og:description" content="Descubre el portafolio de María José Villasante, una experta en desarrollo web a medida y estrategia digital para emprendedores y pequeñas empresas.">
+        <meta property="og:image" content="URL-de-la-imagen-de-portafolio">
+        <meta property="og:url" content="https://mariajosevillasante.cl/">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Portafolio de Maria José Villasante">
+        <meta name="twitter:description" content="Explora el trabajo de María José Villasante, especializada en crear páginas web personalizadas y en brindar asesoría en estrategia de productos digitales para emprendedores y pymes.">
+        <meta name="twitter:image" content="https://x.com/MJVillasante/photo">
+    <title>Calculadora de Proteínas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        table {
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input {
+            width: 60px;
+            text-align: center;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        #buscador {
+            margin-bottom: 20px;
+            padding: 5px;
+            width: 40%;
+        }
+    </style>
+</head>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
+ <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-W0ETPFC8LH');
+ </script>
+<body>
+    <h1>Calculadora de Proteínas</h1>
+    <p>Sólo son valores referenciales, se calcula automáticamente la cantidad aproximada de proteínas</p>
+    <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()">
+    <table>
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Alimento</th>
+                <th>Proteína por 100g (g) / unidad</th>
+                <th>Cantidad Consumida</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-proteinas">
+            <tr><td rowspan="7">Desayuno o colaciones</td>
+                <td>Frutos secos</td><td>15 g por 100g</td><td><input type="number" value="0" data-proteina="15" oninput="calcularProteinas()"> gramos</td></tr>
+            <tr>
+                <td>Huevo</td><td>6 g por unidad</td><td><input type="number" value="0" data-proteina="6" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
+            <tr><td>Leche</td><td>3.4 g por 100ml</td><td><input type="number" value="0" data-proteina="3.4" oninput="calcularProteinas()" placeholder="ml">     ml</td></tr>
+            <tr><td>Queso fresco</td><td>14 g por 100g</td><td><input type="number" value="0" data-proteina="14" oninput="calcularProteinas()"> gramos</td></tr>
+            <tr><td>Queso mantecoso</td><td>21 g por 100g</td><td><input type="number" value="0" data-proteina="21" oninput="calcularProteinas()"> gramos</td></tr>
+            <tr><td>Scoop de proteína</td><td>25 g por scoop</td><td><input type="number" value="0" data-proteina="25" data-tipo="unidad" oninput="calcularProteinas()"> scoops</td></tr>
+            <tr><td>Yogurt protein</td><td>10 g por unidad</td><td><input type="number" value="0" data-proteina="10" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
+            
+            <tr><td rowspan="12">Comida</td>
+                <td>Carne de res</td><td>26 g por 100g</td><td><input type="number" value="0" data-proteina="26" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Edamame</td><td>11 g por 100g</td><td><input type="number" value="0" data-proteina="11" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Erizos</td><td>13 g por 100g</td><td><input type="number" value="0" data-proteina="13" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Espinacas</td><td>2.9 g por 100g</td><td><input type="number" value="0" data-proteina="2.9" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Garbanzos</td><td>19 g por 100g</td><td><input type="number" value="0" data-proteina="19" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Ostras</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Pavo</td><td>29 g por 100g</td><td><input type="number" value="0" data-proteina="29" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Pollo</td><td>27 g por 100g</td><td><input type="number" value="0" data-proteina="27" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Porotos</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Reineta</td><td>19 g por 100g</td><td><input type="number" value="0" data-proteina="19" oninput="calcularProteinas()"> gramos</td></tr>
+            
+            <tr><td>Salmon</td><td>20 g por 100g</td><td><input type="number" value="0" data-proteina="20" oninput="calcularProteinas()"> gramos</td></tr>
+            <tr><td>Tofu</td><td>8 g por 100g</td><td><input type="number" value="0" data-proteina="8" oninput="calcularProteinas()"> gramos</td></tr>
+
+        </tbody>
+    </table>
+    <p id="resultado">Total de proteínas: 0 g</p>
+     <!-- inicio contador de visitas -->
+     <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
+        <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&down=async&FCS_type=6254&FCS_coef=0.5&FCS_visi=1&FCS_clic=1&FCS_rest=standard_resc=000000&FCS_plus=100" async></script>
+        <noscript>
+            <a href="https://www.contadorvisitasgratis.com" title="contadores de visitas">
+                <img src="https://counter8.optistats.ovh/private/contadorvisitasgratis.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" border="0" title="contadores de visitas" alt="contadores de visitas">
+            </a>
+        </noscript>
+    </div>
+    <script>
+        function calcularProteinas() {
+            let total = 0;
+            document.querySelectorAll('input').forEach(input => {
+                let cantidad = parseFloat(input.value) || 0; 
+                let proteina = parseFloat(input.getAttribute('data-proteina')) || 0;// Asegurarse de que proteina tenga un valor numérico.
+                // Si es huevo, yogurt o scoop de proteína, considerarlo por unidad en lugar de por 100g.
+                let tipo = input.getAttribute('data-tipo');
+                if (tipo === 'unidad') {
+                    total += cantidad * proteina;
+                } else {
+                    total += (cantidad / 100) * proteina;
+                }
+            });
+            document.getElementById('resultado').innerText = `Total de proteínas: ${total.toFixed(2)} g`;
+        }
+
+        function filtrarAlimentos() {
+            let filtro = document.getElementById('buscador').value.toLowerCase();
+            document.querySelectorAll('#tabla-proteinas tr').forEach(row => {
+                let texto = row.innerText.toLowerCase();
+                row.style.display = texto.includes(filtro) ? '' : 'none';
+            });
+        }
+    </script>
+    <!-- metricool -->
+    <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"b01c35ed2594185602bcf96202c4eb00"})});</script>
+ 
+</body>
+</html>
