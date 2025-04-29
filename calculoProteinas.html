@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Programadora especializada en el desarrollo de páginas web a medida y asesoría en estrategia de productos digitales para emprendedores y pymes.">
-        <meta name="keywords" content="programadora, programador, desarrollo web, páginas a medida, estrategia digital, asesoría, emprendedores, pymes">
+        <meta name="keywords" content="programadora, programador, desarrollo web, páginas a medida, estrategia digital, asesoría, emprendedores, pymes, contador proteinas, calculo proteinas">
         <meta name="author" content="María José Villasante">
         <meta name="email" content="hola@mariajosevillasante.cl">
         <meta property="og:title" content="Portafolio de María José Villasante">
@@ -16,6 +16,19 @@
         <meta name="twitter:description" content="Explora el trabajo de María José Villasante, especializada en crear páginas web personalizadas y en brindar asesoría en estrategia de productos digitales para emprendedores y pymes.">
         <meta name="twitter:image" content="https://x.com/MJVillasante/photo">
     <title>Calculadora de Proteínas</title>
+    <!-- icono -->
+    <!-- https://www.svgrepo.com/svg/202946/web-design -->
+    <link rel="shortcut icon" href="assets/img/web-design-svgrepo-com.svg" type="image/x-icon">
+    <!-- Include Bootstrap´s CSS and JS (este está al final) CDN links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <!-- link css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,6 +74,34 @@
      gtag('config', 'G-W0ETPFC8LH');
  </script>
 <body>
+     <!-- inicio navbar hecha con bootstrap -->
+     <nav class="navbar navbar-expand-sm navbar-dark autohide fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logolblanca.png" alt="MJVT" width="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#Sobre-Mi">Sobre mi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#Experiencia">Experiencia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#Trabajos">Trabajos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#Contacto">Contacto</a>
+                </li>        
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- fin navbar hecha con bootstrap -->
     <h1>Calculadora de Proteínas</h1>
     <p>Sólo son valores referenciales, se calcula automáticamente la cantidad aproximada de proteínas</p>
     <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()">
@@ -111,6 +152,8 @@
             </a>
         </noscript>
     </div>
+    <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
+    <!-- fin contador de visitas -->
     <script>
         function calcularProteinas() {
             let total = 0;
@@ -136,6 +179,37 @@
             });
         }
     </script>
+    <!-- inicio Footer -->
+    <footer id="Footer" class="text-center text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-12 col-sm-6"> -->
+                    <!-- <h1 class="fw-light text-capitalize">maría josé villasante</h1> -->
+                <!-- </div> -->
+                    <div class="col-12  mt-2">
+                        <a href="https://github.com/MariaJoseVillasante" target="_blank">
+                        <i class="fa-brands fa-github-square fa-2x mx-2"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-2x mx-2"></i>
+                    </a>
+                    <a href="https://twitter.com/MJVillasante" target="_blank">
+                        <i class="fa-brands fa-twitter-square fa-2x mx-2"></i>
+                    </a>
+                    <a href="https://vosolutions.cl/" target="_blank">
+                        <i class="fa-solid fa-globe fa-2x mx-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- fin footer -->
+    <!-- para que funcione js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- para que funcione jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- link al archivo js (nuestros script deben ser lo último)-->
+    <script src="assets/js/script.js"></script>
     <!-- metricool -->
     <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"b01c35ed2594185602bcf96202c4eb00"})});</script>
  
