@@ -103,8 +103,14 @@
     </nav>
     <!-- fin navbar hecha con bootstrap -->
     <h1>Calculadora de Proteínas</h1>
-    <p>Sólo son valores referenciales, se calcula automáticamente la cantidad aproximada de proteínas</p>
-    <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()">
+    <p>Sólo son valores referenciales, agrega lo que has comido hoy y se calcula automáticamente la cantidad aproximada de proteínas que necesitas calculando el peso * 1,3gr/Kg <br>y te indicará cuantas proteínas llevas y cuantas te faltan</p>
+    Peso en kg: <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()">
+    <label for="proteinasObjetivo"> Proteínas objetivo (g):</label>
+    <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()">
+    <p id="metaProteinas"></p>
+    <br>
+    <p id="resultado">Total de proteínas: 0 g</p>
+    <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()"> <br>
     <table>
         <thead>
             <tr>
@@ -119,19 +125,20 @@
                 <td>Frutos secos</td><td>15 g por 100g</td><td><input type="number" value="0" data-proteina="15" oninput="calcularProteinas()"> gramos</td></tr>
             <tr>
                 <td>Huevo</td><td>6 g por unidad</td><td><input type="number" value="0" data-proteina="6" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-            <tr><td>Leche</td><td>3.4 g por 100ml</td><td><input type="number" value="0" data-proteina="3.4" oninput="calcularProteinas()" placeholder="ml">     ml</td></tr>
+            <tr><td>Leche</td><td>3.4 g por 100ml</td><td><input type="number" value="0" data-proteina="3.4" oninput="calcularProteinas()" placeholder="ml">      ml</td></tr>
             <tr><td>Queso fresco</td><td>14 g por 100g</td><td><input type="number" value="0" data-proteina="14" oninput="calcularProteinas()"> gramos</td></tr>
             <tr><td>Queso mantecoso</td><td>21 g por 100g</td><td><input type="number" value="0" data-proteina="21" oninput="calcularProteinas()"> gramos</td></tr>
             <tr><td>Scoop de proteína</td><td>25 g por scoop</td><td><input type="number" value="0" data-proteina="25" data-tipo="unidad" oninput="calcularProteinas()"> scoops</td></tr>
             <tr><td>Yogurt protein</td><td>10 g por unidad</td><td><input type="number" value="0" data-proteina="10" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
             
-            <tr><td rowspan="12">Comida</td>
+            <tr><td rowspan="13">Comida</td>
                 <td>Carne de res</td><td>26 g por 100g</td><td><input type="number" value="0" data-proteina="26" oninput="calcularProteinas()"> gramos</td></tr>
                 <tr><td>Edamame</td><td>11 g por 100g</td><td><input type="number" value="0" data-proteina="11" oninput="calcularProteinas()"> gramos</td></tr>
                 <tr><td>Erizos</td><td>13 g por 100g</td><td><input type="number" value="0" data-proteina="13" oninput="calcularProteinas()"> gramos</td></tr>
                 <tr><td>Espinacas</td><td>2.9 g por 100g</td><td><input type="number" value="0" data-proteina="2.9" oninput="calcularProteinas()"> gramos</td></tr>
                 <tr><td>Garbanzos</td><td>19 g por 100g</td><td><input type="number" value="0" data-proteina="19" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Ostras</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Lentejas</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
+                <tr><td>Ostras</td><td>9 g por unidad</td><td><input type="number" value="0" data-proteina="9" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
                 <tr><td>Pavo</td><td>29 g por 100g</td><td><input type="number" value="0" data-proteina="29" oninput="calcularProteinas()"> gramos</td></tr>
                 <tr><td>Pollo</td><td>27 g por 100g</td><td><input type="number" value="0" data-proteina="27" oninput="calcularProteinas()"> gramos</td></tr>
                 <tr><td>Porotos</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
@@ -139,12 +146,11 @@
             
             <tr><td>Salmon</td><td>20 g por 100g</td><td><input type="number" value="0" data-proteina="20" oninput="calcularProteinas()"> gramos</td></tr>
             <tr><td>Tofu</td><td>8 g por 100g</td><td><input type="number" value="0" data-proteina="8" oninput="calcularProteinas()"> gramos</td></tr>
-
         </tbody>
     </table>
     <p id="resultado">Total de proteínas: 0 g</p>
-     <!-- inicio contador de visitas -->
-     <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
+    <!-- inicio contador de visitas -->
+    <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
         <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&down=async&FCS_type=6254&FCS_coef=0.5&FCS_visi=1&FCS_clic=1&FCS_rest=standard_resc=000000&FCS_plus=100" async></script>
         <noscript>
             <a href="https://www.contadorvisitasgratis.com" title="contadores de visitas">
@@ -155,29 +161,44 @@
     <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
     <!-- fin contador de visitas -->
     <script>
-        function calcularProteinas() {
-            let total = 0;
-            document.querySelectorAll('input').forEach(input => {
-                let cantidad = parseFloat(input.value) || 0; 
-                let proteina = parseFloat(input.getAttribute('data-proteina')) || 0;// Asegurarse de que proteina tenga un valor numérico.
-                // Si es huevo, yogurt o scoop de proteína, considerarlo por unidad en lugar de por 100g.
-                let tipo = input.getAttribute('data-tipo');
-                if (tipo === 'unidad') {
-                    total += cantidad * proteina;
-                } else {
-                    total += (cantidad / 100) * proteina;
-                }
-            });
-            document.getElementById('resultado').innerText = `Total de proteínas: ${total.toFixed(2)} g`;
-        }
+        function actualizarMetaProteinas() {
+        let peso = parseFloat(document.getElementById('peso').value) || 0;
+        let metaProteinas = peso * 1.3;
+        document.getElementById('proteinasObjetivo').value = metaProteinas.toFixed(2);
+        calcularProteinas();
+    }
 
-        function filtrarAlimentos() {
-            let filtro = document.getElementById('buscador').value.toLowerCase();
-            document.querySelectorAll('#tabla-proteinas tr').forEach(row => {
-                let texto = row.innerText.toLowerCase();
-                row.style.display = texto.includes(filtro) ? '' : 'none';
-            });
-        }
+    function calcularProteinas() {
+        let total = 0;
+        document.querySelectorAll('input[data-proteina]').forEach(input => {
+            let cantidad = parseFloat(input.value) || 0;
+            let proteina = parseFloat(input.getAttribute('data-proteina')) || 0;
+            let tipo = input.getAttribute('data-tipo');
+            if (tipo === 'unidad') {
+                total += cantidad * proteina;
+            } else {
+                total += (cantidad / 100) * proteina;
+            }
+        });
+
+        let metaProteinas = parseFloat(document.getElementById('proteinasObjetivo').value) || 0;
+        let diferencia = metaProteinas - total;
+        let scoopsFaltantes = Math.ceil(diferencia / 25);
+
+        let mensaje = total >= metaProteinas ? "✅ ¡Has alcanzado tu meta de proteínas!" 
+                      : `❌ Te faltan ${diferencia.toFixed(2)} g de proteínas (${scoopsFaltantes} scoop(s) de proteína).`;
+
+        document.getElementById('resultado').innerText = `Total de proteínas: ${total.toFixed(2)} g`;
+        document.getElementById('metaProteinas').innerText = mensaje;
+    }
+
+    function filtrarAlimentos() {
+        let filtro = document.getElementById('buscador').value.toLowerCase();
+        document.querySelectorAll('#tabla-proteinas tr').forEach(row => {
+            let texto = row.innerText.toLowerCase();
+            row.style.display = texto.includes(filtro) ? '' : 'none';
+        });
+    }
     </script>
     <!-- inicio Footer -->
     <footer id="Footer" class="text-center text-white py-5">
