@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="https://x.com/MJVillasante/photo">
     <meta name="twitter:url" content="https://mariajosevillasante.cl/" />
     <meta name="twitter:creator" content="@MJVillasante" />
-    <title>Calculadora de Proteínas</title>
+    <title>Valores Económicos</title>
     <!-- icono -->
     <!-- https://www.svgrepo.com/svg/202946/web-design -->
     <link rel="shortcut icon" href="assets/img/web-design-svgrepo-com.svg" type="image/x-icon">
@@ -37,41 +37,12 @@
     <!-- link css -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 5vw;
-        }
-        table {
-            width: 100%;
-            /* margin: auto; */
-            border-collapse: collapse;
-            overflow-x: auto;
-            display: block;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        input {
-            width: 100px;
-            padding: 8px;
-            text-align: center;
-        }
-        #resultado {
-            margin-top: 20px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        #buscador {
-            margin-bottom: 20px;
-            padding: 5px;
-            width: 90%;
-        }
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+        .data { font-size: 20px; margin: 10px 0; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid black; }
+        input { width: 100px; text-align: center; }
     </style>
 </head>
  <!-- Google tag (gtag.js) -->
@@ -112,57 +83,112 @@
         </div>
     </nav>
     <!-- fin navbar hecha con bootstrap -->
-    <h1>Calculadora de Proteínas</h1>
-    <p>Sólo son valores referenciales, agrega lo que has comido hoy y se calcula automáticamente la cantidad aproximada de proteínas que necesitas calculando el peso * 1,3gr/Kg <br>y te indicará cuantas proteínas llevas y cuantas te faltan</p>
-    Peso en kg: <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()">
-    <label for="proteinasObjetivo"> Proteínas objetivo (g):</label>
-    <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()">
-    <p id="metaProteinas"></p>
-    <br>
-    <p id="resultado">Total de proteínas: 0 g</p>
-    <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()"> <br>
+    <script>
+        function toggleEconomicos() {
+            const econContainer = document.getElementById("economicos");
+            const button = document.querySelector("button");
+
+            if (econContainer.style.display === "none") {
+                econContainer.style.display = "block";
+                button.textContent = "Ver menos";
+            } else {
+                econContainer.style.display = "none";
+                button.textContent = "Ver más";
+            }
+        }
+
+    </script>
+    <div class="container">
+        <h1>Valores Económicos en Chile</h1>
+        <div id="UF"></div>
+        <button onclick="toggleEconomicos()" class="btn btn-secondary">Ver más</button>
+        <div id="economicos" style="display: none;">
+            <div id="DolarO"></div>
+            <div id="DolarA"></div>
+            <div id="Euro"></div>
+            <div id="IPC"></div>
+            <div id="UTM"></div>
+            <div id="IVP"></div>
+            <div id="Imacec"></div>
+        </div>
+    </div>
+    <script>
+        function fetchData() {
+            fetch('https://mindicador.cl/api').then(function(response) {
+                return response.json();
+            }).then(function(dailyIndicators) {
+                document.getElementById("UF").innerHTML = 'El valor actual de la UF es $' + formatNumber(dailyIndicators.uf.valor);
+                document.getElementById("DolarO").innerHTML = 'El valor actual del Dólar observado es $' + formatNumber(dailyIndicators.dolar.valor);
+                document.getElementById("DolarA").innerHTML = 'El valor actual del Dólar acuerdo es $' + formatNumber(dailyIndicators.dolar_intercambio.valor);
+                document.getElementById("Euro").innerHTML = 'El valor actual del Euro es $' + formatNumber(dailyIndicators.euro.valor);
+                document.getElementById("IPC").innerHTML = 'El valor actual del IPC es ' + formatNumber(dailyIndicators.ipc.valor) + '%';
+                document.getElementById("UTM").innerHTML = 'El valor actual de la UTM es $' + formatNumber(dailyIndicators.utm.valor);
+                document.getElementById("IVP").innerHTML = 'El valor actual del IVP es $' + formatNumber(dailyIndicators.ivp.valor);
+                document.getElementById("Imacec").innerHTML = 'El valor actual del Imacec es ' + formatNumber(dailyIndicators.imacec.valor) + '%';
+            }).catch(function(error) {
+                console.log('Requestfailed', error);
+            });
+        }
+
+        function formatNumber(value) {
+    return value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+}
+        // Llamar la función al cargar la página
+        fetchData();
+        // Actualizar cada 60 segundos
+        setInterval(fetchData, 60000);
+    </script>
+    <!-- inicio calculadora de boletas -->
+    <h1>Calculadora de Boleta de Honorarios</h1>
+    <label for="cantidadUF">Cantidad de UF:</label>
+    <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()">
+    <br><br>
+
     <table>
         <thead>
             <tr>
-                <th> </th>
-                <th>Alimento</th>
-                <th>Proteína por 100g (g) / unidad</th>
-                <th>Cantidad Consumida</th>
+                <th>Cantidad UF</th>
+                <th>Valor en CLP</th>
+                <th>Retención (13%)</th>
+                <th>Valor Neto</th>
             </tr>
         </thead>
-        <tbody id="tabla-proteinas">
-            <tr><td rowspan="9">Desayuno o colaciones</td>
-                <td>Frutos secos</td><td>15 g por 100g</td><td><input type="number" value="0" data-proteina="15" oninput="calcularProteinas()"> gramos</td></tr>
+        <tbody>
             <tr>
-                <td>Huevo</td><td>6 g por unidad</td><td><input type="number" value="0" data-proteina="6" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-            <tr><td>Leche</td><td>3.4 g por 100ml</td><td><input type="number" value="0" data-proteina="3.4" oninput="calcularProteinas()" placeholder="ml"> ml</td></tr>
-            <tr><td>Pechuga de Pavo</td><td>1.9 g por unidad</td><td><input type="number" value="0" data-proteina="1.9" data-tipo="unidad" oninput="calcularProteinas()"> lámina</td></tr>
-            <tr><td>Queso fresco</td><td>14 g por 100g</td><td><input type="number" value="0" data-proteina="14" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Queso mantecoso</td><td>21 g por 100g</td><td><input type="number" value="0" data-proteina="21" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Queso mantecoso (lámina)</td><td>6.5 g por lámina</td><td><input type="number" value="0" data-proteina="6.5" data-tipo="unidad" oninput="calcularProteinas()"> lámina</td></tr>
-            <tr><td>Scoop de proteína</td><td>25 g por scoop</td><td><input type="number" value="0" data-proteina="25" data-tipo="unidad" oninput="calcularProteinas()"> scoops</td></tr>
-            <tr><td>Yogurt protein</td><td>10 g por unidad</td><td><input type="number" value="0" data-proteina="10" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-            
-            <tr><td rowspan="16">Comida</td>
-                <td>Arroz</td><td>5 g por taza</td><td><input type="number" value="0" data-proteina="5" data-tipo="unidad" oninput="calcularProteinas()"> taza</td></tr>
-                <tr><td>Carne de res</td><td>26 g por 100g</td><td><input type="number" value="0" data-proteina="26" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Edamame</td><td>11 g por 100g</td><td><input type="number" value="0" data-proteina="11" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Erizos</td><td>13 g por 100g</td><td><input type="number" value="0" data-proteina="13" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Espinacas</td><td>2.9 g por 100g</td><td><input type="number" value="0" data-proteina="2.9" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Garbanzos</td><td>19 g por 100g</td><td><input type="number" value="0" data-proteina="19" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Lentejas</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Ostras</td><td>9 g por unidad</td><td><input type="number" value="0" data-proteina="9" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-                <tr><td>Papas</td><td>4 g por unidad</td><td><input type="number" value="0" data-proteina="4" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-                <tr><td>Pavo</td><td>29 g por 100g</td><td><input type="number" value="0" data-proteina="29" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Pollo</td><td>27 g por 100g</td><td><input type="number" value="0" data-proteina="27" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Porotos</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Porotos Negros</td><td>21.6 g por 100g</td><td><input type="number" value="0" data-proteina="21.6" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Reineta</td><td>19 g por 100g</td><td><input type="number" value="0" data-proteina="19" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Salmon</td><td>20 g por 100g</td><td><input type="number" value="0" data-proteina="20" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Tofu</td><td>8 g por 100g</td><td><input type="number" value="0" data-proteina="8" oninput="calcularProteinas()"> gramos</td></tr>
+                <td id="ufDisplay">0</td>
+                <td id="valorCLP">0</td>
+                <td id="retencion">0</td>
+                <td id="valorNeto">0</td>
+            </tr>
         </tbody>
     </table>
-    <!-- <p id="resultado">Total de proteínas: 0 g</p> -->
+
+    <script>
+        async function obtenerValorUF() {
+            try {
+                const response = await fetch("https://mindicador.cl/api/uf");
+                const data = await response.json();
+                return data.serie[0].valor; // Obtiene el último valor de la UF
+            } catch (error) {
+                console.error("Error obteniendo el valor de la UF:", error);
+                return 0;
+            }
+        }
+
+        async function calcularBoleta() {
+            const cantidadUF = parseFloat(document.getElementById("cantidadUF").value) || 0;
+            const valorUF = await obtenerValorUF();
+            const valorCLP = cantidadUF * valorUF;
+            const retencion = valorCLP * 0.13;
+            const valorNeto = valorCLP - retencion;
+
+            document.getElementById("ufDisplay").textContent = cantidadUF;
+            document.getElementById("valorCLP").textContent = valorCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
+            document.getElementById("retencion").textContent = retencion.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
+            document.getElementById("valorNeto").textContent = valorNeto.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
+        }
+    </script>
+    <!-- fin calculadora de boletas -->
     <!-- inicio contador de visitas -->
     <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
         <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&down=async&FCS_type=6254&FCS_coef=0.5&FCS_visi=1&FCS_clic=1&FCS_rest=standard_resc=000000&FCS_plus=100" async></script>
@@ -174,46 +200,6 @@
     </div>
     <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
     <!-- fin contador de visitas -->
-    <script>
-        function actualizarMetaProteinas() {
-        let peso = parseFloat(document.getElementById('peso').value) || 0;
-        let metaProteinas = peso * 1.3;
-        document.getElementById('proteinasObjetivo').value = metaProteinas.toFixed(2);
-        calcularProteinas();
-    }
-
-    function calcularProteinas() {
-        let total = 0;
-        document.querySelectorAll('input[data-proteina]').forEach(input => {
-            let cantidad = parseFloat(input.value) || 0;
-            let proteina = parseFloat(input.getAttribute('data-proteina')) || 0;
-            let tipo = input.getAttribute('data-tipo');
-            if (tipo === 'unidad') {
-                total += cantidad * proteina;
-            } else {
-                total += (cantidad / 100) * proteina;
-            }
-        });
-
-        let metaProteinas = parseFloat(document.getElementById('proteinasObjetivo').value) || 0;
-        let diferencia = metaProteinas - total;
-        let scoopsFaltantes = Math.ceil(diferencia / 25);
-
-        let mensaje = total >= metaProteinas ? "✅ ¡Has alcanzado tu meta de proteínas!" 
-                      : `❌ Te faltan ${diferencia.toFixed(2)} g de proteínas (${scoopsFaltantes} scoop(s) de proteína).`;
-
-        document.getElementById('resultado').innerText = `Total de proteínas: ${total.toFixed(2)} g`;
-        document.getElementById('metaProteinas').innerText = mensaje;
-    }
-
-    function filtrarAlimentos() {
-        let filtro = document.getElementById('buscador').value.toLowerCase();
-        document.querySelectorAll('#tabla-proteinas tr').forEach(row => {
-            let texto = row.innerText.toLowerCase();
-            row.style.display = texto.includes(filtro) ? '' : 'none';
-        });
-    }
-    </script>
     <!-- inicio Footer -->
     <footer id="Footer" class="text-center text-white py-5">
         <div class="container">
@@ -245,6 +231,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- link al archivo js (nuestros script deben ser lo último)-->
     <script src="assets/js/script.js"></script>
+    <!-- Incluye Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- metricool -->
     <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"b01c35ed2594185602bcf96202c4eb00"})});</script>
  

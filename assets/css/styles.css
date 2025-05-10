@@ -5,8 +5,9 @@
     --colorppc: #7F5281;
     --azul: #204E61;
     --blanco: #F9F9FF;
-    --blanco2: #e1d8e3;
-    --blanco3: #EFE8F3;
+    --blanco2: #F9F9FF;
+    --blanco3: #e1d8e3;
+    --accent: #a855f7;
 }
 html{
     scroll-behavior: auto !important; /* para deshacer lo que viene por defecto en bootstra */
