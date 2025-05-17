@@ -30,58 +30,496 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- font awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
     <!-- link css -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .container { max-width: 600px; margin: auto; padding: 20px; }
-        .data { font-size: 20px; margin: 10px 0; }
-        table { width: 50%; margin: auto; border-collapse: collapse; }
-        th, td { padding: 10px; border: 1px solid black; }
-        input { width: 100px; text-align: center; }
+        .pricing-2 {
+
+            .pricing-item {
+                border-bottom: 1px dashed color-mix(in srgb, var(--default-color), transparent 60%);
+                width: 100%;
+                height: 100%;
+                padding: 0 0 15px 0;
+
+                h3 {
+                margin: 0;
+                font-size: 20px;
+                font-weight: 600;
+                }
+
+                h4 {
+                margin: 0;
+                font-size: 18px;
+                color: var(--accent-color);
+                }
+            }
+
+            }
+        .ecommerce-cart-2 {
+            padding-top: 60px;
+            padding-bottom: 60px;
+
+            /* // Cart Items Container */
+            .cart-items-container {
+                background-color: var(--surface-color);
+                border-radius: 0.75rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+                padding: 1.5rem;
+                transition: all 0.3s ease;
+
+                @media (max-width: 767.98px) {
+                padding: 1rem;
+                }
+
+                .cart-header {
+                border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.75rem;
+
+                h5 {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    color: color-mix(in srgb, var(--default-color), transparent 30%);
+                }
+                }
+            }
+
+            /* // Cart Item */
+            .cart-item {
+                background-color: var(--surface-color);
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                position: relative;
+                transition: all 0.3s ease;
+                border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+                &:hover {
+                box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.07);
+                transform: translateY(-2px);
+                }
+
+                &:last-child {
+                margin-bottom: 0;
+                }
+
+                .product-info {
+                .product-image {
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: transform 0.3s ease;
+                    }
+
+                    &:hover img {
+                    transform: scale(1.05);
+                    }
+                }
+
+                .product-details {
+                    .product-title {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.25rem;
+                    color: var(--heading-color);
+                    }
+
+                    .product-variant {
+                    font-size: 0.85rem;
+                    color: color-mix(in srgb, var(--default-color), transparent 30%);
+                    }
+                }
+                }
+
+                .price-mobile {
+                font-size: 0.85rem;
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+                color: color-mix(in srgb, var(--default-color), transparent 30%);
+                }
+
+                .product-price,
+                .product-total {
+                font-weight: 600;
+                color: var(--heading-color);
+                }
+
+                /* // Quantity Selector */
+                .quantity-selector {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+                width: fit-content;
+                margin: 0 auto;
+
+                @media (max-width: 767.98px) {
+                    margin: 0;
+                }
+
+                .quantity-btn {
+                    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+                    border: none;
+                    color: var(--default-color);
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 2rem;
+                    width: 2rem;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                    background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+                    color: var(--accent-color);
+                    }
+
+                    &:active {
+                    transform: scale(0.95);
+                    }
+                }
+
+                .quantity-input {
+                    background-color: var(--surface-color);
+                    border: none;
+                    color: var(--default-color);
+                    font-weight: 600;
+                    height: 2rem;
+                    text-align: center;
+                    width: 2.5rem;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+
+                    &:focus {
+                    outline: none;
+                    }
+                }
+                }
+
+                /* // Remove Item Button */
+                .remove-item {
+                background-color: transparent;
+                border: none;
+                color: color-mix(in srgb, var(--default-color), transparent 30%);
+                cursor: pointer;
+                font-size: 0.85rem;
+                padding: 0.25rem 0;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: #dc3545;
+                }
+
+                i {
+                    font-size: 1rem;
+                }
+                }
+            }
+
+            /* // Cart Actions */
+            .cart-actions {
+
+                .continue-shopping,
+                .update-cart {
+                background-color: transparent;
+                border: none;
+                color: var(--accent-color);
+                cursor: pointer;
+                font-size: 0.9rem;
+                font-weight: 500;
+                padding: 0.5rem 0;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+                }
+
+                i {
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover i {
+                    transform: translateX(-3px);
+                }
+                }
+
+                .update-cart {
+                &:hover i {
+                    transform: rotate(45deg);
+                }
+                }
+            }
+
+            /* // Cart Summary */
+            .cart-summary {
+                background-color: var(--surface-color);
+                border-radius: 0.75rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+                padding: 1.5rem;
+                position: sticky;
+                top: 2rem;
+                transition: all 0.3s ease;
+
+                @media (max-width: 991.98px) {
+                position: relative;
+                top: 0;
+                }
+
+                .summary-title {
+                color: var(--heading-color);
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 1.25rem;
+                }
+
+                .summary-item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.75rem;
+
+                .summary-label {
+                    color: color-mix(in srgb, var(--default-color), transparent 30%);
+                    font-size: 0.95rem;
+                }
+
+                .summary-value {
+                    color: var(--heading-color);
+                    font-size: 0.95rem;
+                    font-weight: 500;
+                }
+
+                &.total {
+                    margin-top: 0.75rem;
+                    margin-bottom: 0;
+
+                    .summary-label,
+                    .summary-value {
+                    color: var(--heading-color);
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    }
+                }
+                }
+
+                .summary-divider {
+                background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+                height: 1px;
+                margin: 1rem 0;
+                width: 100%;
+                }
+
+                /* // Promo Code */
+                .promo-code {
+                .form-control {
+                    background-color: var(--surface-color);
+                    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+                    border-radius: 0.5rem 0 0 0.5rem;
+                    color: var(--default-color);
+                    font-size: 0.9rem;
+                    height: 2.75rem;
+                    padding: 0.5rem 1rem;
+
+                    &:focus {
+                    border-color: var(--accent-color);
+                    box-shadow: none;
+                    }
+
+                    &::placeholder {
+                    color: color-mix(in srgb, var(--default-color), transparent 50%);
+                    }
+                }
+
+                .btn-apply {
+                    background-color: var(--accent-color);
+                    border: none;
+                    border-radius: 0 0.5rem 0.5rem 0;
+                    color: var(--contrast-color);
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    height: 2.75rem;
+                    padding: 0.5rem 1rem;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+                    }
+
+                    &:active {
+                    transform: scale(0.98);
+                    }
+                }
+                }
+
+                /* // Checkout Button */
+                .btn-checkout {
+                background-color: var(--accent-color);
+                border: none;
+                border-radius: 0.5rem;
+                color: var(--contrast-color);
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 0.75rem 1.5rem;
+                transition: all 0.3s ease;
+                width: 100%;
+
+                &:hover {
+                    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+                    transform: translateY(-2px);
+                    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: none;
+                }
+                }
+
+                /* // Payment Methods */
+                .payment-methods {
+                .payment-icon {
+                    color: color-mix(in srgb, var(--default-color), transparent 40%);
+                    font-size: 1.5rem;
+                    margin: 0 0.5rem;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                    color: var(--accent-color);
+                    transform: translateY(-2px);
+                    }
+                }
+                }
+            }
+
+            /* // Responsive Adjustments */
+            @media (max-width: 767.98px) {
+                .cart-item {
+                .product-info {
+                    .product-image {
+                    width: 4rem;
+                    height: 4rem;
+                    }
+
+                    .product-details {
+                    .product-title {
+                        font-size: 0.9rem;
+                    }
+
+                    .product-variant {
+                        font-size: 0.8rem;
+                    }
+                    }
+                }
+                }
+            }
+
+            /* // Animation for new items */
+            @keyframes fadeInUp {
+                from {
+                opacity: 0;
+                transform: translateY(20px);
+                }
+
+                to {
+                opacity: 1;
+                transform: translateY(0);
+                }
+            }
+
+            .cart-item {
+                animation: fadeInUp 0.5s ease-out;
+            }
+
+            /* // Animation for removing items */
+            .cart-item.removing {
+                animation: fadeOutDown 0.5s ease-out forwards;
+            }
+
+            @keyframes fadeOutDown {
+                from {
+                opacity: 1;
+                transform: translateY(0);
+                }
+
+                to {
+                opacity: 0;
+                transform: translateY(20px);
+                height: 0;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                }
+            }
+
+            /* // Swiper wrapper height fix */
+            .swiper-wrapper {
+                height: auto !important;
+            }
+            }
     </style>
 </head>
- <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
- <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-     gtag('config', 'G-W0ETPFC8LH');
- </script>
-<body>
-     <!-- inicio navbar hecha con bootstrap -->
-     <nav class="navbar navbar-expand-sm navbar-dark autohide fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
+    gtag('config', 'G-W0ETPFC8LH');
+</script>
+
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            
+            <a href="/index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <img src="assets/img/logolblanca.png" alt="MJVT" width="100px">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Sobre-Mi">Sobre mi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Experiencia">Experiencia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Trabajos">Trabajos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Contacto">Contacto</a>
-                </li>        
-            </ul>
-            </div>
+
+    <!-- inicio navbar hecha con bootstrap -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/#hero" class="active">Home</a></li>
+                    <li><a href="/#sobre_mi">Sobre mi</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/#mini_soluciones">Mini Soluciones</a></li>
+                    <li><a href="/#publicaciones">Publicaciones</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <a class="btn-getstarted" href="/#contacto">Contacto</a>
         </div>
-    </nav>
+    </header>
     <!-- fin navbar hecha con bootstrap -->
     <script>
         function toggleEconomicos() {
@@ -98,71 +536,215 @@
         }
 
     </script>
-    <div class="container">
-        <h1>Valores Económicos en Chile</h1>
-        <div id="UF"></div>
-        <button onclick="toggleEconomicos()" class="btn btn-secondary">Ver más</button>
-        <div id="economicos" style="display: none;">
-            <div id="DolarO"></div>
-            <div id="DolarA"></div>
-            <div id="Euro"></div>
-            <div id="IPC"></div>
-            <div id="UTM"></div>
-            <div id="IVP"></div>
-            <div id="Imacec"></div>
+    <main class="main">
+        <!-- inicio título -->
+        <div class="page-title">
+            <div class="breadcrumbs">
+                <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/#hero"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
+                    <li class="breadcrumb-item active current">Valores Económicos</li>
+                </ol>
+                </nav>
+            </div>
+            <div class="title-wrapper">
+                <h1>Valores Económicos en Chile</h1>
+                <p class="px-5">Visualiza el valor del dolar, UF y otros indicadores al día de hoy. También puedes calcular el valor en pesos según lo que cobres en UF en tu boleta, para que te dé el valor líquido que quieres.</p>
+            </div>
+            </div>
+        <!-- fin título -->
+        <!--  inicia indicadores económicos -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Valores Económicos</h2>
+            <div><span>indicadores económicos</span> <span class="description-title">de hoy</span></div>
         </div>
-    </div>
-    <script>
-        function fetchData() {
-            fetch('https://mindicador.cl/api').then(function(response) {
-                return response.json();
+        <section id="pricing-2" class="pricing-2 section">
+            <slot type="section-title"></slot>
+            
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+            
+                <div class="row gy-4 gx-lg-5">
+            
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor de la UF es</h3>
+                    <h4 id="UF"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+            
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor del Dólar observado es</h3>
+                    <h4 id="DolarO"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor del Dólar acuerdo es</h3>
+                    <h4 id="DolarA"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor actual del Euro es </h3>
+                    <h4 id="Euro"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+            
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor actual del IPC es </h3>
+                    <h4 id="IPC"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+            
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor actual de la UTM es </h3>
+                    <h4 id="UTM"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor actual del IVP es </h3>
+                    <h4 id="IVP"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                    <h3>El valor actual del Imacec es</h3>
+                    <h4 id="Imacec"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                </div>
+            </div>
+            </section>       
+        <script>
+            function fetchData() {
+                fetch('https://mindicador.cl/api').then(function(response) {
+                    return response.json();
             }).then(function(dailyIndicators) {
-                document.getElementById("UF").innerHTML = 'El valor actual de la UF es $' + formatNumber(dailyIndicators.uf.valor);
-                document.getElementById("DolarO").innerHTML = 'El valor actual del Dólar observado es $' + formatNumber(dailyIndicators.dolar.valor);
-                document.getElementById("DolarA").innerHTML = 'El valor actual del Dólar acuerdo es $' + formatNumber(dailyIndicators.dolar_intercambio.valor);
-                document.getElementById("Euro").innerHTML = 'El valor actual del Euro es $' + formatNumber(dailyIndicators.euro.valor);
-                document.getElementById("IPC").innerHTML = 'El valor actual del IPC es ' + formatNumber(dailyIndicators.ipc.valor) + '%';
-                document.getElementById("UTM").innerHTML = 'El valor actual de la UTM es $' + formatNumber(dailyIndicators.utm.valor);
-                document.getElementById("IVP").innerHTML = 'El valor actual del IVP es $' + formatNumber(dailyIndicators.ivp.valor);
-                document.getElementById("Imacec").innerHTML = 'El valor actual del Imacec es ' + formatNumber(dailyIndicators.imacec.valor) + '%';
+                document.getElementById("UF").innerHTML = '$' + formatNumber(dailyIndicators.uf.valor);
+                document.getElementById("DolarO").innerHTML = '$' + formatNumber(dailyIndicators.dolar.valor);
+                document.getElementById("DolarA").innerHTML = '$' + formatNumber(dailyIndicators.dolar_intercambio.valor);
+                document.getElementById("Euro").innerHTML = '$' + formatNumber(dailyIndicators.euro.valor);
+                document.getElementById("IPC").innerHTML = ' ' + formatNumber(dailyIndicators.ipc.valor) + '%';
+                document.getElementById("UTM").innerHTML = '$' + formatNumber(dailyIndicators.utm.valor);
+                document.getElementById("IVP").innerHTML = '$' + formatNumber(dailyIndicators.ivp.valor);
+                document.getElementById("Imacec").innerHTML = ' ' + formatNumber(dailyIndicators.imacec.valor) + '%';
             }).catch(function(error) {
                 console.log('Requestfailed', error);
             });
         }
-
+        
         function formatNumber(value) {
-    return value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
-}
+            return value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+        }
         // Llamar la función al cargar la página
         fetchData();
         // Actualizar cada 60 segundos
         setInterval(fetchData, 60000);
-    </script>
+        </script>
     <!-- inicio calculadora de boletas -->
-    <h1>Calculadora de Boleta de Honorarios</h1>
-    <label for="cantidadUF">Cantidad de UF:</label>
-    <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()">
-    <br><br>
+    <div class="container section-title" data-aos="fade-up">
+        <h2>calculadora de</h2>
+        <div><span>boleta de</span> <span class="description-title">honorarios</span></div>
+    </div>
+    <section id="ecommerce-cart-2" class="ecommerce-cart-2 section">
+        <slot type="section-title"></slot>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="ecommerce-cart-3">
+            <div class="row g-4">
+                
+                <!-- Cart Summary Column -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="cart-summary">
+                    <h4 class="summary-title">Boleta de Honorarios</h4>
+                    <div class="promo-code my-4">
+                    <div class="input-group">
+                        <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF" aria-label="Promo code">
+                        <button class="btn btn-apply" type="button">Calcular</button>
+                    </div>
+                    </div>
+                    
+                    <div class="summary-item">
+                    <span class="summary-label">Cantidad en UF</span>
+                    <span class="summary-value" id="ufDisplay">0</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                    <span class="summary-label">Valor en CLP</span>
+                    <span class="summary-value" id="valorCLP">0</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                    <span class="summary-label">Retención (14,5%)</span>
+                    <span class="summary-value" id="retencion">0</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-item total">
+                    <span class="summary-label">Valor Neto</span>
+                    <span class="summary-value" id="valorNeto">0</span>
+                    </div>
+                    
+                    <div class="payment-methods mt-4">
+                    <div class="d-flex justify-content-center">
+                        <i class="bi bi-credit-card payment-icon" title="Credit Card"></i>
+                        <i class="bi bi-paypal payment-icon" title="PayPal"></i>
+                        <i class="bi bi-wallet2 payment-icon" title="Digital Wallet"></i>
+                        <i class="bi bi-bank payment-icon" title="Bank Transfer"></i>
+                    </div>
+                    </div>
+                </div>
+                </div> <!-- Cart Summary Column -->
+                <!-- Cart Summary Column -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="cart-summary">
+                    <h4 class="summary-title">Calculadora de Monto Bruto</h4>
+                    <div class="promo-code my-4">
+                    <div class="input-group">
+                        <input type="number" id="montoNetoUF" min="0" step="0.01" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido UF" aria-label="Promo code">
+                        <button class="btn btn-apply" type="button">Calcular</button>
+                    </div>
+                    </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Cantidad UF</th>
-                <th>Valor en CLP</th>
-                <th>Retención (13%)</th>
-                <th>Valor Neto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="ufDisplay">0</td>
-                <td id="valorCLP">0</td>
-                <td id="retencion">0</td>
-                <td id="valorNeto">0</td>
-            </tr>
-        </tbody>
-    </table>
-
+                    <div class="promo-code my-4">
+                    <div class="input-group">
+                        <input type="number" id="montoNetoCLP" min="0" step="100" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido $" aria-label="Promo code">
+                        <button class="btn btn-apply" type="button">Calcular</button>
+                    </div>
+                    </div>            
+                    <div class="summary-item">
+                    <span class="summary-label">Para recibir ese monto líquido, tu boleta debe ser de:</span>
+                    <!-- <span class="summary-value" id="montoBruto">0</span> -->
+                    </div>
+            
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-item total">
+                    <!-- <span class="summary-label">Valor Neto</span> -->
+                    <span class="summary-value" id="montoBruto">0</span>
+                    </div>
+                    <div class="payment-methods mt-4">
+                    <div class="d-flex justify-content-center">
+                        <i class="bi bi-credit-card payment-icon" title="Credit Card"></i>
+                        <i class="bi bi-paypal payment-icon" title="PayPal"></i>
+                        <i class="bi bi-wallet2 payment-icon" title="Digital Wallet"></i>
+                        <i class="bi bi-bank payment-icon" title="Bank Transfer"></i>
+                    </div>
+                    </div>
+                </div>
+                </div> <!-- Cart Summary Column -->
+            </div>
+            </div>
+        </div>
+        </section>
+    <!-- fin calculadora de boletas -->
+    
     <script>
         async function obtenerValorUF() {
             try {
@@ -174,20 +756,34 @@
                 return 0;
             }
         }
-
+        
         async function calcularBoleta() {
             const cantidadUF = parseFloat(document.getElementById("cantidadUF").value) || 0;
             const valorUF = await obtenerValorUF();
             const valorCLP = cantidadUF * valorUF;
-            const retencion = valorCLP * 0.13;
+            const retencion = valorCLP * 0.145;
             const valorNeto = valorCLP - retencion;
-
+            
             document.getElementById("ufDisplay").textContent = cantidadUF;
             document.getElementById("valorCLP").textContent = valorCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
             document.getElementById("retencion").textContent = retencion.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
             document.getElementById("valorNeto").textContent = valorNeto.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
         }
-    </script>
+
+        async function calcularMontoBruto() {
+            const valorUF = await obtenerValorUF();
+
+            // Obtener valores ingresados por el usuario
+            const montoNetoUF = parseFloat(document.getElementById("montoNetoUF").value) || 0;
+            const montoNetoCLP = parseFloat(document.getElementById("montoNetoCLP").value) || (montoNetoUF * valorUF);
+
+            // Calcular monto bruto en CLP con retención del 14,5%
+            const montoBrutoCLP = montoNetoCLP / 0.855; // Se divide por 85,5% para agregar el 14,5% de retención
+
+            // Mostrar resultado
+            document.getElementById("montoBruto").textContent = montoBrutoCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
+        }
+        </script>
     <!-- fin calculadora de boletas -->
     <!-- inicio contador de visitas -->
     <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
@@ -200,39 +796,44 @@
     </div>
     <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
     <!-- fin contador de visitas -->
+</main>
     <!-- inicio Footer -->
-    <footer id="Footer" class="text-center text-white py-5">
-        <div class="container">
-            <div class="row">
-                <!-- <div class="col-12 col-sm-6"> -->
-                    <!-- <h1 class="fw-light text-capitalize">maría josé villasante</h1> -->
-                <!-- </div> -->
-                    <div class="col-12  mt-2">
-                        <a href="https://github.com/MariaJoseVillasante" target="_blank">
-                        <i class="fa-brands fa-github-square fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank">
-                        <i class="fa-brands fa-linkedin fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://twitter.com/MJVillasante" target="_blank">
-                        <i class="fa-brands fa-twitter-square fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://vosolutions.cl/" target="_blank">
-                        <i class="fa-solid fa-globe fa-2x mx-2"></i>
-                    </a>
-                </div>
-            </div>
+<footer id="footer" class="footer position-relative dark-background">
+    <div class="container">
+        <div class="copyright text-center ">
+            <p>Con <i class="bi bi-suit-heart"></i><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
         </div>
+        <div class="social-links d-flex justify-content-center">
+            <a href="https://github.com/MariaJoseVillasante" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/MJVillasante" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://vosolutions.cl/" target="_blank"><i class="bi bi-globe"></i></a>
+        </div>
+    </div>
     </footer>
     <!-- fin footer -->
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <!-- para que funcione js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+    
     <!-- para que funcione jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+        
     <!-- link al archivo js (nuestros script deben ser lo último)-->
-    <script src="assets/js/script.js"></script>
-    <!-- Incluye Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+
     <!-- metricool -->
     <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"b01c35ed2594185602bcf96202c4eb00"})});</script>
  

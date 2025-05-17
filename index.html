@@ -19,7 +19,7 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Portafolio de María José Villasante" />
         <meta name="twitter:description" content="Explora el trabajo de María José Villasante: desarrollo web personalizado y estrategias digitales pensadas para emprendedores y pymes." />
-        <meta name="twitter:image" content="https://mariajosevillasante.cl/ruta-de-tu-imagen.jpg" /><!-- <meta name="twitter:image" content="https://x.com/MJVillasante/photo"> -->
+        <meta name="twitter:image" content="https://mariajosevillasante.cl/photo" /><!-- <meta name="twitter:image" content="https://x.com/MJVillasante/photo"> -->
         <meta name="twitter:url" content="https://mariajosevillasante.cl/" />
         <meta name="twitter:creator" content="@MJVillasante" />
         <title>Portafolio de María José Villasante</title>
@@ -30,14 +30,22 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <!-- font awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
-        <!-- link css -->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <!-- link sass?? -->
-        <!-- <link rel="stylesheet" type="text/css" href="assets/css/styles.css"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+        <!-- Main link css -->
+        <link rel="stylesheet" href="assets/css/main.css">
+    
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
@@ -48,316 +56,564 @@
 
         gtag('config', 'G-W0ETPFC8LH');
     </script>
-    <body>
-        <!-- inicio navbar hecha con bootstrap -->
-        <nav class="navbar navbar-expand-sm navbar-dark autohide fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/img/logolblanca.png" alt="MJVT" width="100px">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Sobre-Mi">Sobre mi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Experiencia">Experiencia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Trabajos">Trabajos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Contacto">Contacto</a>
-                    </li>        
+
+    <body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <img src="assets/img/logolblanca.png" alt="MJVT" width="100px">
+            </a>
+
+    <!-- inicio navbar hecha con bootstrap -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#sobre_mi">Sobre mi</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#mini_soluciones">Mini Soluciones</a></li>
+                    <li><a href="#publicaciones">Publicaciones</a></li>
                 </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <a class="btn-getstarted" href="#contacto">Contacto</a>
+        </div>
+    </header>
+    <!-- fin navbar hecha con bootstrap -->
+    <main class="main">
+        <!-- inicio hero-section -->
+        <section id="hero" class="hero section light-background">
+            <img src="assets/img/profile/pexels-julia-m-cameron-4144294.jpg" alt="" data-aos="fade-in">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <h1>María José Villasante</h1>
+                <p>Soy <span class="typed" data-typed-items="Tech Strategist, Desarrolladora, Ingeniera Civil Industrial, Programadora"></span><span class="typed-cursor typed-cursor--blink"></span></p>
+                <div class="social-links">
+                <a href="https://github.com/MariaJoseVillasante" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://vosolutions.cl/" target="_blank"><i class="bi bi-globe"></i></a>
+                <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/MJVillasante" target="_blank"><i class="bi bi-twitter-x"></i></a>
                 </div>
             </div>
-        </nav>
-        <!-- fin navbar hecha con bootstrap -->
-        <!-- inicio hero-section -->
-        <header id="Hero-Section">
-            <div class="container text-center text-white">
-                <h1>María José Villasante</h1>
-                <hr class="hero-line mx-auto opacity-100">
-                <!-- <h1>Web & App Developer</h1> -->
-                <h1>Tech Strategist & Developer</h1>
-            </div>
-
-        </header>
+        </section>
         <!-- fin hero-section -->
+        
         <!-- inicio WhatsApp -->
         <!-- <a href="https://wa.me/000000000/?text=¡Hola%20María%20José!%20Me%20gustaría%20saber%20sobre%20..." target="_blank" class="btn-wsp link" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
             <img src="assets/img/whatsapp-svgrepo-com.svg" class="fa-brands fa-whatsapp link btn-wsp" alt="">
         </a> -->
         <!-- fin WhatsApp -->
+        
         <!-- inicio Mi descripción -->
-        <section id="Sobre-Mi" class="pt-5 container d-sm-block"> <!-- d-none -->
-            <div>
-                <h4 class="text-center fw-bold">
-                    Mi propósito es empoderar a emprendedores y pymes para que alcancen su máximo potencial en el entorno digital, mediante el desarrollo de soluciones web innovadoras y estrategias digitales efectivas. 
-                    <br><br>
-                    Mi objetivo es impulsar su éxito a través de tecnologías vanguardistas y enfoques estratégicos que generen un impacto tangible en sus negocios, permitiéndoles competir y crecer en el mundo digital con confianza y autonomía.                </h4>
-                <hr class="opacity-100 w-25 mx-auto">
-            </div>
-            <div class="row pt-3">
-                <div class="col-lg-6 col-sm-12">
-                    <p>
-                        Ingeniero Civil Industrial con +15 años de experiencia en el Sector Inmobiliario, Retail, Química y Salud Mental. Diplomada en Finanzas y en Sistemas Integrados de Gestión. 
-                        Certificada en Python, Machine Learning, Ruby on Rails, Ciberseguridad, Metodologías Ágiles, entre otras.
-                    </p>
-                    <p>
-                        Con sólidos conocimientos en programación, tecnología e inteligencia artificial te ayudo con mi experiencia en la Asesoría Estratégica y Gestión Empresarial identificando oportunidades para alinear tus objetivos y visión global de tu empresa. 
-                    </p>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <p>
-                        Con la Digitalización de Procesos aprovechando las metodologías ágiles para transformar los flujos de trabajo minimizando errores, reduciendo costos y acelerando la toma de decisiones. Y también con la Experiencia de Usuario diseñando roadmaps que prioricen la usabilidad y funcionalidad de tu sitio web, mejorando la interacción, retención y satisfacción del usuario. 
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- fin Mi descripción -->
-        <!-- inicio Mi Experiencia -->
-        <section id="Experiencia" class="py-5 container text-center">
-            <div>
-                <h1 class="fw-bold text-uppercase">mi experiencia en desarrollo</h1>
-                <hr class="opacity-100 mx-auto w-25">
-            </div>
-            <div class="row pt-3">
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/python-svgrepo-com.svg" alt="icono Python" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Python" class="iconos-exp">
-                </article>
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/html-svgrepo-com.svg" alt="Icono HTML5" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="HTML5" class="iconos-exp">
-                </article>
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/css-svgrepo-com.svg" alt="Icono css" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="css" class="iconos-exp">
-                </article>   
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/ruby-svgrepo-com.svg" alt="Icono Ruby" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Ruby" class="iconos-exp">
-                </article>  
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/rails-svgrepo-com.svg" alt="Icono Rails" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Rails" class="iconos-exp">
-                </article>
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/bootstrap-svgrepo-com.svg" alt="Icono Bootstrap" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Bootstrap" class="iconos-exp">
-                </article>              
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/javascript-logo-svgrepo-com.svg" alt="Icono Java Script" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Java Script" class="iconos-exp">
-                </article>
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/git-svgrepo-com.svg" alt="Icono Git" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Git" class="iconos-exp">
-                </article>
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/github-svgrepo-com.svg" alt="Github" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Github" class="iconos-exp">
-                </article>  
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/db-svgrepo-com.svg" alt="Icono Sql" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Sql" class="iconos-exp">
-                </article> 
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/aws-svgrepo-com.svg" alt="Icono Amazon Web Service" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Amazon Web Service" class="iconos-exp">
-                </article> 
-                <article class="col-lg-2 col-sm-4 col-4 mb-3">
-                    <img src="assets/img/nginx-svgrepo-com.svg" alt="Nginx" width="90px" data-bs-toggle="tooltip" data-bs-placement="left" title="Nginx" class="iconos-exp">
-                </article>
-            </div>
-        </section>
-        <!-- fin Mi Experiencia -->
-        <!-- inicio Mis últimos trabajos -->
-        <section id="Trabajos" class="py-5">
-            <div>
-                <h1 class="fw-bold text-center text-uppercase mt-2 text-white">Mis trabajos</h1>
-                <hr class="text-white opacity-100 mx-auto w-25">
-            </div>
+        <!-- Sobre Mi Section -->
+        <section id="sobre_mi" class="sobre_mi section">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-4 my-3">
-                        <!-- <a href="paginasYAplicacionesWeb.html" class="link"> -->
-                        <div class="card border-0">    
-                            <img src="assets/img/desarrolloWeb.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Páginas y Applicaciones Web</h4>
-                                <p class="card-text fw-light">
-                                    Puedes tener una Página o Aplicación Web totalmente a tu medida y con lo que necesites. ¿Sabes cual es la diferencia?
-                                </p>
-                            </div>
-                        </div>
-                        <!-- </a> -->
+                <div class="col-lg-7 content-col" data-aos="fade-up">
+                    <div class="content">
+                    <div class="agency-name">
+                        <h5>SOBRE MI</h5>
                     </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <!-- <a href="meet_coffee/index.html" class="link" target="_blank"> -->
-                        <div class="card border-0">    
-                            <img src="assets/img/ciberseguridad.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Ciberseguridad</h4>
-                                <p class="card-text fw-light">
-                                    Capacitarse y actuar frente a los riesgos de la Ciberseguridad es importante y responsabilidad de todos.
-                                </p>
-                                <!-- https://globalsign.ssllabs.com/index.html -->
-                            </div>
-                        </div>
-                        <!-- </a> -->
+
+                    <div class="main-heading">
+                        <h2>Lo que me inspira: <br>Crecimiento y Estrategia Digital</h2>
                     </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <!-- <a href="meet_coffee/index.html" class="link" target="_blank"> -->
-                        <div class="card border-0">    
-                            <img src="assets/img/sistemasDePago.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Sistemas de Pago</h4>
-                                <p class="card-text fw-light">
-                                    Tus clientes pueden pagar de manera segura a través de tu página. La información es encriptada.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- </a> -->
+
+                    <div class="divider"></div>
+
+                    <div class="description">
+                        <p>Mi propósito es empoderar a emprendedores y pymes para que alcancen su máximo potencial en el entorno digital, mediante el desarrollo de soluciones web innovadoras y estrategias digitales efectivas.&nbsp;</p>
+                        <div><br></div>
+                        <div>&nbsp;Mi objetivo es impulsar su éxito a través de tecnologías vanguardistas y enfoques estratégicos que generen un impacto tangible en sus negocios, permitiéndoles competir y crecer en el mundo digital con confianza y autonomía.</div>
+                        <p></p>
                     </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <!-- <a href="meet_coffee/index.html" class="link" target="_blank"> -->
-                        <div class="card border-0">    
-                            <img src="assets/img/votaciones.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Votaciones Online</h4>
-                                <p class="card-text fw-light">
-                                    Puedes hacer votaciones secretas online, personalizar la modalidad de la elección como quieras.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- </a> -->
+
+                    <div class="cta-button">
+                        <a href="#servicios" class="btn">
+                        <span class="">MIS SERVICIOS</span>
+                        <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <!-- <a href="meet_coffee/index.html" class="link" target="_blank"> -->
-                        <div class="card border-0">    
-                            <img src="assets/img/digitalizacion2.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Digitalización de Procesos</h4>
-                                <p class="card-text fw-light">
-                                    Automatizar tus procesos te permite reducir errores y tiempo de trabajo. Elimina tareas repetitivas.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- </a> -->
                     </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <!-- <a href="meet_coffee/index.html" class="link" target="_blank"> -->
-                        <div class="card border-0">    
-                            <img src="assets/img/users.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Control de Usuarios</h4>
-                                <p class="card-text fw-light">
-                                    Ten usuarios con distintos niveles de accesos para cuidar la seguridad de los datos.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- </a> -->
-                    </div>
-                    <!-- <div class="col-12 col-sm-4 my-3">
-                        <a href="ricomida/index.html" class="link" target="_blank">
-                            <div class="card border-0">
-                                <img src="assets/img/ricomida.png" class="card-img-top" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Ricomida</h4>
-                                    <p class="card-text fw-light">
-                                        Ejemplo de una página responsiva realizada con HTML, CSS, Bootstrap y JS.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-                    <!-- <div class="col-12 col-sm-4 my-3">
-                        <a href="viajes_chile/index.html" class="link" target="_blank">
-                            <div class="card border-0">
-                                <img src="assets/img/viajes_chile_azul3.png" class="card-img-top" alt="" style="width: 100%;">
-                                <div class="card-body">
-                                    <h4 class="card-title">Viajes Chile</h4>
-                                    <p class="card-text fw-light">
-                                        Ejemplo de una página responsiva realizada con HTML, CSS y Bootstrap.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-                    <!-- <div class="col-12 col-sm-4 my-3">
-                        <a href="suricata/index.html" class="link" target="_blank">
-                            <div class="card border-0">
-                                <img src="assets/img/suricata.png" class="card-img-top" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">Suricata</h4>
-                                    <p class="card-text fw-light">
-                                        Ejemplo de una página responsiva realizada con HTML, CSS y Bootstrap.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-                    <!-- <div class="col-12 col-sm-4 my-3">
-                        <a href="cuppon/index.html" class="link" target="_blank">
-                        <div class="card border-0">
-                            <img src="assets/img/cuppon.png" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Cuppon</h4>
-                                <p class="card-text fw-light">
-                                    Ejemplo de una página responsiva realizada con HTML, CSS y Bootstrap.
-                                </p>
-                            </div>
-                        </div>
-                        </a>
-                    </div> -->
-                    <!-- <div class="col-12 col-sm-4 my-3">
-                        <a href="meet_coffee/index.html" class="link" target="_blank">
-                        <div class="card border-0">    
-                            <img src="assets/img/meet_coffee.png" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Meet&Coffe</h4>
-                                <p class="card-text fw-light">
-                                    Página simple, sin responsividad, realizada con HTML y CSS.
-                                </p>
-                            </div>
-                        </div>
-                        </a>
-                    </div> -->
-                    <!-- <div class="col-12 col-sm-4 my-3">
-                        <a href="iguana_page/index.html" class="link" target="_blank">
-                        <div class="card border-0">
-                            <img src="assets/img/iguana_page.png" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Iguana Page</h4>
-                                <p class="card-text fw-light">
-                                    Página simple, sin responsividad, realizada con HTML y CSS.
-                                </p>
-                            </div>
-                        </div>
-                        </a>
-                    </div> -->
                 </div>
 
-            </div>
-        </section>
-        <!-- fin Mis últimos trabajos -->
-        <!-- inicio contacto -->
-        <section id="Contacto" class="container text-center py-5">
-            <div class="mb-5">
-                <h1 class="fw-bold text-uppercase">Contacto</h1>
-                <hr class="opacity-100 w-25 mx-auto">
-            </div>
-            <!-- <div>
-                <p>¿Quieres conocer más de mi?</p>
-                <a target="_blank" href="https://838xmntg7y0.typeform.com/to/eiISE5dy">
-                    <button class="btn bg-secondary text-white">Comenzar</button>
-                </a>               
-            </div> -->
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <h3>HOLA!</h3>
-                    <p>Cualquier inquietud que tengas no dudes en contactarme.<br> Puedes llenar el formulario y te responderé a la brevedad.<br> Ya estamos en contacto!
-                    </p>
-                    <img src="assets/img/pexels-cottonbro-3202235.jpg" alt="" width="50%" class="mt-5 shadow rounded">
+                <div class="col-lg-5" data-aos="zoom-out">
+                    <div class="visual-content">
+                    <div class="fluid-shape">
+                        <img src="assets/img/profile/perfil.jpg" alt="Abstract Fluid Shape" class="fluid-img">
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-number">
+                        <h2>Ver</h2>
+                        </div>
+                        <div class="stats-label">
+                        <p>Publicaciones</p>
+                        </div>
+                        <div class="stats-arrow">
+                        <a href="#publicaciones"><i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 p-5 border rounded shadow text-start ">
+                </div>
+            </div>
+        </section><!-- /Sobre Mi Section -->
+            <!-- fin Mi descripción -->
+        
+            <!-- insigmias digitales -->
+        <section id="clients-2" class="clients-2 section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Insignias Digitales</h2>
+            <div> </div>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+                {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                    "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                },
+                "breakpoints": {
+                    "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                    },
+                    "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                    },
+                    "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                    },
+                    "992": {
+                    "slidesPerView": 6,
+                    "spaceBetween": 120
+                    }
+                }
+                }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><a href="https://www.credly.com/badges/4a4dfa4e-cbed-4df3-856d-3205251ee218/public_url" target="_blank"><img src="assets/img/insignias/artificial-intelligence-fundamentals.png" class="img-fluid" alt="artificial-intelligence-fundamentals"></a></div>
+                <div class="swiper-slide"><a href="https://www.credly.com/badges/fd849d8b-f0a9-469a-81f5-f4ca4b916025/public_url" target="_blank"><img src="assets/img/insignias/agile-explorer.png" class="img-fluid" alt="agile-explorer"></a></div>
+                <div class="swiper-slide"><a href="https://www.credly.com/badges/0a16dfbc-c902-4fb0-aa89-457dc332fdaf/public_url" target="_blank"><img src="assets/img/insignias/certificado-de-ciberseguridad-de-google.png" class="img-fluid" alt="certificado-de-ciberseguridad-de-google"></a></div>
+                <div class="swiper-slide"><a href="https://www.acreditta.com/credential/661abe58-b679-4343-8d9c-5a906d1edb2d?utm_source=copy&resource_type=badge&resource=661abe58-b679-4343-8d9c-5a906d1edb2d" target="_blank"><img src="assets/img/insignias/product-o.webp" class="img-fluid" alt="product-o"></a></div>
+                <div class="swiper-slide"><a href="https://www.acreditta.com/credential/e093471f-32a7-4c95-8f14-4ac9f9ff44b0?utm_source=copy&resource_type=badge&resource=e093471f-32a7-4c95-8f14-4ac9f9ff44b0" target="_blank"><img src="assets/img/insignias/top-100-pioneros.webp" class="img-fluid" alt="agile-explorer"></a></div>
+                <div class="swiper-slide"><a href="https://www.credly.com/badges/82573da1-3f39-41d6-b5eb-7809454d82ae/public_url" target="_blank"><img src="assets/img/insignias/certificado-de-soporte-de-ti-de-google.png" class="img-fluid" alt="certificado-de-soporte-de-ti-de-google"></a></div>
+                <div class="swiper-slide"><a href="https://www.credly.com/badges/e20b8f70-f45d-4a9b-9329-f96947435286/public_url" target="_blank"><img src="assets/img/insignias/emprendimiento-digital-con-tecnologias-web.png" class="img-fluid" alt="emprendimiento-digital-con-tecnologias-web"></a></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/Insignia_E-Camp_ED-04.png" class="img-fluid" alt="AWS"></div>
+
+                <!-- <div class="swiper-slide"><img src="assets/img/insignias/aws-svgrepo-com.svg" class="img-fluid" alt="AWS"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/css-svgrepo-com.svg" class="img-fluid" alt="CSS"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/db-svgrepo-com.svg" class="img-fluid" alt="DB"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/git-svgrepo-com.svg" class="img-fluid" alt="Git"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/github-svgrepo-com.svg" class="img-fluid" alt="GitHub"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/javascript-logo-svgrepo-com.svg" class="img-fluid" alt="JavaScript"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/html-svgrepo-com.svg" class="img-fluid" alt="Html"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/nginx-svgrepo-com.svg" class="img-fluid" alt="Nginx"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/python-svgrepo-com.svg" class="img-fluid" alt="Python"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/ruby-svgrepo-com.svg" class="img-fluid" alt="Ruby"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/rails-svgrepo-com.svg" class="img-fluid" alt="Rails"></div>
+                <div class="swiper-slide"><img src="assets/img/insignias/bootstrap-svgrepo-com.svg" class="img-fluid" alt="Bootstrap"></div>
+             -->
+            </div>
+            <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+    </section><!-- /insignias digitales -->
+        <!-- Servicios Section -->
+    <section id="servicios" class="servicios section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>desarrollos destacados</h2>
+            <div><span>servicios de</span> <span class="description-title">desarrollo</span></div>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="program-card">
+                <div class="program-img">
+                    <img src="assets/img/servicios/desarrolloWeb.jpg" alt="Program" class="img-fluid">
+                    <div class="program-overlay">
+                    <a href="#servicios" class="btn-explore">Pronto ver mas</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3>Páginas y Applicaciones Web</h3>
+                    <p>
+                    Puedes tener una Página o Aplicación Web totalmente a tu medida y con lo que necesites. ¿Sabes cual es la diferencia?
+                    </p>
+                    <div class="program-meta">
+
+                    </div>
+                </div>
+                </div>
+            </div><!-- End Program Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="program-card">
+                <div class="program-img">
+                    <img src="assets/img/servicios/ciberseguridad.jpg" alt="Program" class="img-fluid">
+                    <div class="program-overlay">
+                    <a href="#servicios" class="btn-explore">Pronto ver mas</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3>Ciberseguridad</h3>
+                    <p>Capacitarse y actuar frente a los riesgos de la Ciberseguridad es importante y responsabilidad de todos.</p>
+                    <div class="program-meta">
+
+                    </div>
+                </div>
+                </div>
+            </div><!-- End Program Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="program-card">
+                <div class="program-img">
+                    <img src="assets/img/servicios/sistemasDePago.jpg" alt="Program" class="img-fluid">
+                    <div class="program-overlay">
+                    <a href="#servicios" class="btn-explore">Pronto ver mas</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3>Sistemas de Pago</h3>
+                    <p>Tus clientes pueden pagar de manera segura a través de tu página. La información es encriptada.</p>
+                    <div class="program-meta">
+
+                    </div>
+                </div>
+                </div>
+            </div><!-- End Program Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="program-card">
+                <div class="program-img">
+                    <img src="assets/img/servicios/votaciones.jpg" alt="Program" class="img-fluid">
+                    <div class="program-overlay">
+                    <a href="#servicios" class="btn-explore">Pronto ver mas</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3>Votaciones Online</h3>
+                    <p>Puedes hacer votaciones secretas online, personalizar la modalidad de la elección como quieras.</p>
+                    <div class="program-meta">
+
+                    </div>
+                </div>
+                </div>
+            </div><!-- End Program Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="program-card">
+                <div class="program-img">
+                    <img src="assets/img/servicios/digitalizacion2.jpg" alt="Program" class="img-fluid">
+                    <div class="program-overlay">
+                    <a href="#servicios" class="btn-explore">Pronto ver mas</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3>Digitalización de Procesos</h3>
+                    <p>Automatizar tus procesos te permite reducir errores y tiempo de trabajo. Elimina tareas repetitivas.</p>
+                    <div class="program-meta">
+                    </div>
+                </div>
+                </div>
+            </div><!-- End Program Item -->
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="program-card">
+                <div class="program-img">
+                    <img src="assets/img/servicios/users.jpg" alt="Program" class="img-fluid">
+                    <div class="program-overlay">
+                    <a href="#servicios" class="btn-explore">Pronto ver mas</a>
+                    </div>
+                </div>
+                <div class="program-content">
+                    <h3>Control de Usuarios</h3>
+                    <p>Ten usuarios con distintos niveles de accesos para cuidar la seguridad de los datos.</p>
+                    <div class="program-meta">
+
+                    </div>
+                </div>
+                </div>
+            </div><!-- End Program Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Servicios Section -->
+
+    <!-- Mini Soluciones Section -->
+    <section id="mini_soluciones" class="mini_soluciones section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Nuevo</h2>
+            <div><span>Revisa las</span> <span class="description-title">Mini Soluciones</span></div>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="service-header">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-12">
+                <div class="service-intro">
+                    <h2 class="service-heading">
+                    <div>Herramientas Digitales</div>
+                    <div><span>mejoras de eficinecia</span></div>
+                    </h2>
+                </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                <div class="service-summary">
+                    <p>
+                    Las mini soluciones son pequeñas herramientas digitales diseñadas para resolver problemas específicos de manera rápida y eficiente.&nbsp;</p>
+                    <div>Cada una está pensada para mejorar la productividad, facilitar cálculos complejos o proporcionar información relevante en tiempo real.&nbsp; Se vienen mas... </div>
+                    <p></p>
+                    <a href="#contacto" class="service-btn">
+                    ¿Sugerencias?
+                    <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                    <i class="bi bi-calculator"></i>
+                </div>
+                <a href="calculoProteinas.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                    <a href="calculoProteinas.html">
+                    Calculadora de <span>proteinas</span>
+                    </a>
+                </h3>
+                <p>
+                    Permite personalizar objetivos de ingesta diaria de proteinas según tu peso, esta calculado como 1,3 por kg, pero puedes modificar tu meta. Agregas cuanto has comido hoy y te lo calculará automáticamente.
+                </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                    <i class="bi bi-currency-dollar"></i>
+                </div>
+                <a href="valoresEconomicos.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                    <a href="valoresEconomicos.html">
+                    Boletas de <span>Honorarios</span>
+                    </a>
+                </h3>
+                <p>
+                    Visualiza el valor del dolar, UF y otros indicadores al día de hoy. También puedes calcular el valor en pesos según lo que cobres en UF en tu boleta, para que te dé el valor líquido que quieres.
+                </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                    <i class="bi bi-hourglass-split"></i>
+                </div>
+                <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                    <a href="service-details.html">
+                    Temporizador <span>Pomodoro</span>
+                    </a>
+                </h3>
+                <p>PRONTO...</p>
+                <div>Es una conocida herramienta que ayuda a mejorar el enfoque y productividad con intervalos de trabajo y descanso. Períodos de tiempo que se ha comprobado mejoran la productividad.</div>
+                <p></p>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+    </section><!-- /Mini Soluciones Section -->
+
+        <!-- Publicaciones Section -->
+    <section id="publicaciones" class="publicaciones section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Blog Posts</h2>
+            <div><span>Últimas</span> <span class="description-title">Publicaciones</span></div>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                
+            <!-- publicacion: agregar aal iframe class="container-fluid" y height="350" -->
+            <!-- inicio publicacion -->
+            <div class="col-lg-4">
+                <article class="position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                    <img src="assets/img/blog/blog-post-1.webp" class="img-fluid" alt="">
+                    <iframe  class="container-fluid" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7328508811982352384?collapsed=1" height="350" width="" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
+                <div class="meta d-flex align-items-end">
+                    <span class="post-date"><span>15</span>Mayo</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                    <h3 class="post-title">¡Así se vivió el Fintech Forum Chile 2025! "Donde la innovación se conecta con el futuro financiero"</h3>
+                    <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_ff25-fintechforum2025-innovaciaejnfinanciera-activity-7328875577258500096-BL9s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link"  target="_blank"><span>Ir a publicación</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+                </article>
+            </div><!-- End post list item -->
+
+            <!-- inicio publicacion -->
+            <div class="col-lg-4">
+                <article class="position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                    <img src="assets/img/blog/blog-post-1.webp" class="img-fluid" alt="">
+                    <iframe class="container-fluid" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7327861423022260224?collapsed=1" height="350" width="" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
+                <div class="meta d-flex align-items-end">
+                    <span class="post-date"><span>13</span>Mayo</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                    <h3 class="post-title">“Adventure Finance” de Aunnie Patton Power, un referente en modelos financieros alternativos para empresas de impacto.</h3>
+                    <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_adventurefinance-impactosocial-empresasdeimpacto-activity-7328056526869336067-To4x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link"  target="_blank"><span>Ir a publicación</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+                </article>
+            </div><!-- End post list item --><!-- inicio publicacion -->
+            <div class="col-lg-4">
+                <article class="position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                    <img src="assets/img/blog/blog-post-1.webp" class="img-fluid" alt="">
+                    <iframe class="container-fluid" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291179253902057473?collapsed=1" height="350" width="" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>                </div>
+                <div class="meta d-flex align-items-end">
+                    <span class="post-date"><span>25</span>Abril</span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                    <h3 class="post-title">
+                        ¿Por qué son esenciales las habilidades para el empleo?                    
+                    </h3>
+                    <a href="
+                        https://www.linkedin.com/posts/mariajosevillasantetapies_habilidades-para-el-empleo-activity-7323451098671767552-f5pw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA                        " 
+                    class="readmore stretched-link"  target="_blank"><span>Ir a publicación</span><i class="bi bi-arrow-right"></i></a>
+                </div>
+                </article>
+            </div><!-- End post list item -->
+
+            <!-- End post list item -->
+
+            </div>
+        </div>
+    </section><!-- /Publicaciones Section -->
+
+    <!-- Contacto Section -->
+        <section id="contacto" class="contacto section light-background">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Contacto</h2>
+            <div><span>formas de </span> <span class="description-title">Contacto</span></div>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="content" data-aos="fade-up" data-aos-delay="200">
+                <div class="section-category mb-3"></div>
+                <h2 class="display-5 mb-4">¡Hola!</h2>
+                <p class="lead mb-4">Cualquier inquietud que tengas no dudes en contactarme.
+                    Puedes llenar el formulario, mandarme un mail o escribirme en alguna de mis redes sociales, y te responderé a la brevedad. ¡Ya estamos en contacto!</p>
+
+                <div class="contact-info mt-5">
+                    <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-envelope-at me-3"></i>
+                    <span>hola@mariajosevillasante.cl</span>
+                    </div>
+
+                    <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://github.com/MariaJoseVillasante" target="_blank"><i class="bi bi-github me-3"></i></a>
+                    <span>@mariajosevillasante</span>
+                    </div>
+
+                    <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank"><i class="bi bi-linkedin me-3"></i></a>
+                    <span>@mariajosevillasante</span>
+                    </div>
+
+                    <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://twitter.com/MJVillasante" target="_blank"><i class="bi bi-twitter-x me-3"></i></a>
+                    <span>@MJVillasante</span>
+                    </div>
+                    <!-- 
+                <a href="#" class="map-link d-inline-flex align-items-center" data-aos="fade-up" data-aos-delay="600">
+                Open Map
+                <i class="bi bi-arrow-right ms-2"></i>
+                </a> -->
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-body p-4 p-lg-5">
+
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+                    
+                        <div class="row gy-4">
+
+                        <div class="col-12">
+                            <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required="">
+                        </div>
+
+                        <div class="col-12 ">
+                            <input type="email" class="form-control" name="email" placeholder="Tu Email" required="">
+                        </div>
+
+                        <div class="col-12">
+                            <input type="text" class="form-control" name="subject" placeholder="Asunto" required="">
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required=""></textarea>
+                        </div>
+
+                        <div class="col-12 text-center">
+                        <div class="loading">Cargando</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
+
+                        <button type="submit" class="btn btn-submit w-100">Enviar Mensaje</button>
+                        </div>
+
+                    </div>
                     <!-- https://formsubmit.co/ -->
-                    <form action="https://formsubmit.co/f27e32bfc1f114f01045953a68cb60b7" method="post" target="_blank" >
+                    <!-- <form action="https://formsubmit.co/f27e32bfc1f114f01045953a68cb60b7" method="post" target="_blank" >
                         <input type="hidden" name="_next" value="https://mariajosevillasante.github.io/mi_pagina/thanks.html">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
@@ -378,11 +634,22 @@
                         <div class="text-center">
                             <button class="btn btn-secondary" type="submit" >Enviar Mensaje</button>
                         </div>
+                    </form> -->
                     </form>
+
+                </div>
                 </div>
             </div>
-        </section>
-        <!-- fin contacto -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Contacto Section -->
+
+
+</main>
+    
         <!-- inicio contador de visitas -->
         <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
             <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&down=async&FCS_type=6254&FCS_coef=0.5&FCS_visi=1&FCS_clic=1&FCS_rest=standard_resc=000000&FCS_plus=100" async></script>
@@ -395,7 +662,7 @@
         <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
         <!-- fin contador de visitas -->
         <!-- inicio chatbot -->
-        <script>
+        <!-- <script>
             window.addEventListener('mouseover', initLandbot, { once: true });
             window.addEventListener('touchstart', initLandbot, { once: true });
             var myLandbot;
@@ -412,33 +679,26 @@
                 x.parentNode.insertBefore(s, x);
               }
             }
-            </script>
+            </script> -->
         <!-- fin chatbot -->
         <!-- inicio Footer -->
-        <footer id="Footer" class="text-center text-white py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col-12 col-sm-6"> -->
-                        <!-- <h1 class="fw-light text-capitalize">maría josé villasante</h1> -->
-                    <!-- </div> -->
-                        <div class="col-12  mt-2">
-                            <a href="https://github.com/MariaJoseVillasante" target="_blank">
-                            <i class="fa-brands fa-github-square fa-2x mx-2"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank">
-                            <i class="fa-brands fa-linkedin fa-2x mx-2"></i>
-                        </a>
-                        <a href="https://twitter.com/MJVillasante" target="_blank">
-                            <i class="fa-brands fa-twitter-square fa-2x mx-2"></i>
-                        </a>
-                        <a href="https://vosolutions.cl/" target="_blank">
-                            <i class="fa-solid fa-globe fa-2x mx-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- fin footer -->
+        <footer id="footer" class="footer position-relative dark-background">
+        <div class="container">
+        <div class="copyright text-center ">
+            <p>Con <i class="bi bi-suit-heart"></i><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+            <a href="https://github.com/MariaJoseVillasante" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/MJVillasante" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://vosolutions.cl/" target="_blank"><i class="bi bi-globe"></i></a>
+        </div>
+
+    </div>
+
+  </footer>
+        <!-- fin Footer -->
+        
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -457,12 +717,28 @@
             </div>
             </div>
         </div>
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/typed.js/typed.umd.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
         <!-- para que funcione js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+        
         <!-- para que funcione jquery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+        
         <!-- link al archivo js (nuestros script deben ser lo último)-->
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/main.js"></script>
+
         <!-- metricool -->
         <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"b01c35ed2594185602bcf96202c4eb00"})});</script>
     </body>

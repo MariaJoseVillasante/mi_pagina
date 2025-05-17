@@ -30,151 +30,663 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- font awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
-    <!-- link css -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 5vw;
-        }
-        table {
-            width: 100%;
-            /* margin: auto; */
-            border-collapse: collapse;
-            overflow-x: auto;
-            display: block;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        input {
-            width: 100px;
-            padding: 8px;
-            text-align: center;
-        }
-        #resultado {
-            margin-top: 20px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        #buscador {
-            margin-bottom: 20px;
-            padding: 5px;
-            width: 90%;
-        }
-    </style>
-</head>
- <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
- <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
+    
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-     gtag('config', 'G-W0ETPFC8LH');
- </script>
-<body>
-     <!-- inicio navbar hecha con bootstrap -->
-     <nav class="navbar navbar-expand-sm navbar-dark autohide fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
+    <!-- link css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        .ecommerce-cart {
+            /* // Cart Items Container */
+            .cart-items-container {
+                background-color: var(--surface-color);
+                border-radius: 0.75rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+                padding: 1.5rem;
+                transition: all 0.3s ease;
+
+                @media (max-width: 767.98px) {
+                padding: 1rem;
+                }
+
+                .cart-header {
+                border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.75rem;
+
+                h5 {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                    color: color-mix(in srgb, var(--default-color), transparent 30%);
+                }
+                }
+            }
+
+            /* // Cart Item */
+            .cart-item {
+                background-color: var(--surface-color);
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                position: relative;
+                transition: all 0.3s ease;
+                border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+                &:hover {
+                box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.07);
+                transform: translateY(-2px);
+                }
+
+                &:last-child {
+                margin-bottom: 0;
+                }
+
+                .product-info {
+                .product-image {
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: transform 0.3s ease;
+                    }
+
+                    &:hover img {
+                    transform: scale(1.05);
+                    }
+                }
+
+                .product-details {
+                    .product-title {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.25rem;
+                    color: var(--heading-color);
+                    }
+
+                    .product-variant {
+                    font-size: 0.85rem;
+                    color: color-mix(in srgb, var(--default-color), transparent 30%);
+                    }
+                }
+                }
+
+                .price-mobile {
+                font-size: 0.85rem;
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+                color: color-mix(in srgb, var(--default-color), transparent 30%);
+                }
+
+                .product-price, .product-total {
+                font-weight: 600;
+                color: var(--heading-color);
+                }
+
+                /* // Quantity Selector */
+                .quantity-selector {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+                width: fit-content;
+                margin: 0 auto;
+
+                @media (max-width: 767.98px) {
+                    margin: 0;
+                }
+
+                .quantity-btn {
+                    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+                    border: none;
+                    color: var(--default-color);
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 2rem;
+                    width: 2rem;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                    background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+                    color: var(--accent-color);
+                    }
+
+                    &:active {
+                    transform: scale(0.95);
+                    }
+                }
+
+                .quantity-input {
+                    background-color: var(--surface-color);
+                    border: none;
+                    color: var(--default-color);
+                    font-weight: 600;
+                    height: 2rem;
+                    text-align: center;
+                    width: 2.5rem;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+
+                    &:focus {
+                    outline: none;
+                    }
+                }
+                }
+
+                /* // Remove Item Button */
+                .remove-item {
+                background-color: transparent;
+                border: none;
+                color: color-mix(in srgb, var(--default-color), transparent 30%);
+                cursor: pointer;
+                font-size: 0.85rem;
+                padding: 0.25rem 0;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: #dc3545;
+                }
+
+                i {
+                    font-size: 1rem;
+                }
+                }
+            }
+
+            /* // Cart Actions */
+            .cart-actions {
+                .continue-shopping, .update-cart {
+                background-color: transparent;
+                border: none;
+                color: var(--accent-color);
+                cursor: pointer;
+                font-size: 0.9rem;
+                font-weight: 500;
+                padding: 0.5rem 0;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+                }
+
+                i {
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover i {
+                    transform: translateX(-3px);
+                }
+                }
+
+                .update-cart {
+                &:hover i {
+                    transform: rotate(45deg);
+                }
+                }
+            }
+
+            /* // Cart Summary */
+            .cart-summary {
+                background-color: var(--surface-color);
+                border-radius: 0.75rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+                padding: 1.5rem;
+                position: sticky;
+                top: 2rem;
+                transition: all 0.3s ease;
+
+                @media (max-width: 991.98px) {
+                position: relative;
+                top: 0;
+                }
+
+                .summary-title {
+                color: var(--heading-color);
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 1.25rem;
+                }
+
+                .summary-item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.75rem;
+
+                .summary-label {
+                    color: color-mix(in srgb, var(--default-color), transparent 30%);
+                    font-size: 0.95rem;
+                }
+
+                .summary-value {
+                    color: var(--heading-color);
+                    font-size: 0.95rem;
+                    font-weight: 500;
+                }
+
+                &.total {
+                    margin-top: 0.75rem;
+                    margin-bottom: 0;
+
+                    .summary-label, .summary-value {
+                    color: var(--heading-color);
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    }
+                }
+                }
+
+                .summary-divider {
+                background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+                height: 1px;
+                margin: 1rem 0;
+                width: 100%;
+                }
+
+                /* // Promo Code */
+                .promo-code {
+                .form-control {
+                    background-color: var(--surface-color);
+                    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+                    border-radius: 0.5rem 0 0 0.5rem;
+                    color: var(--default-color);
+                    font-size: 0.9rem;
+                    height: 2.75rem;
+                    padding: 0.5rem 1rem;
+
+                    &:focus {
+                    border-color: var(--accent-color);
+                    box-shadow: none;
+                    }
+
+                    &::placeholder {
+                    color: color-mix(in srgb, var(--default-color), transparent 50%);
+                    }
+                }
+
+                .btn-apply {
+                    background-color: var(--accent-color);
+                    border: none;
+                    border-radius: 0 0.5rem 0.5rem 0;
+                    color: var(--contrast-color);
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    height: 2.75rem;
+                    padding: 0.5rem 1rem;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+                    }
+
+                    &:active {
+                    transform: scale(0.98);
+                    }
+                }
+                }
+
+                /* // Checkout Button */
+                .btn-checkout {
+                background-color: var(--accent-color);
+                border: none;
+                border-radius: 0.5rem;
+                color: var(--contrast-color);
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 0.75rem 1.5rem;
+                transition: all 0.3s ease;
+                width: 100%;
+
+                &:hover {
+                    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+                    transform: translateY(-2px);
+                    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: none;
+                }
+                }
+
+                /* // Payment Methods */
+                .payment-methods {
+                .payment-icon {
+                    color: color-mix(in srgb, var(--default-color), transparent 40%);
+                    font-size: 1.5rem;
+                    margin: 0 0.5rem;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                    color: var(--accent-color);
+                    transform: translateY(-2px);
+                    }
+                }
+                }
+            }
+
+            /* // Responsive Adjustments */
+            @media (max-width: 767.98px) {
+                .cart-item {
+                .product-info {
+                    .product-image {
+                    width: 4rem;
+                    height: 4rem;
+                    }
+
+                    .product-details {
+                    .product-title {
+                        font-size: 0.9rem;
+                    }
+
+                    .product-variant {
+                        font-size: 0.8rem;
+                    }
+                    }
+                }
+                }
+            }
+
+            /* // Animation for new items */
+            @keyframes fadeInUp {
+                from {
+                opacity: 0;
+                transform: translateY(20px);
+                }
+                to {
+                opacity: 1;
+                transform: translateY(0);
+                }
+            }
+
+            .cart-item {
+                animation: fadeInUp 0.5s ease-out;
+            }
+
+            /* // Animation for removing items */
+            .cart-item.removing {
+                animation: fadeOutDown 0.5s ease-out forwards;
+            }
+
+            @keyframes fadeOutDown {
+                from {
+                opacity: 1;
+                transform: translateY(0);
+                }
+                to {
+                opacity: 0;
+                transform: translateY(20px);
+                height: 0;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                }
+            }
+
+            /* // Swiper wrapper height fix */
+            .swiper-wrapper {
+                height: auto !important; 
+            }
+            }
+                </style>
+            </head>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-W0ETPFC8LH');
+</script>
+
+<body class="index-page">   
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            
+            <a href="/index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <img src="assets/img/logolblanca.png" alt="MJVT" width="100px">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Sobre-Mi">Sobre mi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Experiencia">Experiencia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Trabajos">Trabajos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Contacto">Contacto</a>
-                </li>        
-            </ul>
+
+    <!-- inicio navbar hecha con bootstrap -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/#hero" class="active">Home</a></li>
+                    <li><a href="/#sobre_mi">Sobre mi</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/#mini_soluciones">Mini Soluciones</a></li>
+                    <li><a href="/#publicaciones">Publicaciones</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <a class="btn-getstarted" href="/#contacto">Contacto</a>
+        </div>
+    </header>
+    <!-- fin navbar hecha con bootstrap -->
+    <main class="main">
+        <!-- inicio título -->
+        <div class="page-title">
+            <div class="breadcrumbs">
+                <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/#hero"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
+                    <li class="breadcrumb-item active current">CalculoProteinas</li>
+                </ol>
+                </nav>
+            </div>
+            <div class="title-wrapper mx-5">
+                <h1>Calculadora de Proteinas</h1>
+                <p>Sólo son valores referenciales, agrega lo que has comido hoy y se calcula automáticamente la cantidad aproximada de proteínas que necesitas calculando el peso * 1,3gr/Kg y te indicará cuantas proteínas llevas y cuantas te faltan. Puedes modificar las proteínas objetivo si quieres.</p>
+            </div>
+            </div>
+            <!-- fin título -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Instrucciones</h2>
+                <p>Escribe la cantidad de alimentos que consumiste hoy, puedes ir borrando los alimentos que no consumiste (no te preocupes que eso lo puedes restaurar). Luego anota tu peso en kg y te calculará tu cantidad de proteinas objetivo, si no estas de acuerdo ese monto lo puedes cambiar. La tabla te dira si lograste tu meta o no y el monto total de proteínas.</p>
+            </div>
+            <!-- <p id="resultado">Total de proteínas: 0 g</p>
+            <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()"> <br> -->
+            <!-- inicio nueva tabla--- -->
+            <section id="ecommerce-cart" class="ecommerce-cart section">
+                <slot type="section-title"></slot>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <!-- inicio commerce card -->
+                    <div class="ecommerce-cart-3">
+                        <div class="row g-4">
+                            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
+                            <div class="cart-items-container">
+                                <div class="cart-header d-none d-lg-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-5"><h5>Alimento</h5></div>
+                                        <div class="col-lg-2 text-center"><h5>Proteína</h5></div>
+                                        <div class="col-lg-2 text-center"><h5>Cantidad</h5></div>
+                                        <div class="col-lg-2 text-center"><h5>Total Proteína</h5></div>
+                                        <div class="col-lg-1 text-center"><h5>Borrar</h5></div>
+                                    </div>
+                                </div>
+                                
+                                <div id="listaAlimentos"></div>
+                                
+                                <!-- Botón para restaurar la lista -->
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-apply" onclick="restaurarLista()">Restaurar Lista</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin commerce cart -->
+                    <!-- Cart Summary Column -->
+                    <div class="col-lg-4 mt-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cart-summary">
+                            <div class="promo-code my-4">
+                        <h4 class="summary-title">Peso en kg:</h4>
+                        <div class="input-group">
+                            <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()" min="0" step="0.1" class="form-control" aria-label="Promo code">
+                            <button class="btn btn-apply" type="button">Calcular</button>
+                        </div>
+                    </div>
+                    <div class="promo-code my-4">
+                <h4 class="summary-title">Proteinas objetivo:</h4>
+                <div class="input-group">
+                    <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()" min="0" step="1" class="form-control" aria-label="Promo code">
+                    <div id="metaProteinas"></div>
+                    <button class="btn btn-apply" type="button">Calcular</button>
+                </div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item total">
+                <span class="summary-label">Total:</span>
+                <span id="resultado" class="summary-value"> 0 g</span>
             </div>
         </div>
-    </nav>
-    <!-- fin navbar hecha con bootstrap -->
-    <h1>Calculadora de Proteínas</h1>
-    <p>Sólo son valores referenciales, agrega lo que has comido hoy y se calcula automáticamente la cantidad aproximada de proteínas que necesitas calculando el peso * 1,3gr/Kg <br>y te indicará cuantas proteínas llevas y cuantas te faltan</p>
-    Peso en kg: <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()">
-    <label for="proteinasObjetivo"> Proteínas objetivo (g):</label>
-    <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()">
-    <p id="metaProteinas"></p>
-    <br>
-    <p id="resultado">Total de proteínas: 0 g</p>
-    <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()"> <br>
-    <table>
-        <thead>
-            <tr>
-                <th> </th>
-                <th>Alimento</th>
-                <th>Proteína por 100g (g) / unidad</th>
-                <th>Cantidad Consumida</th>
-            </tr>
-        </thead>
-        <tbody id="tabla-proteinas">
-            <tr><td rowspan="9">Desayuno o colaciones</td>
-                <td>Frutos secos</td><td>15 g por 100g</td><td><input type="number" value="0" data-proteina="15" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr>
-                <td>Huevo</td><td>6 g por unidad</td><td><input type="number" value="0" data-proteina="6" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-            <tr><td>Leche</td><td>3.4 g por 100ml</td><td><input type="number" value="0" data-proteina="3.4" oninput="calcularProteinas()" placeholder="ml"> ml</td></tr>
-            <tr><td>Pechuga de Pavo</td><td>1.9 g por unidad</td><td><input type="number" value="0" data-proteina="1.9" data-tipo="unidad" oninput="calcularProteinas()"> lámina</td></tr>
-            <tr><td>Queso fresco</td><td>14 g por 100g</td><td><input type="number" value="0" data-proteina="14" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Queso mantecoso</td><td>21 g por 100g</td><td><input type="number" value="0" data-proteina="21" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Queso mantecoso (lámina)</td><td>6.5 g por lámina</td><td><input type="number" value="0" data-proteina="6.5" data-tipo="unidad" oninput="calcularProteinas()"> lámina</td></tr>
-            <tr><td>Scoop de proteína</td><td>25 g por scoop</td><td><input type="number" value="0" data-proteina="25" data-tipo="unidad" oninput="calcularProteinas()"> scoops</td></tr>
-            <tr><td>Yogurt protein</td><td>10 g por unidad</td><td><input type="number" value="0" data-proteina="10" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-            
-            <tr><td rowspan="16">Comida</td>
-                <td>Arroz</td><td>5 g por taza</td><td><input type="number" value="0" data-proteina="5" data-tipo="unidad" oninput="calcularProteinas()"> taza</td></tr>
-                <tr><td>Carne de res</td><td>26 g por 100g</td><td><input type="number" value="0" data-proteina="26" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Edamame</td><td>11 g por 100g</td><td><input type="number" value="0" data-proteina="11" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Erizos</td><td>13 g por 100g</td><td><input type="number" value="0" data-proteina="13" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Espinacas</td><td>2.9 g por 100g</td><td><input type="number" value="0" data-proteina="2.9" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Garbanzos</td><td>19 g por 100g</td><td><input type="number" value="0" data-proteina="19" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Lentejas</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Ostras</td><td>9 g por unidad</td><td><input type="number" value="0" data-proteina="9" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-                <tr><td>Papas</td><td>4 g por unidad</td><td><input type="number" value="0" data-proteina="4" data-tipo="unidad" oninput="calcularProteinas()"> unidad</td></tr>
-                <tr><td>Pavo</td><td>29 g por 100g</td><td><input type="number" value="0" data-proteina="29" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Pollo</td><td>27 g por 100g</td><td><input type="number" value="0" data-proteina="27" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Porotos</td><td>9 g por 100g</td><td><input type="number" value="0" data-proteina="9" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Porotos Negros</td><td>21.6 g por 100g</td><td><input type="number" value="0" data-proteina="21.6" oninput="calcularProteinas()"> gramos</td></tr>
-                <tr><td>Reineta</td><td>19 g por 100g</td><td><input type="number" value="0" data-proteina="19" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Salmon</td><td>20 g por 100g</td><td><input type="number" value="0" data-proteina="20" oninput="calcularProteinas()"> gramos</td></tr>
-            <tr><td>Tofu</td><td>8 g por 100g</td><td><input type="number" value="0" data-proteina="8" oninput="calcularProteinas()"> gramos</td></tr>
-        </tbody>
-    </table>
-    <!-- <p id="resultado">Total de proteínas: 0 g</p> -->
-    <!-- inicio contador de visitas -->
-    <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
-        <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&down=async&FCS_type=6254&FCS_coef=0.5&FCS_visi=1&FCS_clic=1&FCS_rest=standard_resc=000000&FCS_plus=100" async></script>
-        <noscript>
-            <a href="https://www.contadorvisitasgratis.com" title="contadores de visitas">
-                <img src="https://counter8.optistats.ovh/private/contadorvisitasgratis.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" border="0" title="contadores de visitas" alt="contadores de visitas">
-            </a>
-        </noscript>
+        <!-- fin cart summary -->
+</div>
+        </div>
+        </div>
     </div>
-    <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
-    <!-- fin contador de visitas -->
-    <script>
+
+</section>
+        <script>
+            const alimentosOriginales = [
+                { nombre: "Frutos secos", proteina: 15, tipo: "gramos" },
+                { nombre: "Huevo", proteina: 6, tipo: "unidad" },
+                { nombre: "Leche", proteina: 3.4, tipo: "ml" },
+                { nombre: "Pechuga de Pavo", proteina: 1.9, tipo: "lámina" },
+                { nombre: "Queso fresco", proteina: 14, tipo: "gramos" },
+                { nombre: "Queso mantecoso", proteina: 21, tipo: "gramos" },
+                { nombre: "Queso mantecoso (lámina)", proteina: 6.5, tipo: "lámina" },
+                { nombre: "Scoop de proteína", proteina: 25, tipo: "scoop" },
+                { nombre: "Yogurt protein", proteina: 10, tipo: "unidad" },
+                { nombre: "Taza Arroz", proteina: 5, tipo: "unidad" },
+                { nombre: "Carne de res", proteina: 26, tipo: "gramos" },
+                { nombre: "Edamame", proteina: 11, tipo: "gramos" },
+                { nombre: "Erizos", proteina: 13, tipo: "gramos" },
+                { nombre: "Espinacas", proteina: 2.9, tipo: "gramos" },
+                { nombre: "Garbanzos", proteina: 19, tipo: "gramos" },
+                { nombre: "Lentejas", proteina: 9, tipo: "gramos" },
+                { nombre: "Ostras", proteina: 9, tipo: "unidad" },
+                { nombre: "Papas", proteina: 4, tipo: "unidad" },
+                { nombre: "Pavo", proteina: 29, tipo: "gramos" },
+                { nombre: "Pollo", proteina: 27, tipo: "gramos" },
+                { nombre: "Porotos", proteina: 9, tipo: "gramos" },
+                { nombre: "Porotos Negros", proteina: 21.6, tipo: "gramos" },
+                { nombre: "Reineta", proteina: 19, tipo: "gramos" },
+                { nombre: "Salmón", proteina: 20, tipo: "gramos" },
+                { nombre: "Tofu", proteina: 29, tipo: "gramos" },
+                { nombre: "Pavo", proteina: 8, tipo: "gramos" },
+            ];
+            let alimentos = [...alimentosOriginales]; // Copia para modificar
+
+            function generarListaAlimentos() {
+                let container = document.getElementById("listaAlimentos");
+                container.innerHTML = "";
+
+                alimentos.forEach((alimento, index) => {
+                    let item = document.createElement("div");
+                    item.className = "cart-item";
+                    item.setAttribute("data-aos", "fade-up");
+                    item.setAttribute("data-aos-delay", 200 + index * 50);
+                    item.innerHTML = `
+                        <div class="row align-items-center g-3">
+                            <div class="col-lg-5">
+                                <div class="product-info d-flex align-items-center">
+                                    <div class="product-details ms-3">
+                                        <h5 class="product-title">${alimento.nombre}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-2 text-lg-center">
+                                <div class="product-price">${alimento.proteina} g por ${alimento.tipo}</div>
+                            </div>
+                            <div class="col-6 col-lg-2 text-lg-center">
+                                <div class="quantity-selector">
+                                    <input type="number" data-proteina="${alimento.proteina}" 
+                                        oninput="calcularProteinas(this)" 
+                                        class="quantity-input" value="0" min="0">
+                                    <div>${alimento.tipo}</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-2 text-lg-center">
+                                <div class="product-total" id="total-${index}">0 g</div>
+                            </div>
+                            <div class="col-6 col-lg-1 text-lg-center">
+                                <button class="btn btn-danger btn-sm" onclick="eliminarAlimento(${index})">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(item);
+                });
+            }
+
+            function calcularProteinas(input) {
+                let proteinaPorUnidad = parseFloat(input.getAttribute("data-proteina"));
+                let cantidad = parseFloat(input.value) || 0;
+                let totalProteina = proteinaPorUnidad * cantidad;
+                let totalDisplay = input.closest(".row").querySelector(".product-total");
+                totalDisplay.textContent = `${totalProteina.toFixed(2)} g`;
+            }
+
+            function eliminarAlimento(index) {
+                alimentos.splice(index, 1);
+                generarListaAlimentos();
+            }
+
+            function restaurarLista() {
+                alimentos = [...alimentosOriginales]; // Restaurar la lista inicial
+                generarListaAlimentos();
+            }
+
+            // Generar la lista al cargar la página
+            window.onload = generarListaAlimentos;
+
+        </script>
+        <!-- fin nueva tabla--- -->
+       
+        <!-- <p id="resultado">Total de proteínas: 0 g</p> -->
+        <!-- inicio contador de visitas -->
+        <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
+            <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&down=async&FCS_type=6254&FCS_coef=0.5&FCS_visi=1&FCS_clic=1&FCS_rest=standard_resc=000000&FCS_plus=100" async></script>
+            <noscript>
+                <a href="https://www.contadorvisitasgratis.com" title="contadores de visitas">
+                    <img src="https://counter8.optistats.ovh/private/contadorvisitasgratis.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" border="0" title="contadores de visitas" alt="contadores de visitas">
+                </a>
+            </noscript>
+        </div>
+        <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
+        <!-- fin contador de visitas -->
+        <script>
         function actualizarMetaProteinas() {
         let peso = parseFloat(document.getElementById('peso').value) || 0;
         let metaProteinas = peso * 1.3;
@@ -207,44 +719,64 @@
     }
 
     function filtrarAlimentos() {
-        let filtro = document.getElementById('buscador').value.toLowerCase();
-        document.querySelectorAll('#tabla-proteinas tr').forEach(row => {
-            let texto = row.innerText.toLowerCase();
-            row.style.display = texto.includes(filtro) ? '' : 'none';
-        });
-    }
+    let filtro = document.getElementById('buscador').value.toLowerCase();
+    let filas = document.querySelectorAll('#tabla-proteinas tr');
+    let primeraCelda = document.querySelector("thead th:first-child");
+
+    let hayResultados = false;
+
+    filas.forEach(row => {
+        let texto = row.innerText.toLowerCase();
+        if (texto.includes(filtro)) {
+            row.style.display = "";
+            hayResultados = true;
+        } else {
+            row.style.display = "none";
+        }
+    });
+
+    // Ocultar la primera celda si hay resultados de búsqueda
+    primeraCelda.style.display = hayResultados ? "none" : "";
+}
     </script>
-    <!-- inicio Footer -->
-    <footer id="Footer" class="text-center text-white py-5">
-        <div class="container">
-            <div class="row">
-                <!-- <div class="col-12 col-sm-6"> -->
-                    <!-- <h1 class="fw-light text-capitalize">maría josé villasante</h1> -->
-                <!-- </div> -->
-                    <div class="col-12  mt-2">
-                        <a href="https://github.com/MariaJoseVillasante" target="_blank">
-                        <i class="fa-brands fa-github-square fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank">
-                        <i class="fa-brands fa-linkedin fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://twitter.com/MJVillasante" target="_blank">
-                        <i class="fa-brands fa-twitter-square fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://vosolutions.cl/" target="_blank">
-                        <i class="fa-solid fa-globe fa-2x mx-2"></i>
-                    </a>
-                </div>
-            </div>
+</main>
+<!-- inicio Footer -->
+<footer id="footer" class="footer position-relative dark-background">
+    <div class="container">
+        <div class="copyright text-center ">
+            <p>Con <i class="bi bi-suit-heart"></i><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
         </div>
-    </footer>
+        <div class="social-links d-flex justify-content-center">
+            <a href="https://github.com/MariaJoseVillasante" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/MJVillasante" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://vosolutions.cl/" target="_blank"><i class="bi bi-globe"></i></a>
+        </div>
+    </div>
+</footer>
     <!-- fin footer -->
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <!-- para que funcione js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+    
     <!-- para que funcione jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+        
     <!-- link al archivo js (nuestros script deben ser lo último)-->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
+
     <!-- metricool -->
     <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"b01c35ed2594185602bcf96202c4eb00"})});</script>
  

@@ -34,14 +34,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
     <!-- link css -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
@@ -52,49 +60,46 @@
 
         gtag('config', 'G-W0ETPFC8LH');
     </script>
-<body>
-    <!-- inicio navbar hecha con bootstrap -->
-    <nav class="navbar navbar-expand-sm navbar-dark autohide fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
+<body  class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <img src="assets/img/logolblanca.png" alt="MJVT" width="100px">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Sobre-Mi">Sobre mi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Experiencia">Experiencia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Trabajos">Trabajos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#Contacto">Contacto</a>
-                </li>        
-            </ul>
-            </div>
+
+    <!-- inicio navbar hecha con bootstrap -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#sobre_mi">Sobre mi</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#mini_soluciones">Mini Soluciones</a></li>
+                    <li><a href="#publicaciones">Publicaciones</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <a class="btn-getstarted" href="#contacto">Contacto</a>
         </div>
-    </nav>
+    </header>
     <!-- fin navbar hecha con bootstrap -->
-    <div class="container my-5 ">
-        <div class="row justify-content-center mb-5">
-            <div class="col-5 card text-white card-color border rounded m-5 p-0" >
-                <img src="assets/img/pexels-pnw-production-8251167.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-title">Gracias por contactarme!</p>
-                    <p class="card-text">Me pondré en contacto pronto</p>
+    <main class="main">
+
+        <div class="container my-5 ">
+            <div class="row justify-content-center mb-5">
+                <div class="col-5 card text-white card-color border rounded m-5 p-0" >
+                    <img src="assets/img/pexels-pnw-production-8251167.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-title">Gracias por contactarme!</p>
+                        <p class="card-text">Me pondré en contacto pronto</p>
+                    </div>
                 </div>
             </div>
+            <div class="text-center">
+                <button id="cierre" class="btn btn-secondary">Cerrar Ventana</button>
+            </div>
         </div>
-        <div class="text-center">
-            <button id="cierre" class="btn btn-secondary">Cerrar Ventana</button>
-        </div>
-    </div>
+    </main>
 <!-- inicio contador de visitas -->
 <div id="sfcxsfq5at5f2ke9fmdxh3qqu6w56kqh8ka" class="pe-none d-flex justify-content-center">
     <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&down=async&FCS_type=6254&FCS_coef=0.5&FCS_visi=1&FCS_clic=1&FCS_rest=standard_resc=000000&FCS_plus=100" async></script>

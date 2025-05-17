@@ -48,25 +48,3 @@ $(document).ready(function(){
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-// inicio calculadora de proteinas 
-function filtrarAlimentos() {
-    let filtro = document.getElementById('buscador').value.toLowerCase();
-    let filas = document.querySelectorAll('#tabla-proteinas tr');
-    let primeraCelda = document.querySelector("thead th:first-child");
-
-    let hayResultados = false;
-
-    filas.forEach(row => {
-        let texto = row.innerText.toLowerCase();
-        if (texto.includes(filtro)) {
-            row.style.display = "";
-            hayResultados = true;
-        } else {
-            row.style.display = "none";
-        }
-    });
-
-    // Ocultar la primera celda si hay resultados de búsqueda
-    primeraCelda.style.display = hayResultados ? "none" : "";
-}
-// fin calculadora de proteinas 
