@@ -83,20 +83,16 @@
         </div>
     </header>
     <!-- fin navbar hecha con bootstrap -->
-    <main class="main">
+    <main class="">
 
         <div class="container my-5 ">
             <div class="row justify-content-center mb-5">
                 <div class="col-5 card text-white card-color border rounded m-5 p-0" >
-                    <img src="assets/img/pexels-pnw-production-8251167.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-title">Gracias por contactarme!</p>
-                        <p class="card-text">Me pondré en contacto pronto</p>
-                    </div>
+                    <img src="assets/img/pexels-pnw-production-8251167.jpg" class="card-img-top" alt="Thanks">
                 </div>
             </div>
             <div class="text-center">
-                <button id="cierre" class="btn btn-secondary">Cerrar Ventana</button>
+                <button id="cierre" class="btn btn-secondary">Gracias por Contactarte!</button>
             </div>
         </div>
     </main>
@@ -111,41 +107,47 @@
 </div>
 <!-- https://www.contadorvisitasgratis.com/geozoom.php?c=xsfq5at5f2ke9fmdxh3qqu6w56kqh8ka&base=counter8 -->
 <!-- fin contador de visitas -->
-<!-- inicio Footer -->
-<footer id="Footer" class="text-center text-white py-5">
-    <div class="container">
-        <div class="row">
-            <!-- <div class="col-12 col-sm-6"> -->
-                <!-- <h1 class="fw-light text-capitalize">maría josé villasante</h1> -->
-            <!-- </div> -->
-                <div class="col-12  mt-2">
-                    <a href="https://github.com/MariaJoseVillasante" target="_blank">
-                    <i class="fa-brands fa-github-square fa-2x mx-2"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank">
-                    <i class="fa-brands fa-linkedin fa-2x mx-2"></i>
-                </a>
-                <a href="https://twitter.com/MJVillasante" target="_blank">
-                    <i class="fa-brands fa-twitter-square fa-2x mx-2"></i>
-                </a>
-                <a href="https://vosolutions.cl/" target="_blank">
-                    <i class="fa-solid fa-globe fa-2x mx-2"></i>
-                </a>
-            </div>
+ <!-- inicio Footer -->
+        <footer id="footer" class="footer position-relative dark-background">
+        <div class="container">
+        <div class="copyright text-center ">
+            <p>Con <i class="bi bi-suit-heart"></i><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
         </div>
-    </div>
-</footer>
-<!-- fin footer -->
+        <div class="social-links d-flex justify-content-center">
+            <a href="https://github.com/MariaJoseVillasante" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/MJVillasante" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://vosolutions.cl/" target="_blank"><i class="bi bi-globe"></i></a>
+        </div>
 
-<!-- para que funcione js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-<!-- para que funcione jquery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<!-- link al archivo js (nuestros script deben ser lo último)-->
-<script src="assets/js/script.js"></script>
+    </div>
+
+  </footer>
+        <!-- fin Footer -->
+
+
+<!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <!-- para que funcione js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+    
+    <!-- para que funcione jquery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+        
+    <!-- link al archivo js (nuestros script deben ser lo último)-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- metricool -->
+    <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"b01c35ed2594185602bcf96202c4eb00"})});</script>
+ 
 </body>
 
 </html>

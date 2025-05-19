@@ -380,7 +380,7 @@
                 <div class="service-intro">
                     <h2 class="service-heading">
                     <div>Herramientas Digitales</div>
-                    <div><span>mejoras de eficinecia</span></div>
+                    <div><span>mejoras de eficiencia</span></div>
                     </h2>
                 </div>
                 </div>
@@ -582,43 +582,39 @@
             <div class="col-lg-6">
                 <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-body p-4 p-lg-5">
-
-                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-                    
-                        <div class="row gy-4">
-
+                    <form  action="https://formsubmit.co/f27e32bfc1f114f01045953a68cb60b7" method="post" target="_blank" class="php-email-form">
+                        <!-- https://formsubmit.co/ -->
+                    <div class="row gy-4">
+                        <input type="hidden" name="_next" value="https://mariajosevillasante.github.io/mi_pagina/thanks.html">
                         <div class="col-12">
-                            <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required="">
+                            <input type="text" name="name" class="form-control" id="exampleFormControlInput1" aria-label="nombre" placeholder="Tu Nombre" required="">
                         </div>
 
                         <div class="col-12 ">
-                            <input type="email" class="form-control" name="email" placeholder="Tu Email" required="">
+                            <input type="email" class="form-control" name="email" id="exampleFormControlInput2" placeholder="Tu Email" required="">
                         </div>
-
                         <div class="col-12">
-                            <input type="text" class="form-control" name="subject" placeholder="Asunto" required="">
+                            <input type="text" class="form-control" name="subject" id="exampleFormControlInput1" placeholder="Asunto" >
                         </div>
-
                         <div class="col-12">
-                            <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required=""></textarea>
+                            <textarea class="form-control" name="message" rows="6" id="exampleFormControlTextarea1" placeholder="Mensaje" required=""></textarea>
                         </div>
-
                         <div class="col-12 text-center">
-                        <div class="loading">Cargando</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
-
-                        <button type="submit" class="btn btn-submit w-100">Enviar Mensaje</button>
+                            <!-- <div class="loading">Cargando</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div> -->
+                            <button type="submit" class="btn btn-submit w-100">Enviar Mensaje</button>
                         </div>
-
                     </div>
                     <!-- https://formsubmit.co/ -->
-                    <!-- <form action="https://formsubmit.co/f27e32bfc1f114f01045953a68cb60b7" method="post" target="_blank" >
+                    <!-- 
+                    <form action="https://formsubmit.co/f27e32bfc1f114f01045953a68cb60b7" method="post" target="_blank" >
                         <input type="hidden" name="_next" value="https://mariajosevillasante.github.io/mi_pagina/thanks.html">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
                             <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Nombre" aria-label="nombre" required>
                         </div>
+
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
                             <input type="tel" name="telefono" class="form-control" id="exampleFormControlInput1" placeholder="+56911223344" aria-label="nombre" required>

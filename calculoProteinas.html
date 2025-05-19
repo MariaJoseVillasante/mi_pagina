@@ -511,7 +511,7 @@
             <!-- fin título -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Instrucciones</h2>
-                <p>Escribe la cantidad de alimentos que consumiste hoy, puedes ir borrando los alimentos que no consumiste (no te preocupes que eso lo puedes restaurar). Luego anota tu peso en kg y te calculará tu cantidad de proteinas objetivo, si no estas de acuerdo ese monto lo puedes cambiar. La tabla te dira si lograste tu meta o no y el monto total de proteínas.</p>
+                <p>Escribe la cantidad de alimentos que consumiste hoy, puedes ir borrando los alimentos que no consumiste (no te preocupes que eso lo puedes restaurar). Luego anota tu peso en kg y te calculará tu cantidad de proteinas objetivo, si no estas de acuerdo ese monto lo puedes cambiar. La tabla te dirá si lograste tu meta o no y el monto total de proteínas.</p>
             </div>
             <!-- <p id="resultado">Total de proteínas: 0 g</p>
             <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()"> <br> -->
@@ -703,7 +703,7 @@
             if (tipo === 'unidad') {
                 total += cantidad * proteina;
             } else {
-                total += (cantidad / 100) * proteina;
+                total += cantidad * proteina;
             }
         });
 
