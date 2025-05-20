@@ -603,7 +603,6 @@
                 { nombre: "Reineta", proteina: 19, tipo: "gramos" },
                 { nombre: "Salmón", proteina: 20, tipo: "gramos" },
                 { nombre: "Tofu", proteina: 29, tipo: "gramos" },
-                { nombre: "Pavo", proteina: 8, tipo: "gramos" },
             ];
             let alimentos = [...alimentosOriginales]; // Copia para modificar
 
@@ -694,31 +693,51 @@
         calcularProteinas();
     }
 
-    function calcularProteinas() {
-        let total = 0;
-        document.querySelectorAll('input[data-proteina]').forEach(input => {
-            let cantidad = parseFloat(input.value) || 0;
-            let proteina = parseFloat(input.getAttribute('data-proteina')) || 0;
-            let tipo = input.getAttribute('data-tipo');
-            if (tipo === 'unidad') {
-                total += cantidad * proteina;
-            } else {
-                total += cantidad * proteina;
-            }
-        });
+function calcularProteinas() {
+    let totalProteinas = 0;
 
-        let metaProteinas = parseFloat(document.getElementById('proteinasObjetivo').value) || 0;
-        let diferencia = metaProteinas - total;
+    document.querySelectorAll('.quantity-input').forEach(input => {
+        let cantidad = parseFloat(input.value) || 0;
+        let proteinaPorUnidad = parseFloat(input.getAttribute("data-proteina")) || 0;
+        let tipo = input.closest(".quantity-selector").querySelector("div").innerText.toLowerCase();
+
+        let proteinaTotal = 0;
+
+        if (tipo === "unidad" || tipo === "scoop" || tipo === "lámina" || tipo === "taza") {
+            proteinaTotal = cantidad * proteinaPorUnidad; 
+        } else {
+            proteinaTotal = (cantidad / 100) * proteinaPorUnidad; 
+        }
+
+        totalProteinas += proteinaTotal;
+
+        let totalDisplay = input.closest(".row").querySelector(".product-total");
+        totalDisplay.textContent = `${proteinaTotal.toFixed(2)} g`;
+    });
+
+    let peso = parseFloat(document.getElementById('peso').value);
+    let metaProteinas = parseFloat(document.getElementById('proteinasObjetivo').value);
+
+    let mensaje = "";
+
+    // Validar que el usuario haya ingresado un peso antes de calcular si cumplió la meta
+    if (!peso || !metaProteinas) {
+        mensaje = "⚠️ Ingresa tu peso para calcular tu meta de proteínas.";
+    } else {
+        let diferencia = metaProteinas - totalProteinas;
         let scoopsFaltantes = Math.ceil(diferencia / 25);
 
-        let mensaje = total >= metaProteinas ? "✅ ¡Has alcanzado tu meta de proteínas!" 
-                      : `❌ Te faltan ${diferencia.toFixed(2)} g de proteínas (${scoopsFaltantes} scoop(s) de proteína).`;
-
-        document.getElementById('resultado').innerText = `Total de proteínas: ${total.toFixed(2)} g`;
-        document.getElementById('metaProteinas').innerText = mensaje;
+        mensaje = totalProteinas >= metaProteinas 
+            ? "✅ ¡Has alcanzado tu meta de proteínas!" 
+            : `❌ Te faltan ${diferencia.toFixed(2)} g de proteínas (${scoopsFaltantes} scoop(s) de proteína).`;
     }
 
-    function filtrarAlimentos() {
+    document.getElementById('resultado').innerText = `Total de proteínas: ${totalProteinas.toFixed(2)} g`;
+    document.getElementById('metaProteinas').innerText = mensaje;
+}
+
+
+function filtrarAlimentos() {
     let filtro = document.getElementById('buscador').value.toLowerCase();
     let filas = document.querySelectorAll('#tabla-proteinas tr');
     let primeraCelda = document.querySelector("thead th:first-child");
