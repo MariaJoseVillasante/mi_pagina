@@ -527,7 +527,7 @@
                                 <div class="cart-header d-none d-lg-block">
                                     <div class="row align-items-center">
                                         <div class="col-lg-5"><h5>Alimento</h5></div>
-                                        <div class="col-lg-2 text-center"><h5>Proteína</h5></div>
+                                        <div class="col-lg-2 text-center"><h5>Proteína por unidad</h5></div>
                                         <div class="col-lg-2 text-center"><h5>Cantidad</h5></div>
                                         <div class="col-lg-2 text-center"><h5>Total Proteína</h5></div>
                                         <div class="col-lg-1 text-center"><h5>Borrar</h5></div>
@@ -578,31 +578,31 @@
 </section>
         <script>
             const alimentosOriginales = [
-                { nombre: "Frutos secos", proteina: 15, tipo: "gramos" },
+                { nombre: "Frutos secos", proteina: 0.15, tipo: "gramos" },
                 { nombre: "Huevo", proteina: 6, tipo: "unidad" },
-                { nombre: "Leche", proteina: 3.4, tipo: "ml" },
+                { nombre: "Leche", proteina: 0.034, tipo: "ml" },
                 { nombre: "Pechuga de Pavo", proteina: 1.9, tipo: "lámina" },
-                { nombre: "Queso fresco", proteina: 14, tipo: "gramos" },
-                { nombre: "Queso mantecoso", proteina: 21, tipo: "gramos" },
+                { nombre: "Queso fresco", proteina: 0.14, tipo: "gramos" },
+                { nombre: "Queso mantecoso", proteina: 0.21, tipo: "gramos" },
                 { nombre: "Queso mantecoso (lámina)", proteina: 6.5, tipo: "lámina" },
-                { nombre: "Scoop de proteína", proteina: 25, tipo: "scoop" },
-                { nombre: "Yogurt protein", proteina: 10, tipo: "unidad" },
+                { nombre: "Scoop de proteína", proteina: 0.25, tipo: "scoop" },
+                { nombre: "Yogurt protein", proteina: 0.10, tipo: "unidad" },
                 { nombre: "Taza Arroz", proteina: 5, tipo: "unidad" },
-                { nombre: "Carne de res", proteina: 26, tipo: "gramos" },
-                { nombre: "Edamame", proteina: 11, tipo: "gramos" },
-                { nombre: "Erizos", proteina: 13, tipo: "gramos" },
-                { nombre: "Espinacas", proteina: 2.9, tipo: "gramos" },
-                { nombre: "Garbanzos", proteina: 19, tipo: "gramos" },
-                { nombre: "Lentejas", proteina: 9, tipo: "gramos" },
+                { nombre: "Carne de res", proteina: 0.26, tipo: "gramos" },
+                { nombre: "Edamame", proteina: 0.11, tipo: "gramos" },
+                { nombre: "Erizos", proteina: 0.13, tipo: "gramos" },
+                { nombre: "Espinacas", proteina: 0.029, tipo: "gramos" },
+                { nombre: "Garbanzos", proteina: 0.19, tipo: "gramos" },
+                { nombre: "Lentejas", proteina: 0.09, tipo: "gramos" },
                 { nombre: "Ostras", proteina: 9, tipo: "unidad" },
                 { nombre: "Papas", proteina: 4, tipo: "unidad" },
-                { nombre: "Pavo", proteina: 29, tipo: "gramos" },
-                { nombre: "Pollo", proteina: 27, tipo: "gramos" },
-                { nombre: "Porotos", proteina: 9, tipo: "gramos" },
-                { nombre: "Porotos Negros", proteina: 21.6, tipo: "gramos" },
-                { nombre: "Reineta", proteina: 19, tipo: "gramos" },
-                { nombre: "Salmón", proteina: 20, tipo: "gramos" },
-                { nombre: "Tofu", proteina: 29, tipo: "gramos" },
+                { nombre: "Pavo", proteina: 0.29, tipo: "gramos" },
+                { nombre: "Pollo", proteina: 0.27, tipo: "gramos" },
+                { nombre: "Porotos", proteina: 0.09, tipo: "gramos" },
+                { nombre: "Porotos Negros", proteina: 0.216, tipo: "gramos" },
+                { nombre: "Reineta", proteina: 0.19, tipo: "gramos" },
+                { nombre: "Salmón", proteina: 0.20, tipo: "gramos" },
+                { nombre: "Tofu", proteina: 0.29, tipo: "gramos" },
             ];
             let alimentos = [...alimentosOriginales]; // Copia para modificar
 
@@ -629,10 +629,16 @@
                             </div>
                             <div class="col-6 col-lg-2 text-lg-center">
                                 <div class="quantity-selector">
+                                    <button class="quantity-btn decrease" aria-label="Disminuir cantidad" onclick="modificarCantidad(this, -1)">
+                                        <i class="bi bi-dash"></i>
+                                    </button>
                                     <input type="number" data-proteina="${alimento.proteina}" 
                                         oninput="calcularProteinas(this)" 
-                                        class="quantity-input" value="0" min="0">
-                                    <div>${alimento.tipo}</div>
+                                        class="quantity-input" value="0" min="0"  step="1">
+                                    <button class="quantity-btn increase" aria-label="Aumentar cantidad" onclick="modificarCantidad(this, 1)">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                  
                                 </div>
                             </div>
                             <div class="col-6 col-lg-2 text-lg-center">
@@ -693,20 +699,30 @@
         calcularProteinas();
     }
 
+function modificarCantidad(btn, cambio) {
+    let input = btn.closest('.quantity-selector').querySelector('.quantity-input');
+    let nuevoValor = parseFloat(input.value) + cambio;
+
+    if (nuevoValor >= 0) { 
+        input.value = nuevoValor;
+        calcularProteinas(); // Se llama directamente la función de cálculo
+    }
+}
+
 function calcularProteinas() {
     let totalProteinas = 0;
 
     document.querySelectorAll('.quantity-input').forEach(input => {
         let cantidad = parseFloat(input.value) || 0;
         let proteinaPorUnidad = parseFloat(input.getAttribute("data-proteina")) || 0;
-        let tipo = input.closest(".quantity-selector").querySelector("div").innerText.toLowerCase();
+        let tipo = input.getAttribute("data-tipo"); // Detectamos directamente el tipo de alimento
 
         let proteinaTotal = 0;
 
         if (tipo === "unidad" || tipo === "scoop" || tipo === "lámina" || tipo === "taza") {
-            proteinaTotal = cantidad * proteinaPorUnidad; 
+            proteinaTotal = cantidad * proteinaPorUnidad; // Calculamos directamente sin dividir por 100
         } else {
-            proteinaTotal = (cantidad / 100) * proteinaPorUnidad; 
+            proteinaTotal = (cantidad) * proteinaPorUnidad; // Si es por gramos/ml, aplicamos la conversión
         }
 
         totalProteinas += proteinaTotal;
@@ -715,23 +731,27 @@ function calcularProteinas() {
         totalDisplay.textContent = `${proteinaTotal.toFixed(2)} g`;
     });
 
-    let peso = parseFloat(document.getElementById('peso').value);
-    let metaProteinas = parseFloat(document.getElementById('proteinasObjetivo').value);
+    let peso = parseFloat(document.getElementById('peso').value) || 0;
+    let metaProteinas = parseFloat(document.getElementById('proteinasObjetivo').value) || (peso * 1.3);
 
     let mensaje = "";
 
-    // Validar que el usuario haya ingresado un peso antes de calcular si cumplió la meta
-    if (!peso || !metaProteinas) {
+    if (!peso) {
         mensaje = "⚠️ Ingresa tu peso para calcular tu meta de proteínas.";
+    } else if (totalProteinas >= metaProteinas) {
+        mensaje = "✅ ¡Has alcanzado tu meta de proteínas!";
     } else {
         let diferencia = metaProteinas - totalProteinas;
+
+        // Calcular scoops de proteína necesarios
         let scoopsFaltantes = Math.ceil(diferencia / 25);
 
-        mensaje = totalProteinas >= metaProteinas 
-            ? "✅ ¡Has alcanzado tu meta de proteínas!" 
-            : `❌ Te faltan ${diferencia.toFixed(2)} g de proteínas (${scoopsFaltantes} scoop(s) de proteína).`;
-    }
+        // Calcular huevos necesarios (cada huevo aporta 6 g de proteína)
+        let huevosFaltantes = Math.ceil(diferencia / 6);
 
+        mensaje = `❌ Te faltan ${diferencia.toFixed(2)} g de proteínas.
+        ➡️ Puedes alcanzar tu meta consumiendo ${scoopsFaltantes} scoop(s) de proteína o ${huevosFaltantes} huevo(s).`;
+    }
     document.getElementById('resultado').innerText = `Total de proteínas: ${totalProteinas.toFixed(2)} g`;
     document.getElementById('metaProteinas').innerText = mensaje;
 }
