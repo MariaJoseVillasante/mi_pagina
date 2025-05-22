@@ -515,6 +515,9 @@
             </div>
             <!-- <p id="resultado">Total de proteínas: 0 g</p>
             <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()"> <br> -->
+            <!-- inicio buscador -->
+            
+            <!-- fin buscador -->
             <!-- inicio nueva tabla--- -->
             <section id="ecommerce-cart" class="ecommerce-cart section">
                 <slot type="section-title"></slot>
@@ -586,7 +589,7 @@
                 { nombre: "Queso mantecoso", proteina: 0.21, tipo: "gramos" },
                 { nombre: "Queso mantecoso (lámina)", proteina: 6.5, tipo: "lámina" },
                 { nombre: "Scoop de proteína", proteina: 0.25, tipo: "scoop" },
-                { nombre: "Yogurt protein", proteina: 0.10, tipo: "unidad" },
+                { nombre: "Yogurt protein", proteina: 10, tipo: "unidad" },
                 { nombre: "Taza Arroz", proteina: 5, tipo: "unidad" },
                 { nombre: "Carne de res", proteina: 0.26, tipo: "gramos" },
                 { nombre: "Edamame", proteina: 0.11, tipo: "gramos" },
@@ -756,27 +759,52 @@ function calcularProteinas() {
     document.getElementById('metaProteinas').innerText = mensaje;
 }
 
+// inicio filtro de busqueda
+    document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector(".search-form input");
+    const resultsCount = document.querySelector(".results-number");
+    const searchTermDisplay = document.querySelector(".search-term");
+    const sortSelect = document.getElementById("sort-select");
+    const items = document.querySelectorAll("#listaAlimentos .cart-item");
 
-function filtrarAlimentos() {
-    let filtro = document.getElementById('buscador').value.toLowerCase();
-    let filas = document.querySelectorAll('#tabla-proteinas tr');
-    let primeraCelda = document.querySelector("thead th:first-child");
+    // Filtrar alimentos en tiempo real
+    searchInput.addEventListener("input", function () {
+        let filtro = searchInput.value.toLowerCase();
+        let resultados = 0;
 
-    let hayResultados = false;
+        items.forEach(item => {
+            let nombreAlimento = item.querySelector(".product-title").innerText.toLowerCase();
+            let coincide = nombreAlimento.includes(filtro);
+            item.style.display = coincide ? "flex" : "none";
+            if (coincide) resultados++;
+        });
 
-    filas.forEach(row => {
-        let texto = row.innerText.toLowerCase();
-        if (texto.includes(filtro)) {
-            row.style.display = "";
-            hayResultados = true;
-        } else {
-            row.style.display = "none";
-        }
+        resultsCount.innerText = resultados; // Actualizar número de resultados
+        searchTermDisplay.innerText = `"${filtro}"`; // Mostrar término buscado
     });
 
-    // Ocultar la primera celda si hay resultados de búsqueda
-    primeraCelda.style.display = hayResultados ? "none" : "";
-}
+    // Ordenar elementos según selección
+    sortSelect.addEventListener("change", function () {
+        let criterio = sortSelect.value;
+        let container = document.getElementById("listaAlimentos");
+        let itemsArray = Array.from(items);
+
+        itemsArray.sort((a, b) => {
+            let nombreA = a.querySelector(".product-title").innerText.toLowerCase();
+            let nombreB = b.querySelector(".product-title").innerText.toLowerCase();
+
+            if (criterio === "title-asc") return nombreA.localeCompare(nombreB);
+            if (criterio === "title-desc") return nombreB.localeCompare(nombreA);
+            return 0; // Mantener el orden original
+        });
+
+        container.innerHTML = "";
+        itemsArray.forEach(item => container.appendChild(item));
+    });
+});
+
+// fin filtro de busqueda
+
     </script>
 </main>
 <!-- inicio Footer -->
