@@ -664,15 +664,33 @@
                 <div class="cart-summary">
                     <h4 class="summary-title">Boleta de Honorarios</h4>
                     <div class="promo-code my-4">
-                        <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 14,5%, a partir de la cantidad de UF que escribas.</p>
-                        <p>1- Escribe la cantidad de UF que quieras calcular. Haz clic en "Calcular"</p>
-                        <p>2- La calculadora te dará el valor en pesos al día de hoy de las UF que escribiste.</p>
-                        <p>3- La calculadora te dará el valor de la retención del 14,5%</p>
-                        <p>4- La calculadora te dará el valor neto</p>
-                    <div class="input-group">
-                        <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF" aria-label="Promo code">
-                        <button class="btn btn-apply" type="button">Calcular</button>
-                    </div>
+                        <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 14,5%, a partir de la cantidad en UF o pesos Chilenos que escribas.</p>
+                        <p>1- Elige si quieres ingresar el monto en pesos o UF.</p>
+                        <p>2- Escribe el monto que quieras calcular. Haz clic en "Calcular"</p>
+                        <p>3- La calculadora te dará el valor en pesos al día de hoy en UF que escribiste.</p>
+                        <p>4- La calculadora te dará el valor en pesos al día de hoy en pesos que escribiste.</p>
+                        <p>5- La calculadora te dará el valor de la retención del 14,5%</p>
+                        <p>6- La calculadora te dará el valor neto</p>
+                        <p>Selecciona la unidad en la que quieres calcular:</p>
+                        <select id="unidadSeleccionada" onchange="cambiarUnidad()"  class="form-control">
+                            <option value="UF">UF</option>
+                            <option value="CLP">Pesos chilenos</option>
+                        </select>
+                        <div id="campoUF">
+                            <label for="cantidadUF">Cantidad en UF:</label>
+                            <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF">
+                        </div>
+                        <div id="campoCLP" style="display: none;">
+                            <label for="cantidadCLP">Cantidad en CLP:</label>
+                            <input type="number" id="cantidadCLP" min="0" step="100" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad en CLP">
+                        </div>
+                        <button class="btn btn-apply" type="button" onclick="calcularBoleta()">Calcular</button>
+                        <!-- antes -->
+                        <!-- <div class="input-group">
+                            <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF" aria-label="Promo code">
+                            <button class="btn btn-apply" type="button">Calcular</button>
+                        </div> -->
+                        <!-- antes -->
                     </div>
                     
                     <div class="summary-item">
@@ -766,14 +784,35 @@
             }
         }
         
+        function cambiarUnidad() {
+            const unidadSeleccionada = document.getElementById("unidadSeleccionada").value;
+            
+            if (unidadSeleccionada === "UF") {
+                document.getElementById("campoUF").style.display = "block";
+                document.getElementById("campoCLP").style.display = "none";
+            } else {
+                document.getElementById("campoUF").style.display = "none";
+                document.getElementById("campoCLP").style.display = "block";
+            }
+        }
+
         async function calcularBoleta() {
-            const cantidadUF = parseFloat(document.getElementById("cantidadUF").value) || 0;
             const valorUF = await obtenerValorUF();
-            const valorCLP = cantidadUF * valorUF;
+            const unidadSeleccionada = document.getElementById("unidadSeleccionada").value;
+            let valorCLP, cantidadUF;
+
+            if (unidadSeleccionada === "UF") {
+                cantidadUF = parseFloat(document.getElementById("cantidadUF").value) || 0;
+                valorCLP = cantidadUF * valorUF;
+            } else {
+                valorCLP = parseFloat(document.getElementById("cantidadCLP").value) || 0;
+                cantidadUF = valorCLP / valorUF;
+            }
+
             const retencion = valorCLP * 0.145;
             const valorNeto = valorCLP - retencion;
-            
-            document.getElementById("ufDisplay").textContent = cantidadUF;
+
+            document.getElementById("ufDisplay").textContent = cantidadUF.toFixed(2);
             document.getElementById("valorCLP").textContent = valorCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
             document.getElementById("retencion").textContent = retencion.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
             document.getElementById("valorNeto").textContent = valorNeto.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
