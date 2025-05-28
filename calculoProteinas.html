@@ -526,27 +526,27 @@
                     <div class="ecommerce-cart-3">
                         <div class="row g-4">
                             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
-                            <div class="cart-items-container">
-                                <div class="cart-header d-none d-lg-block">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-5"><h5>Alimento</h5></div>
-                                        <div class="col-lg-2 text-center"><h5>Proteína por unidad</h5></div>
-                                        <div class="col-lg-2 text-center"><h5>Cantidad</h5></div>
-                                        <div class="col-lg-2 text-center"><h5>Total Proteína</h5></div>
-                                        <div class="col-lg-1 text-center"><h5>Borrar</h5></div>
+                                <div class="cart-items-container">
+                                    <div class="cart-header d-none d-lg-block">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-5"><h5>Alimento</h5></div>
+                                            <div class="col-lg-2 text-center"><h5>Proteína por unidad</h5></div>
+                                            <div class="col-lg-2 text-center"><h5>Cantidad</h5></div>
+                                            <div class="col-lg-2 text-center"><h5>Total Proteína</h5></div>
+                                            <div class="col-lg-1 text-center"><h5>Borrar</h5></div>
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div id="listaAlimentos"></div>
-                                
-                                <!-- Botón para restaurar la lista -->
-                                <div class="text-center mt-4">
-                                    <button class="btn btn-apply" onclick="restaurarLista()">Restaurar Lista</button>
+                                    
+                                    <div id="listaAlimentos"></div>
+                                    
+                                    <!-- Botón para restaurar la lista -->
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-apply" onclick="restaurarLista()">Restaurar Lista</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 <!-- fin commerce cart -->
                     <!-- Cart Summary Column -->
                     <div class="col-lg-4 mt-5" data-aos="fade-up" data-aos-delay="200">
@@ -554,30 +554,29 @@
                             <div class="promo-code my-4">
                         <h4 class="summary-title">Peso en kg:</h4>
                         <div class="input-group">
-                            <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()" min="0" step="0.1" class="form-control" aria-label="Promo code">
+                            <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()" min="0" step="1" class="form-control" aria-label="Promo code">
                             <button class="btn btn-apply" type="button">Calcular</button>
                         </div>
                     </div>
                     <div class="promo-code my-4">
-                <h4 class="summary-title">Proteinas objetivo:</h4>
-                <div class="input-group">
-                    <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()" min="0" step="1" class="form-control" aria-label="Promo code">
-                    <div id="metaProteinas"></div>
-                    <button class="btn btn-apply" type="button">Calcular</button>
+                        <h4 class="summary-title">Proteinas objetivo:</h4>
+                        <div class="input-group">
+                            <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()" min="0" step="1" class="form-control" aria-label="Promo code">
+                            <div id="metaProteinas"></div>
+                            <button class="btn btn-apply" type="button">Calcular</button>
+                        </div>
+                    </div>
+                    <div class="summary-divider"></div>
+                        <div class="summary-item total">
+                            <span class="summary-label">Total:</span>
+                            <span id="resultado" class="summary-value"> 0 g</span>
+                        </div>
+                    </div>
+                <!-- fin cart summary -->
                 </div>
             </div>
-            <div class="summary-divider"></div>
-            <div class="summary-item total">
-                <span class="summary-label">Total:</span>
-                <span id="resultado" class="summary-value"> 0 g</span>
-            </div>
-        </div>
-        <!-- fin cart summary -->
-</div>
-        </div>
         </div>
     </div>
-
 </section>
         <script>
             const alimentosOriginales = [
@@ -591,6 +590,7 @@
                 { nombre: "Scoop de proteína", proteina: 25, tipo: "scoop" },
                 { nombre: "Yogurt protein", proteina: 10, tipo: "unidad" },
                 { nombre: "Taza Arroz", proteina: 5, tipo: "unidad" },
+                { nombre: "Camarones", proteina: 0.24, tipo: "gramos" },
                 { nombre: "Carne de res", proteina: 0.26, tipo: "gramos" },
                 { nombre: "Choclo", proteina: 0.031, tipo: "gramos" },
                 { nombre: "Edamame", proteina: 0.11, tipo: "gramos" },
