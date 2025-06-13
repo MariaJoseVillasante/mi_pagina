@@ -527,7 +527,7 @@
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
             
             <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-                <img src="assets/img/logolblanca.png" alt="MJVT" width="100px">
+                <img src="assets/img/logolblanca.png" alt="MJVT" width="100px" loading="lazy">
             </a>
 
     <!-- inicio navbar hecha con bootstrap -->
@@ -539,7 +539,7 @@
                     <li><a href="/#mini_soluciones">Mini Soluciones</a></li>
                     <li><a href="/#publicaciones">Publicaciones</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                <em class="mobile-nav-toggle d-xl-none bi bi-list"></em>
             </nav>
             <a class="btn-getstarted" href="/#contacto">Contacto</a>
         </div>
@@ -880,8 +880,10 @@
     </footer>
     <!-- fin footer -->
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+    <a href="#" id="scroll-top" title="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <span class="sr-only">Subir</span>
+        <em class="bi bi-arrow-up-short"></em>
+    </a>
     <!-- Preloader -->
     <div id="preloader"></div>
 
