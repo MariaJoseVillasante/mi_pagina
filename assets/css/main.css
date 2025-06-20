@@ -1,14 +1,3 @@
-/* Hero-section */
-#Hero-Section {
-    background-image: url("../img/pexels-julia-m-cameron-4144294.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 130vh;   
-    position: relative;
-}
-/* nuevo  */
-
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -88,58 +77,6 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
-}
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -557,7 +494,7 @@ h6 {
   transition: all 0.4s;
 }
 
-.scroll-top i {
+.scroll-top a {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
@@ -1238,7 +1175,7 @@ section,
   transition: all 0.3s ease;
 }
 
-.mini_soluciones .service-header .service-summary .service-btn i {
+.mini_soluciones .service-header .service-summary .service-btn em {
   margin-left: 10px;
   transition: transform 0.3s ease;
 }
@@ -1248,7 +1185,7 @@ section,
   color: var(--contrast-color);
 }
 
-.mini_soluciones .service-header .service-summary .service-btn:hover i {
+.mini_soluciones .service-header .service-summary .service-btn:hover em {
   transform: translateX(5px);
 }
 
@@ -1436,7 +1373,7 @@ section,
   padding: 0 30px;
 }
 
-.publicaciones .meta i {
+.publicaciones .meta em {
   font-size: 16px;
   color: var(--accent-color);
 }
@@ -1472,7 +1409,7 @@ section,
   color: color-mix(in srgb, var(--heading-color), transparent 20%);
 }
 
-.publicaciones .readmore i {
+.publicaciones .readmore em {
   line-height: 0;
   margin-left: 6px;
   font-size: 16px;
