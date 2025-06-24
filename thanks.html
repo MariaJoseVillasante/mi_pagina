@@ -69,7 +69,16 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">            
             <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-                <img src="assets/img/logolblanca.png" alt="MJVT" width="100px" height="50" loading="lazy">
+                <picture>
+                    <source srcset="assets/img/logo/logolblanca.avif" type="image/avif">
+                    <source srcset="assets/img/logo/logolblanca.webp" type="image/webp">
+                    <img
+                        src="assets/img/logo/logolblanca.png"
+                        alt="Logo MJVT con el nombre María José Villasante y diseño de estrategia digital con detalles gráficos"
+                        width="100"
+                        height="36"
+                        loading="lazy">
+                </picture>
             </a>
             <!-- inicio navbar hecha con bootstrap -->
             <nav id="navmenu" class="navmenu">
