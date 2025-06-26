@@ -126,7 +126,7 @@
           font-size: 14px;
           color: color-mix(in srgb, var(--default-color), transparent 30%);
 
-          i {
+          em {
             margin-right: 6px;
             color: var(--accent-color);
           }
@@ -147,7 +147,7 @@
       align-items: center;
       margin-bottom: 1.5rem;
 
-      i {
+      em {
         font-size: 22px;
         color: var(--accent-color);
         margin-right: 8px;
@@ -238,7 +238,7 @@
         font-size: 1.25rem;
         margin-bottom: 1.2rem;
 
-        i {
+        em {
           margin-right: 10px;
           color: var(--accent-color);
           font-size: 1.1em;
@@ -256,7 +256,7 @@
           font-size: 15px;
           color: color-mix(in srgb, var(--default-color), transparent 15%);
 
-          i {
+          em {
             color: var(--accent-color);
             margin-right: 10px;
             font-size: 1.1em;
@@ -297,14 +297,14 @@
         align-items: center;
         gap: 8px;
 
-        i {
+        em {
           transition: transform 0.3s ease;
         }
 
         &:hover {
           background-color: color-mix(in srgb, var(--heading-color), transparent 80%);
 
-          i {
+          em {
             transform: translateX(3px);
           }
         }
