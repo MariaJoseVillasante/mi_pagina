@@ -494,7 +494,7 @@ h6 {
   transition: all 0.4s;
 }
 
-.scroll-top a {
+.scroll-top em {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
