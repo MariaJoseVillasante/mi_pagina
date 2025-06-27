@@ -32,7 +32,7 @@
       white-space: nowrap;
       transition: 0.3s;
 
-      i {
+      em {
         font-size: 12px;
         line-height: 0;
         margin-left: 5px;
@@ -76,7 +76,7 @@
           text-transform: none;
           color: var(--nav-dropdown-color);
 
-          i {
+          em {
             font-size: 12px;
           }
         }
@@ -155,7 +155,7 @@
       white-space: nowrap;
       transition: 0.3s;
 
-      i {
+      em {
         font-size: 12px;
         line-height: 0;
         margin-left: 5px;
@@ -181,8 +181,8 @@
       color: var(--nav-dropdown-hover-color);
     }
 
-    .active i,
-    .active:focus i {
+    .active em,
+    .active:focus em {
       background-color: var(--accent-color);
       color: var(--contrast-color);
       transform: rotate(180deg);
