@@ -96,8 +96,20 @@
         <!-- inicio hero-section -->
         <section id="hero" class="hero section light-background">
             <picture>
-                <source srcset="assets/img/profile/pexels-julia-m-cameron-4144294.avif" type="image/avif">
-                <source srcset="assets/img/profile/pexels-julia-m-cameron-4144294.webp" type="image/webp">
+                <source 
+                    type="image/avif"
+                    srcset="
+                        assets/img/profile/pexels-julia-m-cameron-4144294-400.avif 400w,
+                        assets/img/profile/pexels-julia-m-cameron-4144294-800.avif 800w,
+                        assets/img/profile/pexels-julia-m-cameron-4144294.avif 1000w" 
+                    sizes="(max-width: 600px) 100vw, 600px">
+                <source 
+                    type="image/webp"
+                    srcset="
+                        assets/img/profile/pexels-julia-m-cameron-4144294-400.webp 400w,
+                        assets/img/profile/pexels-julia-m-cameron-4144294-800.webp 800w,
+                        assets/img/profile/pexels-julia-m-cameron-4144294.webp 1000w" 
+                    sizes="(max-width: 600px) 100vw, 600px">
                 <img
                     src="assets/img/profile/pexels-julia-m-cameron-4144294.jpg"
                     alt="Mujer frente a un computador"
@@ -743,7 +755,7 @@
             <span class="visually-hidden">Subir</span>
             <em class="bi bi-arrow-up-short"></em>
         </a>
-        
+
         <!-- Preloader -->
         <div id="preloader"></div>
 
