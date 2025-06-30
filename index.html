@@ -586,12 +586,29 @@
                 <article class="position-relative h-100">
                 <div class="post-img position-relative overflow-hidden">
                     <picture>
-                        <source srcset="assets/img/blog/estudiantes-graduados-tirando-gorro-graduacion.avif" type="image/avif">
-                        <source srcset="assets/img/blog/estudiantes-graduados-tirando-gorro-graduacion.webp" type="image/webp">
-                        <img 
-                            src="assets/img/blog/estudiantes-graduados-tirando-gorro-graduacion.jpg" 
-                            class="img-fluid" alt="estudiantes-graduados-tirando-gorro-graduacion" 
-                            width="1000" height="500" loading="lazy">
+                        <source
+                            type="image/avif"
+                            srcset="
+                                assets/img/blog/estudiantes-gorro-400.avif 400w,
+                                assets/img/blog/estudiantes-gorro-800.avif 800w,
+                                assets/img/blog/estudiantes-gorro-graduacion.avif 1000w"
+                            sizes="(max-width: 600px) 100vw, 600px">
+
+                        <source
+                            type="image/webp"
+                            srcset="
+                                assets/img/blog/estudiantes-gorro-400.webp 400w,
+                                assets/img/blog/estudiantes-gorro-800.webp 800w,
+                                assets/img/blog/estudiantes-gorro-graduacion.webp 1000w"
+                            sizes="(max-width: 600px) 100vw, 600px">
+
+                        <img
+                            src="assets/img/blog/estudiantes-gorro-graduacion.jpg"
+                            alt="Estudiantes graduados tirando el gorro de graduación"
+                            width="1000"
+                            height="500"
+                            loading="lazy"
+                            class="img-fluid">
                     </picture>
                 </div>
                 <div class="meta d-flex align-items-end">
