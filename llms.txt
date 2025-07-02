@@ -19,5 +19,5 @@ Sitio web de María José Villasante, consultora en estrategia digital con enfoq
 
 ## Contacto
 - Email: hola@mariajosevillasante.cl
-- LinkedIn: https://www.linkedin.com/in/mariajosevillasantetapies/
+- LinkedIn: https://www.linkedin.com/in/mariajosevillasantetapies
 - Github: https://github.com/MariaJoseVillasante
