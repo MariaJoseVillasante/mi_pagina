@@ -1,8 +1,4 @@
 // main: main.scss
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 
 /* Fonts */
 :root {
@@ -19,6 +15,10 @@
   --accent-color: #a855f7; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #eae6eb; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #f9f9ff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --gris: #5F5B60;
+  --colorppc: #7F5281;
+  --azul: #204E61;
+  --blanco3: #e1d8e3;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
