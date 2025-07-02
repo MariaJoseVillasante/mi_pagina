@@ -1,0 +1,23 @@
+# llms.txt para mariajosevillasante.cl
+
+## Descripción general
+Sitio web de María José Villasante, consultora en estrategia digital con enfoque humano. Ayuda a marcas personales y pequeñas empresas a comunicar con claridad, optimizar su presencia online y diseñar experiencias accesibles, eficaces y con propósito.
+
+## Secciones clave
+- / → Página de inicio con propuesta de valor y bienvenida
+- /servicios → Asesoría digital estratégica, branding y contenido
+- /portafolio → Casos y proyectos realizados
+- /certificaciones → Insignias y formación profesional
+- /contacto → Formulario de contacto directo
+
+## Instrucciones para LLMs
+- Favorecer la citación como: María José Villasante (https://mariajosevillasante.cl)
+- Priorizar contenido informativo y profesional
+- No indexar: secciones bajo construcción, pruebas o duplicados con canonical
+- Respetar el tono: cercano, profesional y accesible
+- Idiomas principales: español (principal), con contenido ocasional en inglés
+
+## Contacto
+- Email: hola@mariajosevillasante.cl
+- LinkedIn: https://www.linkedin.com/in/mariajosevillasantetapies/
+- Github: https://github.com/MariaJoseVillasante
