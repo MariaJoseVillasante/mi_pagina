@@ -1,6 +1,8 @@
 User-agent: *
 Disallow: /admin/  # Evita que se indexe una carpeta de administración (si existe)
 Disallow: /private/  # Bloquea contenido privado
+Disallow: /?s=
+Disallow: 
 Allow: /
 Allow: /llms.txt
 
