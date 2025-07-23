@@ -1,8 +1,21 @@
 User-agent: *
-Disallow: /admin/         # Evita que se indexe una carpeta de administración (si existe)
-Disallow: /private/       # Bloquea contenido privado
-Disallow: /?s=            # Evita indexar resultados de búsqueda interna
-Allow: /llms.txt          # Asegura acceso a este archivo en particular
+
+# Evita que se indexe una carpeta de administración (si existe)
+Disallow: /admin/
+
+# Bloquea contenido privado
+Disallow: /private/
+
+# Evita indexar resultados de búsqueda interna
+Disallow: /?s=
+
+# Evita que se indexen filtros u ordenamie
+Disallow: /?orden=
+Disallow: /?filter=
+
+# Asegura acceso a este archivo en particular
+Allow: /llms.txt
 
 Sitemap: https://mariajosevillasante.cl/sitemap.xml
+
 
