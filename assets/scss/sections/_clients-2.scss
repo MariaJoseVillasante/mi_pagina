@@ -2,37 +2,33 @@
 /*--------------------------------------------------------------
 # Clients 2 Section
 --------------------------------------------------------------*/
-.clients-2 {
-  .swiper-slide {
-    img {
-      opacity: 0.5;
-      transition: 0.3s;
-      filter: grayscale(100);
+.clients-2 .swiper-slide img {
+  opacity: 0.5;
+  transition: 0.3s;
+  filter: grayscale(100);
+}
 
-      &:hover {
-        filter: none;
-        opacity: 1;
-      }
-    }
-  }
+.clients-2 .swiper-slide img:hover {
+  filter: none;
+  opacity: 1;
+}
 
-  .swiper-wrapper {
-    height: auto;
-  }
+.clients-2 .swiper-wrapper {
+  height: auto;
+}
 
-  .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
+.clients-2 .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
 
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      opacity: 1;
-      background-color: color-mix(in srgb, var(--default-color), transparent 80%);
-    }
+.clients-2 .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
 
-    .swiper-pagination-bullet-active {
-      background-color: var(--accent-color);
-    }
-  }
+.clients-2 .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
 }

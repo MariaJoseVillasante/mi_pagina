@@ -11,69 +11,72 @@
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+}
 
-  .header-container {
-    background: var(--surface-color);
-    border-radius: 50px;
-    padding: 5px 25px 5px 30px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
-  }
+.header .header-container {
+  background: var(--surface-color);
+  border-radius: 50px;
+  padding: 5px 25px 5px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
 
-  .logo {
-    line-height: 1;
+.header .logo {
+  line-height: 1;
+}
 
-    img {
-      // max-height: 36px;
-      margin-right: 8px;
-    }
+.header .logo img {
+  /* max-height: 36px; */
+  margin-right: 8px;
+}
 
-    h1 {
-      font-size: 20px;
-      margin: 0;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--heading-color);
-    }
-  }
+.header .logo h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--heading-color);
+}
 
-  .btn-getstarted,
-  .btn-getstarted:focus {
-    color: var(--contrast-color);
-    background: var(--accent-color);
-    font-size: 14px;
-    padding: 8px 20px;
-    margin: 0 0 0 30px;
-    border-radius: 50px;
-    transition: 0.3s;
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 20px;
+  margin: 0 0 0 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
 
-    &:hover {
-      color: var(--contrast-color);
-      background: color-mix(in srgb, var(--accent-color), transparent 15%);
-    }
-  }
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
 
-  @media (max-width: 1200px) {
+@media (max-width: 1200px) {
+  .header {
     padding-top: 10px;
+  }
 
-    .header-container {
-      margin-left: 10px;
-      margin-right: 10px;
-      padding: 10px 5px 10px 15px;
-    }
+  .header .header-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 5px 10px 15px;
+  }
 
-    .logo {
-      order: 1;
-    }
+  .header .logo {
+    order: 1;
+  }
 
-    .btn-getstarted {
-      order: 2;
-      margin: 0 10px 0 0;
-      padding: 6px 15px;
-    }
+  .header .btn-getstarted {
+    order: 2;
+    margin: 0 10px 0 0;
+    padding: 6px 15px;
+  }
 
-    .navmenu {
-      order: 3;
-    }
+  .header .navmenu {
+    order: 3;
   }
 }

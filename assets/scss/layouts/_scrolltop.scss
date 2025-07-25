@@ -14,21 +14,21 @@
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
+}
 
-  em {
-    font-size: 24px;
-    color: var(--contrast-color);
-    line-height: 0;
-  }
+.scroll-top em {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
 
-  &:hover {
-    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-    color: var(--contrast-color);
-  }
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
 
-  &.active {
-    visibility: visible;
-    opacity: 1;
-    bottom: 15px;
-  }
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
 }

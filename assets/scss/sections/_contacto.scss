@@ -2,95 +2,91 @@
 /*--------------------------------------------------------------
 # Contacto Section
 --------------------------------------------------------------*/
-.contacto {
-  .section-category {
-    font-family: var(--heading-font);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+.contacto .section-category {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-  .content {
-    h2 {
-      font-weight: 700;
-      line-height: 1.2;
-    }
+.contacto .content h2 {
+  font-weight: 700;
+  line-height: 1.2;
+}
 
-    .lead {
-      color: color-mix(in srgb, var(--default-color), transparent 25%);
-    }
-  }
+.contacto .content .lead {
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
 
-  .contact-info {
-    .info-item {
-      font-size: 1.1rem;
+.contacto .contact-info .info-item {
+  font-size: 1.1rem;
+}
 
-      em {
-        color: var(--accent-color);
-        font-size: 1.4rem;
-      }
-    }
+.contacto .contact-info .info-item em {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+}
 
-    .map-link {
-      color: var(--heading-color);
-      font-weight: 500;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
+.contacto .contact-info .map-link {
+  color: var(--heading-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
 
-      em {
-        transition: transform 0.3s ease;
-      }
+.contacto .contact-info .map-link em {
+  transition: transform 0.3s ease;
+}
 
-      &:hover {
-        color: var(--accent-color);
+.contacto .contact-info .map-link:hover {
+  color: var(--accent-color);
+}
 
-        em {
-          transform: translateX(5px);
-        }
-      }
-    }
-  }
+.contacto .contact-info .map-link:hover em {
+  transform: translateX(5px);
+}
 
-  .contact-form {
-    background-color: var(--surface-color);
-    border: none;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
+.contacto .contact-form {
+  background-color: var(--surface-color);
+  border: none;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
 
-    .form-control,
-    .form-select {
-      padding: 0.75rem 1.25rem;
-      border-color: #e5e5e5;
-      border-radius: 8px;
-      font-size: 1rem;
+.contacto .contact-form .form-control,
+.contacto .contact-form .form-select {
+  padding: 0.75rem 1.25rem;
+  border-color: #e5e5e5;
+  border-radius: 8px;
+  font-size: 1rem;
+}
 
-      &:focus {
-        border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
-        box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent-color), transparent 90%);
-      }
+.contacto .contact-form .form-control:focus,
+.contacto .contact-form .form-select:focus {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent-color), transparent 90%);
+}
 
-      &::placeholder {
-        color: color-mix(in srgb, var(--default-color), transparent 50%);
-      }
-    }
+.contacto .contact-form .form-control::placeholder,
+.contacto .contact-form .form-select::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
 
-    .btn-submit {
-      background-color: var(--accent-color);
-      color: var(--contrast-color);
-      padding: 0.75rem 2rem;
-      font-weight: 500;
-      border-radius: 8px;
-      transition: all 0.3s ease;
+.contacto .contact-form .btn-submit {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
-      &:hover {
-        background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
-        transform: translateY(-1px);
-      }
+.contacto .contact-form .btn-submit:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: translateY(-1px);
+}
 
-      &:active {
-        transform: translateY(0);
-      }
-    }
-  }
+.contacto .contact-form .btn-submit:active {
+  transform: translateY(0);
 }
