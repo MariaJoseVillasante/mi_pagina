@@ -6,13 +6,6 @@ Disallow: /admin/
 # Bloquea contenido privado
 Disallow: /private/
 
-# Evita indexar resultados de búsqueda interna
-Disallow: /?s=
-
-# Evita que se indexen filtros u ordenamie
-Disallow: /?orden=
-Disallow: /?filter=
-
 # Asegura acceso a este archivo en particular
 Allow: /llms.txt
 
