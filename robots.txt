@@ -6,9 +6,13 @@ Disallow: /admin/
 # Bloquea contenido privado
 Disallow: /private/
 
-# Asegura acceso a este archivo en particular
+# NOTA: Para bloquear búsquedas internas y filtros, se usa meta robots NOINDEX en la página
+
+# Permite acceso a este archivo específico
 Allow: /llms.txt
 
+# Mapa del sitio
 Sitemap: https://mariajosevillasante.cl/sitemap.xml
+
 
 
