@@ -2,7 +2,6 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="robots" content="noindex, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Desarrollo web y estrategia digital | Villasante – MJVT</title>
@@ -53,6 +52,18 @@
             <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
             <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
         </noscript>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('s') || params.has('orden') || params.has('filter')) {
+                const meta = document.createElement('meta');
+                meta.name = "robots";
+                meta.content = "noindex, follow";
+                document.head.appendChild(meta);
+            }
+        </script>
+
+
         <script type="application/ld+json">
             {
             "@context": "https://schema.org",
