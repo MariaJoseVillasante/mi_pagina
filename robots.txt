@@ -6,6 +6,8 @@ Disallow: /admin/
 # Bloquea contenido privado
 Disallow: /private/
 
+Disallow: /cdn-cgi/
+
 # NOTA: Para bloquear búsquedas internas y filtros, se usa meta robots NOINDEX en la página
 
 # Permite acceso a este archivo específico
