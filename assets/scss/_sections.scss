@@ -1,3 +1,14 @@
+@use './sections/_hero.scss';
+@use './sections/_sobre_mi.scss';
+@use './sections/_clients-2.scss';
+@use './sections/_servicios.scss';
+@use './sections/_mini_soluciones.scss';
+@use './sections/_publicaciones.scss';
+@use './sections/_contacto.scss';
+@use './sections/_portfolio-details.scss';
+@use './sections/_service-details.scss';
+@use './sections/_starter-section.scss';
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -57,13 +68,3 @@ section,
   font-family: var(--heading-font);
 }
 
-@use './sections/_hero.scss';
-@use './sections/_sobre_mi.scss';
-@use './sections/_clients-2.scss';
-@use './sections/_servicios.scss';
-@use './sections/_mini_soluciones.scss';
-@use './sections/_publicaciones.scss';
-@use './sections/_contacto.scss';
-@use './sections/_portfolio-details.scss';
-@use './sections/_service-details.scss';
-@use './sections/_starter-section.scss';
