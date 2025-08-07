@@ -255,7 +255,7 @@
                     color: #dc3545;
                 }
 
-                i {
+                em {
                     font-size: 1rem;
                 }
                 }
@@ -277,17 +277,17 @@
                     color: color-mix(in srgb, var(--accent-color), transparent 25%);
                 }
 
-                i {
+            em {
                     transition: transform 0.2s ease;
                 }
 
-                &:hover i {
+                &:hover em {
                     transform: translateX(-3px);
                 }
                 }
 
                 .update-cart {
-                &:hover i {
+                &:hover em {
                     transform: rotate(45deg);
                 }
                 }
@@ -543,7 +543,7 @@
             <div class="breadcrumbs">
                 <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/#hero"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#hero"><em class="bi bi-house"></em> Home</a></li>
                     <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
                     <li class="breadcrumb-item active current">CalculoProteinas</li>
                 </ol>
@@ -587,7 +587,6 @@
             <!-- fin buscador -->
             <!-- inicio nueva tabla--- -->
             <section id="ecommerce-cart" class="ecommerce-cart section">
-                <slot type="section-title"></slot>
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
                     <!-- inicio commerce card -->
                     <div class="ecommerce-cart-3">
@@ -702,15 +701,14 @@
                             <div class="col-6 col-lg-2 text-lg-center">
                                 <div class="quantity-selector">
                                     <button class="quantity-btn decrease" aria-label="Disminuir cantidad" onclick="modificarCantidad(this, -1)">
-                                        <i class="bi bi-dash"></i>
+                                        <em class="bi bi-dash"></em>
                                     </button>
                                     <input type="number" data-proteina="${alimento.proteina}" 
                                         oninput="calcularProteinas(this)" 
                                         class="quantity-input" value="0" min="0"  step="1">
                                     <button class="quantity-btn increase" aria-label="Aumentar cantidad" onclick="modificarCantidad(this, 1)">
-                                        <i class="bi bi-plus"></i>
+                                        <em class="bi bi-plus"></em>
                                     </button>
-                                  
                                 </div>
                             </div>
                             <div class="col-6 col-lg-2 text-lg-center">
@@ -718,7 +716,7 @@
                             </div>
                             <div class="col-6 col-lg-1 text-lg-center">
                                 <button class="btn btn-danger btn-sm" onclick="eliminarAlimento(${index})">
-                                    <i class="bi bi-trash"></i>
+                                    <em class="bi bi-trash"></em>
                                 </button>
                             </div>
                         </div>
@@ -868,13 +866,13 @@ function calcularProteinas() {
 <footer id="footer" class="footer position-relative dark-background">
     <div class="container">
         <div class="copyright text-center ">
-            <p>Con <i class="bi bi-suit-heart"></i><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
+            <p>Con <em class="bi bi-suit-heart"></em><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
         </div>
         <div class="social-links d-flex justify-content-center">
-            <a href="https://github.com/MariaJoseVillasante" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/mariajosevillasantetapies" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/MariaJoseVillasante" target="_blank"><em class="bi bi-github"></em></a>
+            <a href="https://www.linkedin.com/in/mariajosevillasantetapies" target="_blank"><em class="bi bi-linkedin"></em></a>
             <a href="https://twitter.com/MJVillasante" target="_blank"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://vosolutions.cl/" target="_blank"><i class="bi bi-globe"></i></a>
+            <a href="https://vosolutions.cl/" target="_blank"><em class="bi bi-globe"></em></a>
         </div>
     </div>
 </footer>
