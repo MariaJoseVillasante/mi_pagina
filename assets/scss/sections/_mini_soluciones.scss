@@ -241,7 +241,7 @@
         margin-bottom: 1.5rem;
         padding-bottom: 0.75rem;
 
-        h5 {
+        th {
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 0;
@@ -413,11 +413,11 @@
             color: color-mix(in srgb, var(--accent-color), transparent 25%);
         }
 
-        i {
+        em {
             transition: transform 0.2s ease;
         }
 
-        &:hover i {
+        &:hover em {
             transform: translateX(-3px);
         }
         }

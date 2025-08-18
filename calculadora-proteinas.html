@@ -85,417 +85,6 @@
             }
         }
     </script>
-
-    <style>
-        .ecommerce-cart {
-            /* // Cart Items Container */
-            .cart-items-container {
-                background-color: var(--surface-color);
-                border-radius: 0.75rem;
-                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
-                padding: 1.5rem;
-                transition: all 0.3s ease;
-
-                @media (max-width: 767.98px) {
-                padding: 1rem;
-                }
-
-                .cart-header {
-                border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-                margin-bottom: 1.5rem;
-                padding-bottom: 0.75rem;
-
-                h5 {
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    margin-bottom: 0;
-                    color: color-mix(in srgb, var(--default-color), transparent 30%);
-                }
-                }
-            }
-
-            /* // Cart Item */
-            .cart-item {
-                background-color: var(--surface-color);
-                border-radius: 0.5rem;
-                margin-bottom: 1rem;
-                padding: 1rem;
-                position: relative;
-                transition: all 0.3s ease;
-                border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-
-                &:hover {
-                box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.07);
-                transform: translateY(-2px);
-                }
-
-                &:last-child {
-                margin-bottom: 0;
-                }
-
-                .product-info {
-                .product-image {
-                    width: 5rem;
-                    height: 5rem;
-                    border-radius: 0.5rem;
-                    overflow: hidden;
-                    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    transition: transform 0.3s ease;
-                    }
-
-                    &:hover img {
-                    transform: scale(1.05);
-                    }
-                }
-
-                .product-details {
-                    .product-title {
-                    font-size: 1rem;
-                    font-weight: 600;
-                    margin-bottom: 0.25rem;
-                    color: var(--heading-color);
-                    }
-
-                    .product-variant {
-                    font-size: 0.85rem;
-                    color: color-mix(in srgb, var(--default-color), transparent 30%);
-                    }
-                }
-                }
-
-                .price-mobile {
-                font-size: 0.85rem;
-                font-weight: 600;
-                margin-bottom: 0.25rem;
-                color: color-mix(in srgb, var(--default-color), transparent 30%);
-                }
-
-                .product-price, .product-total {
-                font-weight: 600;
-                color: var(--heading-color);
-                }
-
-                /* // Quantity Selector */
-                .quantity-selector {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 0.5rem;
-                overflow: hidden;
-                border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-                width: fit-content;
-                margin: 0 auto;
-
-                @media (max-width: 767.98px) {
-                    margin: 0;
-                }
-
-                .quantity-btn {
-                    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-                    border: none;
-                    color: var(--default-color);
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 2rem;
-                    width: 2rem;
-                    transition: all 0.2s ease;
-
-                    &:hover {
-                    background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
-                    color: var(--accent-color);
-                    }
-
-                    &:active {
-                    transform: scale(0.95);
-                    }
-                }
-
-                .quantity-input {
-                    background-color: var(--surface-color);
-                    border: none;
-                    color: var(--default-color);
-                    font-weight: 600;
-                    height: 2rem;
-                    text-align: center;
-                    width: 2.5rem;
-
-                    &::-webkit-outer-spin-button,
-                    &::-webkit-inner-spin-button {
-                    -webkit-appearance: none;
-                    margin: 0;
-                    }
-
-                    &:focus {
-                    outline: none;
-                    }
-                }
-                }
-
-                /* // Remove Item Button */
-                .remove-item {
-                background-color: transparent;
-                border: none;
-                color: color-mix(in srgb, var(--default-color), transparent 30%);
-                cursor: pointer;
-                font-size: 0.85rem;
-                padding: 0.25rem 0;
-                transition: all 0.2s ease;
-
-                &:hover {
-                    color: #dc3545;
-                }
-
-                em {
-                    font-size: 1rem;
-                }
-                }
-            }
-
-            /* // Cart Actions */
-            .cart-actions {
-                .continue-shopping, .update-cart {
-                background-color: transparent;
-                border: none;
-                color: var(--accent-color);
-                cursor: pointer;
-                font-size: 0.9rem;
-                font-weight: 500;
-                padding: 0.5rem 0;
-                transition: all 0.2s ease;
-
-                &:hover {
-                    color: color-mix(in srgb, var(--accent-color), transparent 25%);
-                }
-
-            em {
-                    transition: transform 0.2s ease;
-                }
-
-                &:hover em {
-                    transform: translateX(-3px);
-                }
-                }
-
-                .update-cart {
-                &:hover em {
-                    transform: rotate(45deg);
-                }
-                }
-            }
-
-            /* // Cart Summary */
-            .cart-summary {
-                background-color: var(--surface-color);
-                border-radius: 0.75rem;
-                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
-                padding: 1.5rem;
-                position: sticky;
-                top: 2rem;
-                transition: all 0.3s ease;
-
-                @media (max-width: 991.98px) {
-                position: relative;
-                top: 0;
-                }
-
-                .summary-title {
-                color: var(--heading-color);
-                font-size: 1.25rem;
-                font-weight: 600;
-                margin-bottom: 1.25rem;
-                }
-
-                .summary-item {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 0.75rem;
-
-                .summary-label {
-                    color: color-mix(in srgb, var(--default-color), transparent 30%);
-                    font-size: 0.95rem;
-                }
-
-                .summary-value {
-                    color: var(--heading-color);
-                    font-size: 0.95rem;
-                    font-weight: 500;
-                }
-
-                &.total {
-                    margin-top: 0.75rem;
-                    margin-bottom: 0;
-
-                    .summary-label, .summary-value {
-                    color: var(--heading-color);
-                    font-size: 1.1rem;
-                    font-weight: 700;
-                    }
-                }
-                }
-
-                .summary-divider {
-                background-color: color-mix(in srgb, var(--default-color), transparent 90%);
-                height: 1px;
-                margin: 1rem 0;
-                width: 100%;
-                }
-
-                /* // Promo Code */
-                .promo-code {
-                .form-control {
-                    background-color: var(--surface-color);
-                    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-                    border-radius: 0.5rem 0 0 0.5rem;
-                    color: var(--default-color);
-                    font-size: 0.9rem;
-                    height: 2.75rem;
-                    padding: 0.5rem 1rem;
-
-                    &:focus {
-                    border-color: var(--accent-color);
-                    box-shadow: none;
-                    }
-
-                    &::placeholder {
-                    color: color-mix(in srgb, var(--default-color), transparent 50%);
-                    }
-                }
-
-                .btn-apply {
-                    background-color: var(--accent-color);
-                    border: none;
-                    border-radius: 0 0.5rem 0.5rem 0;
-                    color: var(--contrast-color);
-                    font-size: 0.9rem;
-                    font-weight: 500;
-                    height: 2.75rem;
-                    padding: 0.5rem 1rem;
-                    transition: all 0.2s ease;
-
-                    &:hover {
-                    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
-                    }
-
-                    &:active {
-                    transform: scale(0.98);
-                    }
-                }
-                }
-
-                /* // Checkout Button */
-                .btn-checkout {
-                background-color: var(--accent-color);
-                border: none;
-                border-radius: 0.5rem;
-                color: var(--contrast-color);
-                font-size: 1rem;
-                font-weight: 500;
-                padding: 0.75rem 1.5rem;
-                transition: all 0.3s ease;
-                width: 100%;
-
-                &:hover {
-                    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
-                    transform: translateY(-2px);
-                    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-                }
-
-                &:active {
-                    transform: translateY(0);
-                    box-shadow: none;
-                }
-                }
-
-                /* // Payment Methods */
-                .payment-methods {
-                .payment-icon {
-                    color: color-mix(in srgb, var(--default-color), transparent 40%);
-                    font-size: 1.5rem;
-                    margin: 0 0.5rem;
-                    transition: all 0.2s ease;
-
-                    &:hover {
-                    color: var(--accent-color);
-                    transform: translateY(-2px);
-                    }
-                }
-                }
-            }
-
-            /* // Responsive Adjustments */
-            @media (max-width: 767.98px) {
-                .cart-item {
-                .product-info {
-                    .product-image {
-                    width: 4rem;
-                    height: 4rem;
-                    }
-
-                    .product-details {
-                    .product-title {
-                        font-size: 0.9rem;
-                    }
-
-                    .product-variant {
-                        font-size: 0.8rem;
-                    }
-                    }
-                }
-                }
-            }
-
-            /* // Animation for new items */
-            @keyframes fadeInUp {
-                from {
-                opacity: 0;
-                transform: translateY(20px);
-                }
-                to {
-                opacity: 1;
-                transform: translateY(0);
-                }
-            }
-
-            .cart-item {
-                animation: fadeInUp 0.5s ease-out;
-            }
-
-            /* // Animation for removing items */
-            .cart-item.removing {
-                animation: fadeOutDown 0.5s ease-out forwards;
-            }
-
-            @keyframes fadeOutDown {
-                from {
-                opacity: 1;
-                transform: translateY(0);
-                }
-                to {
-                opacity: 0;
-                transform: translateY(20px);
-                height: 0;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                }
-            }
-
-            /* // Swiper wrapper height fix */
-            .swiper-wrapper {
-                height: auto !important; 
-            }
-            }
-    </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
@@ -580,11 +169,6 @@
                     <dd>Si no has alcanzado la meta, te sugieren scoops de proteína y huevos como opciones para completar el déficit.</dd>
                 </dl>
             </div>
-            <!-- <p id="resultado">Total de proteínas: 0 g</p>
-            <input type="text" id="buscador" placeholder="Buscar alimento..." oninput="filtrarAlimentos()"> <br> -->
-            <!-- inicio buscador -->
-            
-            <!-- fin buscador -->
             <!-- inicio nueva tabla--- -->
             <section id="ecommerce-cart" class="ecommerce-cart section">
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -593,27 +177,32 @@
                         <div class="row g-4">
                             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
                                 <div class="cart-items-container">
-                                    <div class="cart-header d-none d-lg-block">
-                                        <div class="row align-items-center">
-                                            <div class="col-lg-5"><h5>Alimento</h5></div>
-                                            <div class="col-lg-2 text-center"><h5>Proteína por unidad</h5></div>
-                                            <div class="col-lg-2 text-center"><h5>Cantidad</h5></div>
-                                            <div class="col-lg-2 text-center"><h5>Total Proteína</h5></div>
-                                            <div class="col-lg-1 text-center"><h5>Borrar</h5></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div id="listaAlimentos"></div>
+                                    <!-- inicio tabla prueba  -->
+                                    <table class="cart-header d-lg-block" id="tabla-proteinas">
+                                        <caption>Tabla de alimentos y su aporte proteico</caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Alimento</th>
+                                                <th scope="col">Proteína por unidad</th>
+                                                <th scope="col">Cantidad</th>
+                                                <th scope="col">Total Proteína</th>
+                                                <th scope="col">Borrar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="listaAlimentos"></tbody>
+                                    </table>
+                                    <!-- fin tabla prueba  -->
                                     
                                     <!-- Botón para restaurar la lista -->
                                     <div class="text-center mt-4">
-                                        <button class="btn btn-apply" onclick="restaurarLista()">Restaurar Lista</button>
+                                        <button class="btn btn-apply" onclick="restaurarLista()" aria-label="Restaurar lista de alimentos">Restaurar Lista</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <!-- fin commerce cart -->
+               
                     <!-- Cart Summary Column -->
                     <div class="col-lg-4 mt-5" data-aos="fade-up" data-aos-delay="200">
                         <div class="cart-summary">
@@ -678,58 +267,49 @@
             let alimentos = [...alimentosOriginales]; // Copia para modificar
 
             function generarListaAlimentos() {
-                let container = document.getElementById("listaAlimentos");
-                container.innerHTML = "";
+                let tbody = document.getElementById("listaAlimentos");
+                tbody.innerHTML = "";
+                tbody.className = "cart-item";
+                // tbody.setAttribute("data-aos", "fade-up");
+                // tbody.setAttribute("data-aos-delay", 200 + index * 50);
 
                 alimentos.forEach((alimento, index) => {
-                    let item = document.createElement("div");
-                    item.className = "cart-item";
-                    item.setAttribute("data-aos", "fade-up");
-                    item.setAttribute("data-aos-delay", 200 + index * 50);
-                    item.innerHTML = `
-                        <div class="row align-items-center g-3">
-                            <div class="col-lg-5">
-                                <div class="product-info d-flex align-items-center">
-                                    <div class="product-details ms-3">
-                                        <h5 class="product-title">${alimento.nombre}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-2 text-lg-center">
-                                <div class="product-price">${alimento.proteina} g por ${alimento.tipo}</div>
-                            </div>
-                            <div class="col-6 col-lg-2 text-lg-center">
-                                <div class="quantity-selector">
-                                    <button class="quantity-btn decrease" aria-label="Disminuir cantidad" onclick="modificarCantidad(this, -1)">
-                                        <em class="bi bi-dash"></em>
-                                    </button>
-                                    <input type="number" data-proteina="${alimento.proteina}" 
-                                        oninput="calcularProteinas(this)" 
-                                        class="quantity-input" value="0" min="0"  step="1">
-                                    <button class="quantity-btn increase" aria-label="Aumentar cantidad" onclick="modificarCantidad(this, 1)">
-                                        <em class="bi bi-plus"></em>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-2 text-lg-center">
-                                <div class="product-total" id="total-${index}">0 g</div>
-                            </div>
-                            <div class="col-6 col-lg-1 text-lg-center">
-                                <button class="btn btn-danger btn-sm" onclick="eliminarAlimento(${index})">
-                                    <em class="bi bi-trash"></em>
+                    let fila = document.createElement("tr");
+
+                    fila.innerHTML = `
+                        <th scope="row">${alimento.nombre}</th>
+                        <td>${alimento.proteina} g por ${alimento.tipo}</td>
+                        <td>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn decrease" aria-label="Disminuir cantidad" onclick="modificarCantidad(this, -1)">
+                                    <em class="bi bi-dash"></em>
+                                </button>
+                                <input type="number" data-proteina="${alimento.proteina}" 
+                                    oninput="calcularProteinas()" 
+                                    class="quantity-input" value="0" min="0" step="1">
+                                <button class="quantity-btn increase" aria-label="Aumentar cantidad" onclick="modificarCantidad(this, 1)">
+                                    <em class="bi bi-plus"></em>
                                 </button>
                             </div>
-                        </div>
+                        </td>
+                        <td class="product-total" id="total-${index}">0 g</td>
+                        <td class="text-center">
+                            <button class="btn btn-danger btn-sm" onclick="eliminarAlimento(${index})" aria-label="Eliminar alimento">
+                                <em class="bi bi-trash"></em>
+                            </button>
+                        </td>
                     `;
-                    container.appendChild(item);
+
+                    tbody.appendChild(fila);
                 });
             }
+
 
             function calcularProteinas(input) {
                 let proteinaPorUnidad = parseFloat(input.getAttribute("data-proteina"));
                 let cantidad = parseFloat(input.value) || 0;
                 let totalProteina = proteinaPorUnidad * cantidad;
-                let totalDisplay = input.closest(".row").querySelector(".product-total");
+                let totalDisplay = input.closest("tr").querySelector(".product-total");
                 totalDisplay.textContent = `${totalProteina.toFixed(2)} g`;
             }
 
@@ -785,7 +365,7 @@ function calcularProteinas() {
 
         totalProteinas += proteinaTotal;
 
-        let totalDisplay = input.closest(".row").querySelector(".product-total");
+        let totalDisplay = input.closest("tr").querySelector(".product-total");
         totalDisplay.textContent = `${proteinaTotal.toFixed(2)} g`;
     });
 
@@ -813,52 +393,6 @@ function calcularProteinas() {
     document.getElementById('resultado').innerText = `Total de proteínas: ${totalProteinas.toFixed(2)} g`;
     document.getElementById('metaProteinas').innerText = mensaje;
 }
-
-// inicio filtro de busqueda
-    document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.querySelector(".search-form input");
-    const resultsCount = document.querySelector(".results-number");
-    const searchTermDisplay = document.querySelector(".search-term");
-    const sortSelect = document.getElementById("sort-select");
-    const items = document.querySelectorAll("#listaAlimentos .cart-item");
-
-    // Filtrar alimentos en tiempo real
-    searchInput.addEventListener("input", function () {
-        let filtro = searchInput.value.toLowerCase();
-        let resultados = 0;
-
-        items.forEach(item => {
-            let nombreAlimento = item.querySelector(".product-title").innerText.toLowerCase();
-            let coincide = nombreAlimento.includes(filtro);
-            item.style.display = coincide ? "flex" : "none";
-            if (coincide) resultados++;
-        });
-
-        resultsCount.innerText = resultados; // Actualizar número de resultados
-        searchTermDisplay.innerText = `"${filtro}"`; // Mostrar término buscado
-    });
-
-    // Ordenar elementos según selección
-    sortSelect.addEventListener("change", function () {
-        let criterio = sortSelect.value;
-        let container = document.getElementById("listaAlimentos");
-        let itemsArray = Array.from(items);
-
-        itemsArray.sort((a, b) => {
-            let nombreA = a.querySelector(".product-title").innerText.toLowerCase();
-            let nombreB = b.querySelector(".product-title").innerText.toLowerCase();
-
-            if (criterio === "title-asc") return nombreA.localeCompare(nombreB);
-            if (criterio === "title-desc") return nombreB.localeCompare(nombreA);
-            return 0; // Mantener el orden original
-        });
-
-        container.innerHTML = "";
-        itemsArray.forEach(item => container.appendChild(item));
-    });
-});
-
-// fin filtro de busqueda
 
     </script>
 </main>
