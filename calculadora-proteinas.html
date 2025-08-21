@@ -279,7 +279,7 @@
                                 <label for="cantidad-${index}" class="visually-hidden">
                                     Cantidad de ${alimento.nombre}
                                 </label>
-                                <input type="number" data-proteina="${alimento.proteina}" 
+                                <input id="cantidad-${index}" type="number" data-proteina="${alimento.proteina}" 
                                     oninput="calcularProteinas()" 
                                     class="quantity-input" value="0" min="0" step="1">
                                 <button class="quantity-btn increase" aria-label="Aumentar cantidad" onclick="modificarCantidad(this, 1)">
