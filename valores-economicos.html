@@ -154,18 +154,18 @@
         <div class="page-title">
             <div class="breadcrumbs">
                 <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/#hero"><em class="bi bi-house"></em> Home</a></li>
-                    <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
-                    <li class="breadcrumb-item active current">Valores Económicos</li>
-                </ol>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/#hero"><em class="bi bi-house"></em> Home</a></li>
+                        <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
+                        <li class="breadcrumb-item active current">Valores Económicos</li>
+                    </ol>
                 </nav>
             </div>
             <div class="title-wrapper">
                 <h1>Valores Económicos en Chile</h1>
                 <p class="px-5">Visualiza el valor del dólar, <abbr title="Unidad de Fomento">UF</abbr> y otros indicadores al día de hoy. También puedes calcular el valor en pesos según lo que cobres en <abbr title="Unidad de Fomento">UF</abbr> en tu boleta, para que te dé el valor líquido que quieres.</p>
             </div>
-            </div>
+        </div>
         <!-- fin título -->
         <!--  inicia indicadores económicos -->
         <div class="container section-title" data-aos="fade-up">
@@ -274,70 +274,70 @@
                 
                 <!-- Cart Summary Column -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="cart-summary">
-                    <h3 class="summary-title">Boleta de Honorarios</h3>
-                    <div class="promo-code my-4">
-                        <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 14,5%, a partir de la cantidad en <abbr>UF</abbr> o pesos Chilenos que escribas.</p>
-                        <p>1- Elige si quieres ingresar el monto en pesos o <abbr>UF</abbr>.</p>
-                        <p>2- Escribe el monto que quieras calcular. Haz clic en "Calcular"</p>
-                        <p>3- La calculadora te dará el valor en pesos al día de hoy en <abbr>UF</abbr> que escribiste.</p>
-                        <p>4- La calculadora te dará el valor en pesos al día de hoy en pesos que escribiste.</p>
-                        <p>5- La calculadora te dará el valor de la retención del 14,5%</p>
-                        <p>6- La calculadora te dará el valor neto</p>
-                        <label for="unidadSeleccionada" class="form-label">
-                            Selecciona la unidad en la que quieres calcular:
-                        </label>
-                        <select id="unidadSeleccionada" onchange="cambiarUnidad()"  class="form-control">
-                            <option value="UF">UF</option>
-                            <option value="CLP">Pesos chilenos</option>
-                        </select>
-                        <div id="campoUF">
-                            <label for="cantidadUF">Cantidad en UF:</label>
-                            <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF">
+                    <div class="cart-summary">
+                        <h3 class="summary-title">Boleta de Honorarios</h3>
+                        <div class="promo-code my-4">
+                            <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 14,5%, a partir de la cantidad en <abbr>UF</abbr> o pesos Chilenos que escribas.</p>
+                            <p>1- Elige si quieres ingresar el monto en pesos o <abbr>UF</abbr>.</p>
+                            <p>2- Escribe el monto que quieras calcular. Haz clic en "Calcular"</p>
+                            <p>3- La calculadora te dará el valor en pesos al día de hoy en <abbr>UF</abbr> que escribiste.</p>
+                            <p>4- La calculadora te dará el valor en pesos al día de hoy en pesos que escribiste.</p>
+                            <p>5- La calculadora te dará el valor de la retención del 14,5%</p>
+                            <p>6- La calculadora te dará el valor neto</p>
+                            <label for="unidadSeleccionada" class="form-label">
+                                Selecciona la unidad en la que quieres calcular:
+                            </label>
+                            <select id="unidadSeleccionada" onchange="cambiarUnidad()"  class="form-control">
+                                <option value="UF">UF</option>
+                                <option value="CLP">Pesos chilenos</option>
+                            </select>
+                            <div id="campoUF">
+                                <label for="cantidadUF">Cantidad en UF:</label>
+                                <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF">
+                            </div>
+                            <div id="campoCLP" style="display: none;">
+                                <label for="cantidadCLP">Cantidad en CLP:</label>
+                                <input type="number" id="cantidadCLP" min="0" step="100" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad en CLP">
+                            </div>
+                            <button class="btn btn-apply" type="button" onclick="calcularBoleta()">Calcular</button>
+                            <!-- antes -->
+                            <!-- <div class="input-group">
+                                <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF" aria-label="Promo code">
+                                <button class="btn btn-apply" type="button">Calcular</button>
+                            </div> -->
+                            <!-- antes -->
                         </div>
-                        <div id="campoCLP" style="display: none;">
-                            <label for="cantidadCLP">Cantidad en CLP:</label>
-                            <input type="number" id="cantidadCLP" min="0" step="100" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad en CLP">
+                        
+                        <div class="summary-item">
+                        <span class="summary-label">Cantidad en <abbr>UF</abbr></span>
+                        <span class="summary-value" id="ufDisplay">0</span>
                         </div>
-                        <button class="btn btn-apply" type="button" onclick="calcularBoleta()">Calcular</button>
-                        <!-- antes -->
-                        <!-- <div class="input-group">
-                            <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF" aria-label="Promo code">
-                            <button class="btn btn-apply" type="button">Calcular</button>
-                        </div> -->
-                        <!-- antes -->
+                        
+                        <div class="summary-item">
+                        <span class="summary-label">Valor en CLP</span>
+                        <span class="summary-value" id="valorCLP">0</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                        <span class="summary-label">Retención (14,5%)</span>
+                        <span class="summary-value" id="retencion">0</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-item total">
+                        <span class="summary-label">Valor Neto</span>
+                        <span class="summary-value" id="valorNeto">0</span>
+                        </div>
+                        
+                        <div class="payment-methods mt-4">
+                        <div class="d-flex justify-content-center">
+                            <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
+                            <em class="bi bi-paypal payment-icon" title="PayPal"></em>
+                            <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
+                            <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
+                        </div>
+                        </div>
                     </div>
-                    
-                    <div class="summary-item">
-                    <span class="summary-label">Cantidad en <abbr>UF</abbr></span>
-                    <span class="summary-value" id="ufDisplay">0</span>
-                    </div>
-                    
-                    <div class="summary-item">
-                    <span class="summary-label">Valor en CLP</span>
-                    <span class="summary-value" id="valorCLP">0</span>
-                    </div>
-                    
-                    <div class="summary-item">
-                    <span class="summary-label">Retención (14,5%)</span>
-                    <span class="summary-value" id="retencion">0</span>
-                    </div>
-                    <div class="summary-divider"></div>
-                    
-                    <div class="summary-item total">
-                    <span class="summary-label">Valor Neto</span>
-                    <span class="summary-value" id="valorNeto">0</span>
-                    </div>
-                    
-                    <div class="payment-methods mt-4">
-                    <div class="d-flex justify-content-center">
-                        <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
-                        <em class="bi bi-paypal payment-icon" title="PayPal"></em>
-                        <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
-                        <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
-                    </div>
-                    </div>
-                </div>
                 </div> <!-- Cart Summary Column -->
                 <!-- Cart Summary Column -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
