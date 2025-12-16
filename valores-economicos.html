@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- SEO -->
     <title>Calculadora de Honorarios en UF y CLP | Indicadores Económicos</title>
     <meta name="description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real. Herramienta accesible para visualizar datos y tomar decisiones informadas.">
     <meta name="keywords" content="calculadora de honorarios, boleta de honorarios, UF hoy, dólar hoy Chile, indicadores económicos, precio dólar Chile, conversión UF a CLP, retención impuestos honorarios, cálculo financiero">
     <meta name="author" content="María José Villasante">
     <meta name="email" content="hola@mariajosevillasante.cl">
-
     <!-- Etiqueta canonical -->
     <link rel="canonical" href="https://mariajosevillasante.cl/valores-economicos.html" />
-
     <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
     <meta property="og:title" content="Portafolio de María José Villasante" />
     <meta property="og:description" content="Explora el trabajo de María José Villasante: desarrollo web personalizado y estrategias digitales pensadas para emprendedores y pymes." />
@@ -21,7 +18,6 @@
     <meta property="og:url" content="https://mariajosevillasante.cl/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_CL" />
-
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="María José Villasante - Estrategia Digital Personalizada">
@@ -29,21 +25,17 @@
     <meta name="twitter:image" content="https://mariajosevillasante.cl/assets/img/logo/logolnegra.png">
     <meta name="twitter:url" content="https://mariajosevillasante.cl/">
     <meta name="twitter:site" content="@MJVillasante">
-
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/logolmorada.png" type="image/x-icon">
-
     <!-- Google Fonts optimizado -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"></noscript>
-
     <!-- CSS Vendor (solo lo necesario en primera carga) -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/main.min.css">
-
     <!-- CSS diferido -->
     <link rel="stylesheet" href="assets/vendor/aos/aos.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
@@ -53,7 +45,6 @@
         <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
     </noscript>
-
     <script>
         const params = new URLSearchParams(window.location.search);
         if (params.has('s') || params.has('orden') || params.has('filter')) {
@@ -63,8 +54,6 @@
             document.head.appendChild(meta);
         }
     </script>
-
-
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -86,7 +75,6 @@
             }
         }
     </script>
-
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
@@ -122,9 +110,9 @@
                     <li><a href="/#servicios">Servicios</a></li>
                     <li class="dropdown"><a href="/#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
+                            <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
                             <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
                             <li><a href="/valores-economicos.html" aria-label="Boleta de Honorarios">Boleta de Honorarios</a></li>
-                            <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
                         </ul>
                     </li>
                     <li><a href="/#publicaciones">Publicaciones</a></li>
@@ -139,7 +127,6 @@
         function toggleEconomicos() {
             const econContainer = document.getElementById("economicos");
             const button = document.querySelector("button");
-
             if (econContainer.style.display === "none") {
                 econContainer.style.display = "block";
                 button.textContent = "Ver menos";
@@ -175,62 +162,54 @@
         </div>
         <section id="pricing-2" class="pricing-2 section">
             <slot type="section-title"></slot>
-            
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-            
                 <div class="row gy-4 gx-lg-5">
-            
                 <div class="col-lg-6">
                     <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor de la <abbr>UF</abbr> es</h3>
-                    <h4 id="UF"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-            
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor del Dólar observado es</h3>
-                    <h4 id="DolarO"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor del Dólar acuerdo es</h3>
-                    <h4 id="DolarA"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor actual del Euro es </h3>
-                    <h4 id="Euro"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-            
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor actual del <abbr title="Índice de precios al consumidor">IPC</abbr> es </h3>
-                    <h4 id="IPC"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-            
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor actual de la <abbr title="Unidad Tributaria Mensual">UTM</abbr> es </h3>
-                    <h4 id="UTM"></h4>
+                        <h3>El valor de la <abbr>UF</abbr> es</h3>
+                        <h4 id="UF"></h4>
                     </div>
                 </div><!-- End Pricing Item -->
                 <div class="col-lg-6">
                     <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor actual del <abbr title="Índice de Valor Promedio">IVP</abbr> es </h3>
-                    <h4 id="IVP"></h4>
+                        <h3>El valor del Dólar observado es</h3>
+                        <h4 id="DolarO"></h4>
                     </div>
                 </div><!-- End Pricing Item -->
                 <div class="col-lg-6">
                     <div class="pricing-item d-flex justify-content-between">
-                    <h3>El valor actual del <abbr title="Índicador Mensual de Actividad Económica">IMACEC</abbr> es</h3>
-                    <h4 id="Imacec"></h4>
+                        <h3>El valor del Dólar acuerdo es</h3>
+                        <h4 id="DolarA"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                        <h3>El valor actual del Euro es </h3>
+                        <h4 id="Euro"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                        <h3>El valor actual del <abbr title="Índice de precios al consumidor">IPC</abbr> es </h3>
+                        <h4 id="IPC"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                        <h3>El valor actual de la <abbr title="Unidad Tributaria Mensual">UTM</abbr> es </h3>
+                        <h4 id="UTM"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                        <h3>El valor actual del <abbr title="Índice de Valor Promedio">IVP</abbr> es </h3>
+                        <h4 id="IVP"></h4>
+                    </div>
+                </div><!-- End Pricing Item -->
+                <div class="col-lg-6">
+                    <div class="pricing-item d-flex justify-content-between">
+                        <h3>El valor actual del <abbr title="Índicador Mensual de Actividad Económica">IMACEC</abbr> es</h3>
+                        <h4 id="Imacec"></h4>
                     </div>
                 </div><!-- End Pricing Item -->
                 </div>
@@ -272,7 +251,6 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="ecommerce-cart-3">
             <div class="row g-4">
-                
                 <!-- Cart Summary Column -->
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="cart-summary">
@@ -308,35 +286,30 @@
                             </div> -->
                             <!-- antes -->
                         </div>
-                        
                         <div class="summary-item">
-                        <span class="summary-label">Cantidad en <abbr>UF</abbr></span>
-                        <span class="summary-value" id="ufDisplay">0</span>
+                            <span class="summary-label">Cantidad en <abbr>UF</abbr></span>
+                            <span class="summary-value" id="ufDisplay">0</span>
                         </div>
-                        
                         <div class="summary-item">
-                        <span class="summary-label">Valor en CLP</span>
-                        <span class="summary-value" id="valorCLP">0</span>
+                            <span class="summary-label">Valor en CLP</span>
+                            <span class="summary-value" id="valorCLP">0</span>
                         </div>
-                        
                         <div class="summary-item">
-                        <span class="summary-label">Retención (14,5%)</span>
-                        <span class="summary-value" id="retencion">0</span>
+                            <span class="summary-label">Retención (14,5%)</span>
+                            <span class="summary-value" id="retencion">0</span>
                         </div>
                         <div class="summary-divider"></div>
-                        
                         <div class="summary-item total">
-                        <span class="summary-label">Valor Neto</span>
-                        <span class="summary-value" id="valorNeto">0</span>
+                            <span class="summary-label">Valor Neto</span>
+                            <span class="summary-value" id="valorNeto">0</span>
                         </div>
-                        
                         <div class="payment-methods mt-4">
-                        <div class="d-flex justify-content-center">
-                            <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
-                            <em class="bi bi-paypal payment-icon" title="PayPal"></em>
-                            <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
-                            <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
-                        </div>
+                            <div class="d-flex justify-content-center">
+                                <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
+                                <em class="bi bi-paypal payment-icon" title="PayPal"></em>
+                                <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
+                                <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
+                            </div>
                         </div>
                     </div>
                 </div> <!-- Cart Summary Column -->
@@ -354,31 +327,28 @@
                         <button class="btn btn-apply" type="button">Calcular</button>
                     </div>
                     </div>
-
                     <div class="promo-code my-4">
-                    <div class="input-group">
-                        <input type="number" id="montoNetoCLP" min="0" step="100" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido $" aria-label="Promo code">
-                        <button class="btn btn-apply" type="button">Calcular</button>
-                    </div>
+                        <div class="input-group">
+                            <input type="number" id="montoNetoCLP" min="0" step="100" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido $" aria-label="Promo code">
+                            <button class="btn btn-apply" type="button">Calcular</button>
+                        </div>
                     </div>            
                     <div class="summary-item">
                     <span class="summary-label">Para recibir ese monto líquido, tu boleta debe ser de:</span>
                     <!-- <span class="summary-value" id="montoBruto">0</span> -->
                     </div>
-            
                     <div class="summary-divider"></div>
-                    
                     <div class="summary-item total">
                     <!-- <span class="summary-label">Valor Neto</span> -->
                     <span class="summary-value" id="montoBruto">0</span>
                     </div>
                     <div class="payment-methods mt-4">
-                    <div class="d-flex justify-content-center">
-                        <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
-                        <em class="bi bi-paypal payment-icon" title="PayPal"></em>
-                        <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
-                        <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
-                    </div>
+                        <div class="d-flex justify-content-center">
+                            <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
+                            <em class="bi bi-paypal payment-icon" title="PayPal"></em>
+                            <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
+                            <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
+                        </div>
                     </div>
                 </div>
                 </div> <!-- Cart Summary Column -->
@@ -402,7 +372,6 @@
         
         function cambiarUnidad() {
             const unidadSeleccionada = document.getElementById("unidadSeleccionada").value;
-            
             if (unidadSeleccionada === "UF") {
                 document.getElementById("campoUF").style.display = "block";
                 document.getElementById("campoCLP").style.display = "none";
@@ -416,7 +385,6 @@
             const valorUF = await obtenerValorUF();
             const unidadSeleccionada = document.getElementById("unidadSeleccionada").value;
             let valorCLP, cantidadUF;
-
             if (unidadSeleccionada === "UF") {
                 cantidadUF = parseFloat(document.getElementById("cantidadUF").value) || 0;
                 valorCLP = cantidadUF * valorUF;
@@ -433,58 +401,48 @@
             document.getElementById("retencion").textContent = retencion.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
             document.getElementById("valorNeto").textContent = valorNeto.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
         }
-
         async function calcularMontoBruto() {
             const valorUF = await obtenerValorUF();
-
             // Obtener valores ingresados por el usuario
             const montoNetoUF = parseFloat(document.getElementById("montoNetoUF").value) || 0;
             const montoNetoCLP = parseFloat(document.getElementById("montoNetoCLP").value) || (montoNetoUF * valorUF);
-
             // Calcular monto bruto en CLP con retención del 14,5%
             const montoBrutoCLP = montoNetoCLP / 0.855; // Se divide por 85,5% para agregar el 14,5% de retención
-
             // Mostrar resultado
             document.getElementById("montoBruto").textContent = montoBrutoCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
         }
+       // <!-- fin calculadora de boletas -->
         </script>
-    <!-- fin calculadora de boletas -->
-
 </main>
     <!-- inicio Footer -->
-<footer id="footer" class="footer position-relative dark-background">
-    <div class="container">
-        <div class="copyright text-center ">
-            <p>Con <em class="bi bi-suit-heart"></em><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
-        </div>
-        <div class="social-links d-flex justify-content-center">
-            <a href="https://github.com/MariaJoseVillasante" title="Github icon" target="_blank"><em class="bi bi-github"></em></a>
-            <a href="https://www.linkedin.com/in/mariajosevillasantetapies" title="LinkedIn icon" target="_blank"><em class="bi bi-linkedin"></em></a>
-            <a href="https://twitter.com/MJVillasante" title="Twitter icon" target="_blank"><em class="bi bi-twitter-x"></em></a>
-            <a href="https://vosolutions.cl/" title="globe icon" target="_blank"><em class="bi bi-globe"></em></a>
-        </div>
-    </div>
-</footer>
+        <footer id="footer" class="footer position-relative dark-background">
+            <div class="container">
+                <div class="copyright text-center ">
+                    <p>Con <em class="bi bi-suit-heart"></em><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/">MJVT</a></p>
+                </div>
+                <div class="social-links d-flex justify-content-center">
+                    <a href="https://github.com/MariaJoseVillasante" title="Github icon" target="_blank"><em class="bi bi-github"></em></a>
+                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies" title="LinkedIn icon" target="_blank"><em class="bi bi-linkedin"></em></a>
+                    <a href="https://twitter.com/MJVillasante" title="Twitter icon" target="_blank"><em class="bi bi-twitter-x"></em></a>
+                    <a href="https://vosolutions.cl/" title="globe icon" target="_blank"><em class="bi bi-globe"></em></a>
+                </div>
+            </div>
+        </footer>
     <!-- fin footer -->
-    
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" title="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-        <span class="visually-hidden">Subir</span>
-        <em class="bi bi-arrow-up-short"></em>
-    </a>
-    
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/vendor/aos/aos.js" defer></script>
-    <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-    
-    <!-- link al archivo js (nuestros script deben ser lo último)-->
-    <script src="assets/js/main.min.js" defer></script>
-
-</body>
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" title="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+            <span class="visually-hidden">Subir</span>
+            <em class="bi bi-arrow-up-short"></em>
+        </a>
+        <!-- Preloader -->
+        <div id="preloader"></div>
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+        <script src="assets/vendor/aos/aos.js" defer></script>
+        <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+        <!-- link al archivo js (nuestros script deben ser lo último)-->
+        <script src="assets/js/main.min.js" defer></script>
+    </body>
 </html>

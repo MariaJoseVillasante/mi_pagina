@@ -93,25 +93,25 @@
                     <source srcset="assets/img/logo/logolblanca.avif" type="image/avif">
                     <source srcset="assets/img/logo/logolblanca.webp" type="image/webp">
                     <img
-                        src="assets/img/logo/logolblanca.png"
+                    src="assets/img/logo/logolblanca.png"
                         alt="Logo MJVT con el nombre María José Villasante y diseño de estrategia digital."
                         width="100"
                         height="50" 
                         loading="lazy">
-                </picture>
-            </a>
-    <!-- inicio navbar hecha con bootstrap -->
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="/#hero" class="active">Home</a></li>
-                    <li><a href="/#sobre_mi">Sobre mi</a></li>
-                    <li><a href="/#servicios">Servicios</a></li>
-                    <li class="dropdown"><a href="/#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><em class="bi bi-chevron-down toggle-dropdown"></em></a>
-                        <ul>
-                            <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
-                            <li><a href="/valores-economicos.html" aria-label="Boleta de Honorarios">Boleta de Honorarios</a></li>
-                            <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
-                        </ul>
+                    </picture>
+                </a>
+                <!-- inicio navbar hecha con bootstrap -->
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="/#hero" class="active">Home</a></li>
+                        <li><a href="/#sobre_mi">Sobre mi</a></li>
+                        <li><a href="/#servicios">Servicios</a></li>
+                        <li class="dropdown"><a href="/#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><em class="bi bi-chevron-down toggle-dropdown"></em></a>
+                            <ul>
+                                <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
+                                <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
+                                <li><a href="/valores-economicos.html" aria-label="Boleta de Honorarios">Boleta de Honorarios</a></li>
+                            </ul>
                     </li>
                     <li><a href="/#publicaciones">Publicaciones</a></li>
                 </ul>
@@ -201,10 +201,10 @@
                         </div>
                     </div>
                 <!-- fin commerce cart -->
-                    <!-- Cart Summary Column -->
-                    <div class="col-lg-4 mt-5" data-aos="fade-up" data-aos-delay="200">
-                        <div class="cart-summary">
-                            <div class="promo-code my-4">
+                <!-- Cart Summary Column -->
+                <div class="col-lg-4 mt-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cart-summary">
+                        <div class="promo-code my-4">
                         <h3 class="summary-title">Peso en kg:</h3>
                         <div class="input-group">
                             <label for="peso" class="visually-hidden">Ingrese su peso en kilogramos</label>
@@ -222,128 +222,116 @@
                         </div>
                     </div>
                     <div class="summary-divider"></div>
-                        <div class="summary-item total">
-                            <span class="summary-label">Total:</span>
-                            <span id="resultado" class="summary-value"> 0 g</span>
+                    <div class="summary-item total">
+                        <span class="summary-label">Total:</span>
+                        <span id="resultado" class="summary-value"> 0 g</span>
                         </div>
                     </div>
-                <!-- fin cart summary -->
+                    <!-- fin cart summary -->
                 </div>
             </div>
         </div>
     </div>
 </section>
-        <script>
-            const alimentosOriginales = [
-                { nombre: "Frutos secos", proteina: 0.15, tipo: "gramos" },
-                { nombre: "Huevo", proteina: 6, tipo: "unidad" },
-                { nombre: "Leche", proteina: 0.034, tipo: "ml" },
-                { nombre: "Pechuga de Pavo", proteina: 1.9, tipo: "lámina" },
-                { nombre: "Queso fresco", proteina: 0.14, tipo: "gramos" },
-                { nombre: "Queso mantecoso", proteina: 0.21, tipo: "gramos" },
-                { nombre: "Queso mantecoso (lámina)", proteina: 6.5, tipo: "lámina" },
-                { nombre: "Scoop de proteína", proteina: 25, tipo: "scoop" },
-                { nombre: "Yogurt protein", proteina: 10, tipo: "unidad" },
-                { nombre: "Taza Arroz", proteina: 5, tipo: "unidad" },
-                { nombre: "Camarones", proteina: 0.24, tipo: "gramos" },
-                { nombre: "Carne de res", proteina: 0.26, tipo: "gramos" },
-                { nombre: "Choclo", proteina: 0.031, tipo: "gramos" },
-                { nombre: "Edamame", proteina: 0.11, tipo: "gramos" },
-                { nombre: "Erizos", proteina: 0.13, tipo: "gramos" },
-                { nombre: "Espinacas", proteina: 0.029, tipo: "gramos" },
-                { nombre: "Garbanzos", proteina: 0.19, tipo: "gramos" },
-                { nombre: "Lentejas", proteina: 0.09, tipo: "gramos" },
-                { nombre: "Ostras", proteina: 9, tipo: "unidad" },
-                { nombre: "Panitas de pollo", proteina: 0.167, tipo: "gramos" },
-                { nombre: "Papas", proteina: 4, tipo: "unidad" },
-                { nombre: "Pavo", proteina: 0.29, tipo: "gramos" },
-                { nombre: "Pollo", proteina: 0.27, tipo: "gramos" },
-                { nombre: "Porotos", proteina: 0.09, tipo: "gramos" },
-                { nombre: "Porotos Negros", proteina: 0.216, tipo: "gramos" },
-                { nombre: "Reineta", proteina: 0.19, tipo: "gramos" },
-                { nombre: "Salmón", proteina: 0.20, tipo: "gramos" },
-                { nombre: "Tofu", proteina: 0.29, tipo: "gramos" },
-            ];
-            let alimentos = [...alimentosOriginales]; // Copia para modificar
-            function generarListaAlimentos() {
-                let tbody = document.getElementById("listaAlimentos");
-                tbody.innerHTML = "";
-                
-                alimentos.forEach((alimento, index) => {
-                    let fila = document.createElement("tr");
-                    fila.className = "cart-item";
-                    fila.setAttribute("data-aos", "fade-up");
-                    fila.setAttribute("data-aos-delay", 200 + index * 50);
-                    fila.innerHTML = `
-                        <th scope="row">${alimento.nombre}</th>
-                        <td>${alimento.proteina} g por ${alimento.tipo}</td>
-                        <td>
-                            <div class="quantity-selector">
-                                <button class="quantity-btn decrease" aria-label="Disminuir cantidad" onclick="modificarCantidad(this, -1)">
-                                    <em class="bi bi-dash"></em>
-                                </button>
-                                <label for="cantidad-${index}" class="visually-hidden">
-                                    Cantidad de ${alimento.nombre}
-                                </label>
-                                <input id="cantidad-${index}" type="number" data-proteina="${alimento.proteina}" 
-                                    oninput="calcularProteinas()" 
-                                    class="quantity-input" value="0" min="0" step="1">
-                                <button class="quantity-btn increase" aria-label="Aumentar cantidad" onclick="modificarCantidad(this, 1)">
-                                    <em class="bi bi-plus"></em>
-                                </button>
-                            </div>
-                        </td>
-                        <td class="product-total" id="total-${index}">0 g</td>
-                        <td class="text-center">
-                            <button class="btn btn-danger btn-sm" onclick="eliminarAlimento(${index})" aria-label="Eliminar alimento">
-                                <em class="bi bi-trash"></em>
-                            </button>
-                        </td>
-                    `;
-                    tbody.appendChild(fila);
-                });
-            }
+<script>
+    const alimentosOriginales = [
+        { nombre: "Frutos secos", proteina: 0.15, tipo: "gramos" },
+        { nombre: "Huevo", proteina: 6, tipo: "unidad" },
+        { nombre: "Leche", proteina: 0.034, tipo: "ml" },
+        { nombre: "Pechuga de Pavo", proteina: 1.9, tipo: "lámina" },
+        { nombre: "Queso fresco", proteina: 0.14, tipo: "gramos" },
+        { nombre: "Queso mantecoso", proteina: 0.21, tipo: "gramos" },
+        { nombre: "Queso mantecoso (lámina)", proteina: 6.5, tipo: "lámina" },
+        { nombre: "Scoop de proteína", proteina: 25, tipo: "scoop" },
+        { nombre: "Yogurt protein", proteina: 10, tipo: "unidad" },
+        { nombre: "Taza Arroz", proteina: 5, tipo: "unidad" },
+        { nombre: "Camarones", proteina: 0.24, tipo: "gramos" },
+        { nombre: "Carne de res", proteina: 0.26, tipo: "gramos" },
+        { nombre: "Choclo", proteina: 0.031, tipo: "gramos" },
+        { nombre: "Edamame", proteina: 0.11, tipo: "gramos" },
+        { nombre: "Erizos", proteina: 0.13, tipo: "gramos" },
+        { nombre: "Espinacas", proteina: 0.029, tipo: "gramos" },
+        { nombre: "Garbanzos", proteina: 0.19, tipo: "gramos" },
+        { nombre: "Lentejas", proteina: 0.09, tipo: "gramos" },
+        { nombre: "Ostras", proteina: 9, tipo: "unidad" },
+        { nombre: "Panitas de pollo", proteina: 0.167, tipo: "gramos" },
+        { nombre: "Papas", proteina: 4, tipo: "unidad" },
+        { nombre: "Pavo", proteina: 0.29, tipo: "gramos" },
+        { nombre: "Pollo", proteina: 0.27, tipo: "gramos" },
+        { nombre: "Porotos", proteina: 0.09, tipo: "gramos" },
+        { nombre: "Porotos Negros", proteina: 0.216, tipo: "gramos" },
+        { nombre: "Reineta", proteina: 0.19, tipo: "gramos" },
+        { nombre: "Salmón", proteina: 0.20, tipo: "gramos" },
+        { nombre: "Tofu", proteina: 0.29, tipo: "gramos" },
+    ];
+    let alimentos = [...alimentosOriginales]; // Copia para modificar
+    function generarListaAlimentos() {
+        let tbody = document.getElementById("listaAlimentos");
+        tbody.innerHTML = "";
+        
+        alimentos.forEach((alimento, index) => {
+            let fila = document.createElement("tr");
+            fila.className = "cart-item";
+            fila.setAttribute("data-aos", "fade-up");
+            fila.setAttribute("data-aos-delay", 200 + index * 50);
+            fila.innerHTML = `
+                <th scope="row">${alimento.nombre}</th>
+                <td>${alimento.proteina} g por ${alimento.tipo}</td>
+                <td>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn decrease" aria-label="Disminuir cantidad" onclick="modificarCantidad(this, -1)">
+                            <em class="bi bi-dash"></em>
+                        </button>
+                        <label for="cantidad-${index}" class="visually-hidden">
+                            Cantidad de ${alimento.nombre}
+                        </label>
+                        <input id="cantidad-${index}" type="number" data-proteina="${alimento.proteina}" 
+                            oninput="calcularProteinas()" 
+                            class="quantity-input" value="0" min="0" step="1">
+                        <button class="quantity-btn increase" aria-label="Aumentar cantidad" onclick="modificarCantidad(this, 1)">
+                            <em class="bi bi-plus"></em>
+                        </button>
+                    </div>
+                </td>
+                <td class="product-total" id="total-${index}">0 g</td>
+                <td class="text-center">
+                    <button class="btn btn-danger btn-sm" onclick="eliminarAlimento(${index})" aria-label="Eliminar alimento">
+                        <em class="bi bi-trash"></em>
+                    </button>
+                </td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
+    function eliminarAlimento(index) {
+        alimentos.splice(index, 1);
+        generarListaAlimentos();
+    }
+    function restaurarLista() {
+        alimentos = [...alimentosOriginales]; // Restaurar la lista inicial
+        generarListaAlimentos();
+    }
 
-            function calcularProteinas(input) {
-                let proteinaPorUnidad = parseFloat(input.getAttribute("data-proteina"));
-                let cantidad = parseFloat(input.value) || 0;
-                let totalProteina = proteinaPorUnidad * cantidad;
-                let totalDisplay = input.closest("tr").querySelector(".product-total");
-                totalDisplay.textContent = `${totalProteina.toFixed(2)} g`;
-            }
+    // Generar la lista al cargar la página
+    window.onload = generarListaAlimentos;
+//<!-- fin nueva tabla--- -->
 
-            function eliminarAlimento(index) {
-                alimentos.splice(index, 1);
-                generarListaAlimentos();
-            }
-
-            function restaurarLista() {
-                alimentos = [...alimentosOriginales]; // Restaurar la lista inicial
-                generarListaAlimentos();
-            }
-
-            // Generar la lista al cargar la página
-            window.onload = generarListaAlimentos;
-        </script>
-        <!-- fin nueva tabla--- -->
-
-        <script>
-        function actualizarMetaProteinas() {
+    function actualizarMetaProteinas() {
         let peso = parseFloat(document.getElementById('peso').value) || 0;
         let metaProteinas = peso * 1.3;
         document.getElementById('proteinasObjetivo').value = metaProteinas.toFixed(2);
         calcularProteinas();
     }
 
-function modificarCantidad(btn, cambio) {
-    let input = btn.closest('.quantity-selector').querySelector('.quantity-input');
-    let nuevoValor = parseFloat(input.value) + cambio;
+    function modificarCantidad(btn, cambio) {
+        let input = btn.closest('.quantity-selector').querySelector('.quantity-input');
+        let nuevoValor = parseFloat(input.value) + cambio;
 
     if (nuevoValor >= 0) { 
-        input.value = nuevoValor;
-        calcularProteinas(); // Se llama directamente la función de cálculo
+            input.value = nuevoValor;
+            calcularProteinas(); // Se llama directamente la función de cálculo
+        }
     }
-}
 
 function calcularProteinas() {
     let totalProteinas = 0;
@@ -385,9 +373,8 @@ function calcularProteinas() {
     }
     document.getElementById('resultado').innerText = `Total de proteínas: ${totalProteinas.toFixed(2)} g`;
     document.getElementById('metaProteinas').innerText = mensaje;
-}
-
-    </script>
+}           
+</script>
 </main>
 <!-- inicio Footer -->
 <footer id="footer" class="footer position-relative dark-background">
@@ -418,6 +405,6 @@ function calcularProteinas() {
     <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script> 
     <!-- link al archivo js (nuestros script deben ser lo último)-->
-    <script src="assets/js/main.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
