@@ -604,10 +604,10 @@ const Dulce = [
   { nombre: "1", link: "", ingredientes: ["", "", ""] },
   { nombre: "1", link: "", ingredientes: ["", "", ""] },
   { nombre: "1", link: "", ingredientes: ["", "", ""] },
-  { nombre: "1", link: "", ingredientes: ["", "", ""] },
   { nombre: "GALLETAS CON AVENA, ALMENDRA Y CHOCOLATE", link: "https://www.recetasthermomix.cl/?recipe=galletas-con-avena-almendra-y-chocolate", ingredientes: ["115 g de mantequilla sin sal, en cubos y a temperatura ambiente", "50 g de azúcar mascabado", "100 g de azúcar estandar", "140 g de harina", "½ cdita de bicarbonato de sodio", "½ cdita de polvo para hornear", "1 huevo", "1 cdita de esencia de vainilla", "120 g de copos de avena", "50 g almendras fileteadas", "50 g de chocolate (negro o blanco), en trozos o bien 50 g de chispas de chocolate (negro o blanco)", "", ""] },
   { nombre: "BLONDIES CON ALMENDRAS Y FRUTOS ROJOS", link: "https://www.recetasthermomix.cl/?recipe=blondies-con-almendras-y-frutos-rojos", ingredientes: ["250 g de harina sin polvos de hornear", "100 g de azúcar", "15 g de polvos de hornear", "2 cucharadas de coco rallado", "100 g de mantequilla a temperatura ambiente cortada en trozos", "2 huevos", "180 g de chocolate blanco en cortado en trozos de 1 cm aprox.", "40 g de arándanos congelados", "40 g de frambuesas congeladas", "10-15 g de almendras laminadas", "", ""] },
   { nombre: "Bizcocho de manzana", link: "https://www.recetasthermomix.cl/?recipe=bizcocho-de-manzana", ingredientes: ["130 g de mantequilla blanda en trozos (y algo más para engrasar el molde)", "3 - 4 manzanas ácidas (aprox. 180 g cada una)", "3 huevos", "150 g de azúcar", "30 g de brandy (opcional)", "200 g de harina", "1 cucharada de polvos para hornear (15 g)", "azúcar flor para espolvorear", "", ""] },
+  { nombre: "1", link: "", ingredientes: ["", "", ""] },
 
 ];
 
