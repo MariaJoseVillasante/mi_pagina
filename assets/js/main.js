@@ -506,7 +506,9 @@ const Verdura = [
   { nombre: "Pebre", link: "https://www.recetasthermomix.cl/?recipe=pebre", ingredientes: ["15 g de hojas de cilantro fresco", "60-90 g de ají verde (2 unidades aprox)", "120 g de cebolla morada (1 unidad aprox)", "330-350 g de tomate (2-3 unidades aprox)", "20 g de aceite de oliva", "20 g de jugo de limón"] },
    // extras
   { nombre: "SOPA MINESTRONE", link: "https://www.recetasthermomix.cl/?recipe=sopa-minestrone", ingredientes: ["600 g de verduras variadas (zanahoria, zapallo italiano, porotos verdes, etc.) en trozos", "100 g de cebolla en trozos", "1 puerro en rodajas (aprox. 150 g)", "40 g de aceite de oliva virgen extra", "", ""] },
-  { nombre: "1", link: "", ingredientes: ["", "", ""] },
+  { nombre: "", link: "", ingredientes: ["", "", ""] },
+  { nombre: "", link: "", ingredientes: ["", "", ""] },
+  { nombre: "", link: "", ingredientes: ["", "", ""] },
 ];
 
 const Aperitivo = [

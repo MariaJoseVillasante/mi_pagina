@@ -65,7 +65,7 @@
           font-size: 0.9rem;
           color: color-mix(in srgb, var(--heading-color), transparent 30%);
 
-          i {
+          em {
             margin-right: 0.25rem;
           }
 
@@ -85,7 +85,7 @@
           font-weight: 600;
           color: var(--accent-color);
 
-          i {
+          em {
             margin-left: 0.5rem;
             transition: transform 0.3s ease;
           }
@@ -93,7 +93,7 @@
           &:hover {
             color: color-mix(in srgb, var(--accent-color), transparent 25%);
 
-            i {
+            em {
               transform: translateX(5px);
             }
           }
@@ -198,7 +198,7 @@
             color: color-mix(in srgb, var(--default-color), transparent 10%);
             font-size: 0.95rem;
 
-            i {
+            em {
               color: var(--accent-color);
               margin-right: 0.25rem;
             }
