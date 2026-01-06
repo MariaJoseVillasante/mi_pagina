@@ -256,12 +256,12 @@
                     <div class="cart-summary">
                         <h3 class="summary-title">Boleta de Honorarios</h3>
                         <div class="promo-code my-4">
-                            <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 14,5%, a partir de la cantidad en <abbr>UF</abbr> o pesos Chilenos que escribas.</p>
+                            <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 15,25% (desde el 1 de enero de 2026), a partir de la cantidad en <abbr>UF</abbr> o pesos Chilenos que escribas.</p>
                             <p>1- Elige si quieres ingresar el monto en pesos o <abbr>UF</abbr>.</p>
                             <p>2- Escribe el monto que quieras calcular. Haz clic en "Calcular"</p>
                             <p>3- La calculadora te dará el valor en pesos al día de hoy en <abbr>UF</abbr> que escribiste.</p>
                             <p>4- La calculadora te dará el valor en pesos al día de hoy en pesos que escribiste.</p>
-                            <p>5- La calculadora te dará el valor de la retención del 14,5%</p>
+                            <p>5- La calculadora te dará el valor de la retención del 15,25%</p>
                             <p>6- La calculadora te dará el valor neto</p>
                             <label for="unidadSeleccionada" class="form-label">
                                 Selecciona la unidad en la que quieres calcular:
@@ -295,7 +295,7 @@
                             <span class="summary-value" id="valorCLP">0</span>
                         </div>
                         <div class="summary-item">
-                            <span class="summary-label">Retención (14,5%)</span>
+                            <span class="summary-label">Retención (15,25%)</span>
                             <span class="summary-value" id="retencion">0</span>
                         </div>
                         <div class="summary-divider"></div>
@@ -318,9 +318,9 @@
                 <div class="cart-summary">
                     <h3 class="summary-title">Calculadora de Monto Bruto</h3>
                     <div class="promo-code my-4">
-                        <p>Esta calculadora permite determinar cuánto debe ser el monto bruto de tu boleta de honorarios para que, después de la retención del 14,5%, recibas el monto exacto que deseas líquido.</p>
+                        <p>Esta calculadora permite determinar cuánto debe ser el monto bruto de tu boleta de honorarios para que, después de la retención del 15,25%, recibas el monto exacto que deseas líquido.</p>
                         <p>1- Ingresas el monto líquido que deseas recibir en <abbr>UF</abbr> o en pesos chilenos. Fíjate de anotarlos en la casilla correcta. Haz clic en "Calcular"  </p>
-                        <p>2- La calculadora aplica la fórmula Monto Neto / 0.855 para agregar el 14,5% de retención.  </p>
+                        <p>2- La calculadora aplica la fórmula Monto Neto / 0.8475 para agregar el 15,25% de retención.  </p>
                         <p>3- Automáticamente muestra el monto bruto que debes colocar en la boleta para recibir el pago deseado.  </p>
                     <div class="input-group">
                         <input type="number" id="montoNetoUF" min="0" step="0.01" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido UF" aria-label="Promo code">
@@ -393,7 +393,7 @@
                 cantidadUF = valorCLP / valorUF;
             }
 
-            const retencion = valorCLP * 0.145;
+            const retencion = valorCLP * 0.1525;
             const valorNeto = valorCLP - retencion;
 
             document.getElementById("ufDisplay").textContent = cantidadUF.toFixed(2);
@@ -406,8 +406,8 @@
             // Obtener valores ingresados por el usuario
             const montoNetoUF = parseFloat(document.getElementById("montoNetoUF").value) || 0;
             const montoNetoCLP = parseFloat(document.getElementById("montoNetoCLP").value) || (montoNetoUF * valorUF);
-            // Calcular monto bruto en CLP con retención del 14,5%
-            const montoBrutoCLP = montoNetoCLP / 0.855; // Se divide por 85,5% para agregar el 14,5% de retención
+            // Calcular monto bruto en CLP con retención del 15,25%
+            const montoBrutoCLP = montoNetoCLP / 0.8475; // Se divide por 84,75% para agregar el 15,25% de retención
             // Mostrar resultado
             document.getElementById("montoBruto").textContent = montoBrutoCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
         }
