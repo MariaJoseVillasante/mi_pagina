@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="María José Villasante - Calcula tus boletas de honorarios, con UF de hoy">
     <meta name="twitter:description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real.">
     <meta name="twitter:image" content="https://mariajosevillasante.cl/assets/img/logo/logolnegra.png">
-    <meta name="twitter:url" content="https://mariajosevillasante.cl/valores-economicos.html"">
+    <meta name="twitter:url" content="https://mariajosevillasante.cl/valores-economicos.html">
     <meta name="twitter:site" content="@MJVillasante">
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo/logolmorada.png" type="image/x-icon">
@@ -46,7 +46,7 @@
         <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
     </noscript>
-    <script>
+    <!-- <script>
         const params = new URLSearchParams(window.location.search);
         if (params.has('s') || params.has('orden') || params.has('filter')) {
             const meta = document.createElement('meta');
@@ -54,7 +54,8 @@
             meta.content = "noindex, follow";
             document.head.appendChild(meta);
         }
-    </script>
+    </script> -->
+    <script src="assets/js/noindex-query.js"></script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -79,13 +80,14 @@
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
-<script>
+<!-- <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-W0ETPFC8LH');
-</script>
+</script> -->
+<script src="assets/js/google-analytics.js" defer></script>
 
 <body class="index-page">
         <header id="header" class="header d-flex align-items-center fixed-top">
@@ -124,7 +126,7 @@
         </div>
     </header>
     <!-- fin navbar hecha con bootstrap -->
-    <script>
+    <!-- <script>
         function toggleEconomicos() {
             const econContainer = document.getElementById("economicos");
             const button = document.querySelector("button");
@@ -136,8 +138,7 @@
                 button.textContent = "Ver más";
             }
         }
-
-    </script>
+    </script> -->
     <main class="main">
         <!-- inicio título -->
         <div class="page-title">
@@ -216,7 +217,7 @@
                 </div>
             </div>
             </section>       
-        <script>
+        <!-- <script>
             function fetchData() {
                 fetch('https://mindicador.cl/api').then(function(response) {
                     return response.json();
@@ -241,7 +242,7 @@
         fetchData();
         // Actualizar cada 60 segundos
         setInterval(fetchData, 60000);
-        </script>
+        </script> -->
     <!-- inicio calculadora de boletas -->
     <div class="container section-title" data-aos="fade-up">
         <h2>calculadora de</h2>
@@ -267,19 +268,23 @@
                             <label for="unidadSeleccionada" class="form-label">
                                 Selecciona la unidad en la que quieres calcular:
                             </label>
-                            <select id="unidadSeleccionada" onchange="cambiarUnidad()"  class="form-control">
+                            <!-- <select id="unidadSeleccionada" onchange="cambiarUnidad()"  class="form-control"> -->
+                            <select id="unidadSeleccionada" class="form-control">
                                 <option value="UF">UF</option>
                                 <option value="CLP">Pesos chilenos</option>
                             </select>
                             <div id="campoUF">
                                 <label for="cantidadUF">Cantidad en UF:</label>
-                                <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF">
+                                <input type="number" id="cantidadUF" min="0" step="0.01" class="form-control" placeholder="Cantidad de UF">
+                                <!-- <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF"> -->
                             </div>
                             <div id="campoCLP" style="display: none;">
                                 <label for="cantidadCLP">Cantidad en CLP:</label>
-                                <input type="number" id="cantidadCLP" min="0" step="100" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad en CLP">
+                                <!-- <input type="number" id="cantidadCLP" min="0" step="100" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad en CLP"> -->
+                                <input type="number" id="cantidadCLP" min="0" step="100" class="form-control" placeholder="Cantidad en CLP">
                             </div>
-                            <button class="btn btn-apply" type="button" onclick="calcularBoleta()">Calcular</button>
+                            <button id="btnCalcularBoleta" class="btn btn-apply" type="button">Calcular</button>
+                            <!-- <button class="btn btn-apply" type="button" onclick="calcularBoleta()">Calcular</button> -->
                             <!-- antes -->
                             <!-- <div class="input-group">
                                 <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF" aria-label="Promo code">
@@ -320,18 +325,22 @@
                     <h3 class="summary-title">Calculadora de Monto Bruto</h3>
                     <div class="promo-code my-4">
                         <p>Esta calculadora permite determinar cuánto debe ser el monto bruto de tu boleta de honorarios para que, después de la retención del 15,25%, recibas el monto exacto que deseas líquido.</p>
-                        <p>1- Ingresas el monto líquido que deseas recibir en <abbr>UF</abbr> o en pesos chilenos. Fíjate de anotarlos en la casilla correcta. Haz clic en "Calcular"  </p>
+                        <p>1- Ingresas el monto líquido que deseas recibir en <abbr>UF</abbr> o en pesos chilenos. Fíjate de anotarlos sólo en la casilla correcta. Haz clic en "Calcular"  </p>
                         <p>2- La calculadora aplica la fórmula Monto Neto / 0.8475 para agregar el 15,25% de retención.  </p>
                         <p>3- Automáticamente muestra el monto bruto que debes colocar en la boleta para recibir el pago deseado.  </p>
                     <div class="input-group">
                         <input type="number" id="montoNetoUF" min="0" step="0.01" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido UF" aria-label="Promo code">
-                        <button class="btn btn-apply" type="button">Calcular</button>
+                        <!-- <input type="number" id="montoNetoUF" min="0" step="0.01" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido UF" aria-label="Promo code"> -->
+                        <!-- <button class="btn btn-apply" type="button">Calcular</button> -->
+                        <button id="btnCalcularMontoBrutoUF" class="btn btn-apply" type="button">Calcular</button>
                     </div>
                     </div>
                     <div class="promo-code my-4">
                         <div class="input-group">
-                            <input type="number" id="montoNetoCLP" min="0" step="100" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido $" aria-label="Promo code">
-                            <button class="btn btn-apply" type="button">Calcular</button>
+                            <input type="number" id="montoNetoCLP" min="0" step="100" class="form-control" placeholder="Monto líquido $" aria-label="Promo code">
+                            <!-- <input type="number" id="montoNetoCLP" min="0" step="100" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido $" aria-label="Promo code"> -->
+                            <!-- <button class="btn btn-apply" type="button">Calcular</button> -->
+                            <button id="btnCalcularMontoBrutoUF" class="btn btn-apply" type="button">Calcular</button>
                         </div>
                     </div>            
                     <div class="summary-item">
@@ -358,7 +367,7 @@
         </div>
         </section>
     <!-- fin calculadora de boletas -->
-    
+<!--     
     <script>
         async function obtenerValorUF() {
             try {
@@ -411,7 +420,7 @@
             const montoBrutoCLP = montoNetoCLP / 0.8475; // Se divide por 84,75% para agregar el 15,25% de retención
             // Mostrar resultado
             document.getElementById("montoBruto").textContent = montoBrutoCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
-        }
+        } -->
        // <!-- fin calculadora de boletas -->
         </script>
 </main>
@@ -445,5 +454,6 @@
         <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
         <!-- link al archivo js (nuestros script deben ser lo último)-->
         <script src="assets/js/main.min.js" defer></script>
+        <script src="assets/js/valores-economicos.js" defer></script>
     </body>
 </html>
