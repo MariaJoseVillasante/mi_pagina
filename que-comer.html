@@ -46,7 +46,7 @@
       <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
       <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
   </noscript>
-  <script>
+  <!-- <script>
       const params = new URLSearchParams(window.location.search);
       if (params.has('s') || params.has('orden') || params.has('filter')) {
           const meta = document.createElement('meta');
@@ -54,7 +54,8 @@
           meta.content = "noindex, follow";
           document.head.appendChild(meta);
       }
-  </script>
+  </script> -->
+  <script src="assets/js/noindex-query.js" defer></script>
   <script type="application/ld+json">
       {
           "@context": "https://schema.org",
@@ -79,12 +80,13 @@
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
-<script>
+<script src="assets/js/google-analytics.js" defer></script>
+<!-- <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-W0ETPFC8LH');
-</script>
+</script> -->
 
 <body class="que-comer-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -173,10 +175,6 @@
       </div>
     </section><!-- /Events Section -->
 
-<script>
-</script>
-
-
 </main>
 <!-- inicio Footer -->
 <footer id="footer" class="footer position-relative dark-background">
@@ -207,6 +205,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script> 
     <!-- link al archivo js (nuestros script deben ser lo último)-->
-    <script src="assets/js/main.js?v=3.1" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/que-comer.js" defer></script>
 </body>
 </html>
