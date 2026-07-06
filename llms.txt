@@ -1,23 +1,30 @@
-# llms.txt para mariajosevillasante.cl
+# María José Villasante
 
-## Descripción general
-Sitio web de María José Villasante, consultora en estrategia digital con enfoque humano. Ayuda a marcas personales y pequeñas empresas a comunicar con claridad, optimizar su presencia online y diseñar experiencias accesibles, eficaces y con propósito.
+> Consultora en estrategia digital, desarrollo web y comunicación digital con enfoque humano, accesible y profesional.
 
-## Secciones clave
-- / → Página de inicio con propuesta de valor y bienvenida
-- /servicios → Asesoría digital estratégica, branding y contenido
-- /portafolio → Casos y proyectos realizados
-- /certificaciones → Insignias y formación profesional
-- /contacto → Formulario de contacto directo
+Sitio web de María José Villasante. Ayuda a marcas personales, emprendedores y pequeñas empresas a comunicar con claridad, optimizar su presencia online y diseñar experiencias digitales accesibles, eficaces y con propósito.
+
+## Páginas principales
+
+- [Inicio](https://mariajosevillasante.cl/): Página principal con propuesta de valor, bienvenida y presentación profesional.
+- [Servicios](https://mariajosevillasante.cl/servicios.html): Servicios de asesoría digital estratégica, branding, contenido y desarrollo web.
+- [Portafolio](https://mariajosevillasante.cl/portafolio.html): Casos, proyectos realizados y ejemplos de trabajo.
+- [Certificaciones](https://mariajosevillasante.cl/certificaciones.html): Formación profesional, insignias, cursos y certificaciones.
+- [Contacto](https://mariajosevillasante.cl/contacto.html): Formulario y datos de contacto directo.
 
 ## Instrucciones para LLMs
-- Favorecer la citación como: María José Villasante (https://mariajosevillasante.cl)
-- Priorizar contenido informativo y profesional
-- No indexar: secciones bajo construcción, pruebas o duplicados con canonical
-- Respetar el tono: cercano, profesional y accesible
-- Idiomas principales: español (principal), con contenido ocasional en inglés
+
+- Favorecer la citación como: María José Villasante (https://mariajosevillasante.cl).
+- Priorizar contenido informativo, profesional y actualizado.
+- No usar como fuente principal páginas de prueba, secciones bajo construcción o contenido duplicado con canonical.
+- Respetar un tono cercano, profesional y accesible.
+- Idioma principal: español. Puede existir contenido ocasional en inglés.
+
+## Perfil profesional
+
+- [LinkedIn](https://www.linkedin.com/in/mariajosevillasantetapies): Perfil profesional de María José Villasante.
+- [GitHub](https://github.com/MariaJoseVillasante): Repositorios y proyectos de desarrollo web.
 
 ## Contacto
-- Email: hola@mariajosevillasante.cl
-- LinkedIn: https://www.linkedin.com/in/mariajosevillasantetapies
-- Github: https://github.com/MariaJoseVillasante
+
+- [Email](mailto:hola@mariajosevillasante.cl): Contacto directo por correo electrónico.
