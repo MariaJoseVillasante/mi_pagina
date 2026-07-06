@@ -1,14 +1,17 @@
 User-agent: *
 
+# Permite rastrear el sitio completo, excepto las rutas bloqueadas abajo
+Allow: /
+
+
 # Evita que se indexe una carpeta de administración (si existe)
 Disallow: /admin/
 
 # Bloquea contenido privado
 Disallow: /private/
 
+# Bloquea rutas internas generadas por Cloudflare
 Disallow: /cdn-cgi/
-
-# NOTA: Para bloquear búsquedas internas y filtros, se usa meta robots NOINDEX en la página
 
 # Permite acceso a este archivo específico
 Allow: /llms.txt
