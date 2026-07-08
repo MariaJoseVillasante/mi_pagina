@@ -46,15 +46,6 @@
         <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
     </noscript>
-    <!-- <script>
-        const params = new URLSearchParams(window.location.search);
-        if (params.has('s') || params.has('orden') || params.has('filter')) {
-            const meta = document.createElement('meta');
-            meta.name = "robots";
-            meta.content = "noindex, follow";
-            document.head.appendChild(meta);
-        }
-    </script> -->
     <script src="assets/js/noindex-query.js"></script>
     <script type="application/ld+json">
         {
@@ -79,13 +70,6 @@
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
-    <!-- <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-W0ETPFC8LH');
-    </script> -->
     <script src="assets/js/google-analytics.js" defer></script>
 </head>
 
@@ -126,19 +110,6 @@
         </div>
     </header>
     <!-- fin navbar hecha con bootstrap -->
-    <!-- <script>
-        function toggleEconomicos() {
-            const econContainer = document.getElementById("economicos");
-            const button = document.querySelector("button");
-            if (econContainer.style.display === "none") {
-                econContainer.style.display = "block";
-                button.textContent = "Ver menos";
-            } else {
-                econContainer.style.display = "none";
-                button.textContent = "Ver más";
-            }
-        }
-    </script> -->
     <main class="main">
         <!-- inicio título -->
         <div class="page-title">
@@ -217,32 +188,6 @@
                 </div>
             </div>
             </section>       
-        <!-- <script>
-            function fetchData() {
-                fetch('https://mindicador.cl/api').then(function(response) {
-                    return response.json();
-            }).then(function(dailyIndicators) {
-                document.getElementById("UF").innerHTML = '$' + formatNumber(dailyIndicators.uf.valor);
-                document.getElementById("DolarO").innerHTML = '$' + formatNumber(dailyIndicators.dolar.valor);
-                document.getElementById("DolarA").innerHTML = '$' + formatNumber(dailyIndicators.dolar_intercambio.valor);
-                document.getElementById("Euro").innerHTML = '$' + formatNumber(dailyIndicators.euro.valor);
-                document.getElementById("IPC").innerHTML = ' ' + formatNumber(dailyIndicators.ipc.valor) + '%';
-                document.getElementById("UTM").innerHTML = '$' + formatNumber(dailyIndicators.utm.valor);
-                document.getElementById("IVP").innerHTML = '$' + formatNumber(dailyIndicators.ivp.valor);
-                document.getElementById("Imacec").innerHTML = ' ' + formatNumber(dailyIndicators.imacec.valor) + '%';
-            }).catch(function(error) {
-                console.log('Requestfailed', error);
-            });
-        }
-        
-        function formatNumber(value) {
-            return value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
-        }
-        // Llamar la función al cargar la página
-        fetchData();
-        // Actualizar cada 60 segundos
-        setInterval(fetchData, 60000);
-        </script> -->
     <!-- inicio calculadora de boletas -->
     <div class="container section-title" data-aos="fade-up">
         <h2>calculadora de</h2>
@@ -268,7 +213,6 @@
                             <label for="unidadSeleccionada" class="form-label">
                                 Selecciona la unidad en la que quieres calcular:
                             </label>
-                            <!-- <select id="unidadSeleccionada" onchange="cambiarUnidad()"  class="form-control"> -->
                             <select id="unidadSeleccionada" class="form-control">
                                 <option value="UF">UF</option>
                                 <option value="CLP">Pesos chilenos</option>
@@ -276,21 +220,12 @@
                             <div id="campoUF">
                                 <label for="cantidadUF">Cantidad en UF:</label>
                                 <input type="number" id="cantidadUF" min="0" step="0.01" class="form-control" placeholder="Cantidad de UF">
-                                <!-- <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF"> -->
                             </div>
                             <div id="campoCLP" style="display: none;">
                                 <label for="cantidadCLP">Cantidad en CLP:</label>
-                                <!-- <input type="number" id="cantidadCLP" min="0" step="100" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad en CLP"> -->
                                 <input type="number" id="cantidadCLP" min="0" step="100" class="form-control" placeholder="Cantidad en CLP">
                             </div>
                             <button id="btnCalcularBoleta" class="btn btn-apply" type="button">Calcular</button>
-                            <!-- <button class="btn btn-apply" type="button" onclick="calcularBoleta()">Calcular</button> -->
-                            <!-- antes -->
-                            <!-- <div class="input-group">
-                                <input type="number" id="cantidadUF" min="0" step="0.01" onchange="calcularBoleta()" class="form-control" placeholder="Cantidad de UF" aria-label="Promo code">
-                                <button class="btn btn-apply" type="button">Calcular</button>
-                            </div> -->
-                            <!-- antes -->
                         </div>
                         <div class="summary-item">
                             <span class="summary-label">Cantidad en <abbr>UF</abbr></span>
@@ -330,26 +265,20 @@
                         <p>3- Automáticamente muestra el monto bruto que debes colocar en la boleta para recibir el pago deseado.  </p>
                     <div class="input-group">
                         <input type="number" id="montoNetoUF" min="0" step="0.01" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido UF" aria-label="Promo code">
-                        <!-- <input type="number" id="montoNetoUF" min="0" step="0.01" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido UF" aria-label="Promo code"> -->
-                        <!-- <button class="btn btn-apply" type="button">Calcular</button> -->
                         <button id="btnCalcularMontoBrutoUF" class="btn btn-apply" type="button">Calcular</button>
                     </div>
                     </div>
                     <div class="promo-code my-4">
                         <div class="input-group">
                             <input type="number" id="montoNetoCLP" min="0" step="100" class="form-control" placeholder="Monto líquido $" aria-label="Promo code">
-                            <!-- <input type="number" id="montoNetoCLP" min="0" step="100" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido $" aria-label="Promo code"> -->
-                            <!-- <button class="btn btn-apply" type="button">Calcular</button> -->
                             <button id="btnCalcularMontoBrutoUF" class="btn btn-apply" type="button">Calcular</button>
                         </div>
                     </div>            
                     <div class="summary-item">
                     <span class="summary-label">Para recibir ese monto líquido, tu boleta debe ser de:</span>
-                    <!-- <span class="summary-value" id="montoBruto">0</span> -->
                     </div>
                     <div class="summary-divider"></div>
                     <div class="summary-item total">
-                    <!-- <span class="summary-label">Valor Neto</span> -->
                     <span class="summary-value" id="montoBruto">0</span>
                     </div>
                     <div class="payment-methods mt-4">
@@ -366,62 +295,6 @@
             </div>
         </div>
         </section>
-    <!-- fin calculadora de boletas -->
-<!--     
-    <script>
-        async function obtenerValorUF() {
-            try {
-                const response = await fetch("https://mindicador.cl/api/uf");
-                const data = await response.json();
-                return data.serie[0].valor; // Obtiene el último valor de la UF
-            } catch (error) {
-                console.error("Error obteniendo el valor de la UF:", error);
-                return 0;
-            }
-        }
-        
-        function cambiarUnidad() {
-            const unidadSeleccionada = document.getElementById("unidadSeleccionada").value;
-            if (unidadSeleccionada === "UF") {
-                document.getElementById("campoUF").style.display = "block";
-                document.getElementById("campoCLP").style.display = "none";
-            } else {
-                document.getElementById("campoUF").style.display = "none";
-                document.getElementById("campoCLP").style.display = "block";
-            }
-        }
-
-        async function calcularBoleta() {
-            const valorUF = await obtenerValorUF();
-            const unidadSeleccionada = document.getElementById("unidadSeleccionada").value;
-            let valorCLP, cantidadUF;
-            if (unidadSeleccionada === "UF") {
-                cantidadUF = parseFloat(document.getElementById("cantidadUF").value) || 0;
-                valorCLP = cantidadUF * valorUF;
-            } else {
-                valorCLP = parseFloat(document.getElementById("cantidadCLP").value) || 0;
-                cantidadUF = valorCLP / valorUF;
-            }
-
-            const retencion = valorCLP * 0.1525;
-            const valorNeto = valorCLP - retencion;
-
-            document.getElementById("ufDisplay").textContent = cantidadUF.toFixed(2);
-            document.getElementById("valorCLP").textContent = valorCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
-            document.getElementById("retencion").textContent = retencion.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
-            document.getElementById("valorNeto").textContent = valorNeto.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
-        }
-        async function calcularMontoBruto() {
-            const valorUF = await obtenerValorUF();
-            // Obtener valores ingresados por el usuario
-            const montoNetoUF = parseFloat(document.getElementById("montoNetoUF").value) || 0;
-            const montoNetoCLP = parseFloat(document.getElementById("montoNetoCLP").value) || (montoNetoUF * valorUF);
-            // Calcular monto bruto en CLP con retención del 15,25%
-            const montoBrutoCLP = montoNetoCLP / 0.8475; // Se divide por 84,75% para agregar el 15,25% de retención
-            // Mostrar resultado
-            document.getElementById("montoBruto").textContent = montoBrutoCLP.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
-        } -->
-       // <!-- fin calculadora de boletas -->
         </script>
 </main>
     <!-- inicio Footer -->
