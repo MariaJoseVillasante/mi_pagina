@@ -35,20 +35,29 @@
   z-index: 3;
 }
 
-.hero h2 {
+.hero h1 {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
 }
 
-.hero p {
+.hero h2 {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: var(--default-color);
 }
 
-.hero p span {
+.hero h2 .typed {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+  color: var(--default-color);
+}
+
+.hero h2 .typed-cursor {
+  color: var(--default-color) !important;
+  opacity: 1 !important;
+  border-bottom: none !important;
+  font-weight: 700;
 }
 
 .hero .social-links {
@@ -69,11 +78,11 @@
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
+  .hero h1 {
     font-size: 32px;
   }
 
-  .hero p {
+  .hero h2 {
     font-size: 20px;
   }
 }

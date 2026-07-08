@@ -149,7 +149,13 @@
   transition: transform 0.3s ease;
 }
 
-.mini_soluciones .service-card .card-action:hover em {
+.mini_soluciones .service-card:hover .card-action {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mini_soluciones .service-card:hover .card-action em {
   transform: rotate(45deg);
 }
 
