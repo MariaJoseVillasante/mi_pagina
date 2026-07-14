@@ -14,6 +14,7 @@
   /**
    * Mobile nav toggle
    */
+  // para lo comentado: Y en tu JavaScript, cuando el menú se abra, cambia aria-expanded a true. Cuando se cierre, vuelve a false.
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToggle() {

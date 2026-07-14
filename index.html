@@ -3,14 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>Desarrollo web y estrategia digital | Villasante – MJVT</title>
         <meta name="description" content="Programadora especializada en el desarrollo de páginas web a medida y asesoría en estrategia de productos digitales para emprendedores y pymes.">
         <meta name="author" content="María José Villasante">
-
         <!-- Canonical -->
         <link rel="canonical" href="https://mariajosevillasante.cl/" />
-
         <!-- Open Graph -->
         <meta property="og:title" content="Portafolio de María José Villasante">
         <meta property="og:description" content="Explora el trabajo de María José Villasante: desarrollo web personalizado y estrategias digitales para emprendedores y pymes.">
@@ -21,7 +18,6 @@
         <meta property="og:url" content="https://mariajosevillasante.cl/">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="es_CL">
-
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="María José Villasante - Estrategia Digital Personalizada">
@@ -29,21 +25,17 @@
         <meta name="twitter:image" content="https://mariajosevillasante.cl/assets/img/logo/logolnegra.png">
         <meta name="twitter:url" content="https://mariajosevillasante.cl/">
         <meta name="twitter:site" content="@MJVillasante">
-
         <!-- Favicon -->
         <link rel="shortcut icon" href="assets/img/logo/logolmorada.png" type="image/x-icon">
-
         <!-- Google Fonts optimizado -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"></noscript>
-
         <!-- CSS Vendor (solo lo necesario en primera carga) -->
         <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
         <link rel="stylesheet" href="assets/css/main.min.css">
-
         <!-- CSS diferido -->
         <link rel="stylesheet" href="assets/vendor/aos/aos.css" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
@@ -99,715 +91,867 @@
             ]
             }
         </script>
-        
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
         <script src="assets/js/google-analytics.js" defer></script>
     </head>
-    
     <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-            <a href="/" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="Ir a inicio">
+        <a class="skip-link" href="#main">Saltar al contenido principal</a>
+        <header id="header" class="header d-flex align-items-center fixed-top">
+            <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+                <a href="/" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="Ir a inicio">
+                    <picture>
+                        <source 
+                            srcset="assets/img/logo/logolblanca.avif" 
+                            type="image/avif">
+                        <source srcset="assets/img/logo/logolblanca.webp" type="image/webp">
+                        <img
+                            src="assets/img/logo/logolblanca.png"
+                            alt="Logo María José Villasante - Estrategia Digital."
+                            width="100"
+                            height="50" 
+                            loading="lazy">
+                    </picture>
+                </a>
+        <!-- inicio navbar -->
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="#hero" aria-label="inicio" class="active">Home</a></li>
+                        <li><a href="#sobre_mi"  aria-label="Sobre mi">Sobre mi</a></li>
+                        <li><a href="#servicios" aria-label="Ir a la sección Servicios">Servicios</a></li>
+                        <li class="dropdown"><a href="#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><em class="bi bi-chevron-down toggle-dropdown"></em></a>
+                            <ul>
+                                <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
+                                <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
+                                <li><a href="/valores-economicos.html" aria-label="Boleta de Honorarios">Boleta de Honorarios</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#publicaciones" aria-label="Publicaciones">Publicaciones</a></li>
+                    </ul>
+                    <em class="mobile-nav-toggle d-xl-none bi bi-list"></em>
+                    <!-- <button class="mobile-nav-toggle d-xl-none"
+                            type="button"
+                            aria-label="Abrir menú de navegación"
+                            aria-controls="navmenu"
+                            aria-expanded="false">
+                    <em class="bi bi-list" aria-hidden="true"></em> -->
+                    </button>
+                </nav>
+                <a class="btn-getstarted" aria-label="Ir a la sección Contacto" href="#contacto">Contacto</a>
+            </div>
+        </header>
+        <!-- fin navbar -->
+        <main id="main" class="main" tabindex="-1"></main>
+            <!-- inicio hero -->
+            <section id="hero" class="hero section light-background">
                 <picture>
                     <source 
-                        srcset="assets/img/logo/logolblanca.avif" 
-                        type="image/avif">
-                    <source srcset="assets/img/logo/logolblanca.webp" type="image/webp">
+                        type="image/avif"
+                        srcset="
+                            assets/img/profile/pexels-julia-m-cameron-4144294-400.avif 400w,
+                            assets/img/profile/pexels-julia-m-cameron-4144294-800.avif 800w,
+                            assets/img/profile/pexels-julia-m-cameron-4144294.avif 1000w" 
+                        sizes="(max-width: 600px) 100vw, 600px">
+                    <source 
+                        type="image/webp"
+                        srcset="
+                            assets/img/profile/pexels-julia-m-cameron-4144294-400.webp 400w,
+                            assets/img/profile/pexels-julia-m-cameron-4144294-800.webp 800w,
+                            assets/img/profile/pexels-julia-m-cameron-4144294.webp 1000w" 
+                        sizes="(max-width: 600px) 100vw, 600px">
                     <img
-                        src="assets/img/logo/logolblanca.png"
-                        alt="Logo María José Villasante - Estrategia Digital."
-                        width="100"
-                        height="50" 
-                        loading="lazy">
-                </picture>
-            </a>
-    <!-- inicio navbar -->
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="#hero" aria-label="inicio" class="active">Home</a></li>
-                    <li><a href="#sobre_mi"  aria-label="Sobre mi">Sobre mi</a></li>
-                    <li><a href="#servicios" aria-label="servicios">Servicios</a></li>
-                    <li class="dropdown"><a href="#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><em class="bi bi-chevron-down toggle-dropdown"></em></a>
-                        <ul>
-                            <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
-                            <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
-                            <li><a href="/valores-economicos.html" aria-label="Boleta de Honorarios">Boleta de Honorarios</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#publicaciones" aria-label="Publicaciones">Publicaciones</a></li>
-                </ul>
-                <em class="mobile-nav-toggle d-xl-none bi bi-list"></em>
-            </nav>
-            <a class="btn-getstarted" aria-label="Contacto" href="#contacto">Contacto</a>
-        </div>
-    </header>
-    <!-- fin navbar -->
-    <main class="main">
-        <!-- inicio hero -->
-        <section id="hero" class="hero section light-background">
-            <picture>
-                <source 
-                    type="image/avif"
-                    srcset="
-                        assets/img/profile/pexels-julia-m-cameron-4144294-400.avif 400w,
-                        assets/img/profile/pexels-julia-m-cameron-4144294-800.avif 800w,
-                        assets/img/profile/pexels-julia-m-cameron-4144294.avif 1000w" 
-                    sizes="(max-width: 600px) 100vw, 600px">
-                <source 
-                    type="image/webp"
-                    srcset="
-                        assets/img/profile/pexels-julia-m-cameron-4144294-400.webp 400w,
-                        assets/img/profile/pexels-julia-m-cameron-4144294-800.webp 800w,
-                        assets/img/profile/pexels-julia-m-cameron-4144294.webp 1000w" 
-                    sizes="(max-width: 600px) 100vw, 600px">
-                <img
-                    src="assets/img/profile/pexels-julia-m-cameron-4144294.jpg"
-                    alt="Mujer frente a un computador"
-                    width="800"
-                    height="533"
-                    fetchpriority="high"
-                    data-aos="fade-in">
-                </picture>
-                <!-- width="1000"
-                height="667" 
-                loading="lazy"
-                -->
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <h1>María José Villasante</h1>
-                <h2>Soy <span class="typed" data-typed-items="Tech Strategist, Desarrolladora, Ingeniera Civil Industrial, Programadora"></span><span class="typed-cursor typed-cursor--blink"></span></h2>
-                <div class="social-links">
-                    <a href="https://github.com/MariaJoseVillasante" aria-label="Github icon y link al perfil de Github." target="_blank"><em class="bi bi-github"></em></a>
-                    <a href="https://vosolutions.cl/" title="globe icon"  target="_blank" aria-label="Globe icon y link a la página web vosolutions.cl."><em class="bi bi-globe"></em></a>
-                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" aria-label="Linkedin icon y link al perfil de linkedin."  target="_blank" alt="LinkedIn icon"><em class="bi bi-linkedin"></em></a>
-                    <a href="https://twitter.com/MJVillasante" aria-label="Twitter icon y link al perfil de Twitter."  target="_blank"><em class="bi bi-twitter-x"></em></a>
-                </div>
-            </div>
-        </section>
-        <!-- fin hero -->
-        <!-- Sobre Mi  -->
-        <section id="sobre_mi" class="sobre_mi section">
-            <div class="container">
-                <div class="row">
-                <div class="col-lg-7 content-col" data-aos="fade-up">
-                    <div class="content">
-                        <div class="agency-name">
-                        </div>
-                        <div class="main-heading">
-                            <h2>Lo que me inspira:</h2><h2>Crecimiento y Estrategia Digital</h2>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="description">
-                            <p>Mi propósito es empoderar a emprendedores y pymes para que alcancen su máximo potencial en el entorno digital, mediante el desarrollo de soluciones web innovadoras y estrategias digitales efectivas.&nbsp;</p>
-                            <div><br></div>
-                            <div>&nbsp;Mi objetivo es impulsar su éxito a través de tecnologías vanguardistas y enfoques estratégicos que generen un impacto tangible en sus negocios, permitiéndoles competir y crecer en el mundo digital con confianza y autonomía.</div>
-                            <p></p>
-                        </div>
-                        <div class="cta-button">
-                            <a href="#servicios"  aria-label="Servicios" class="btn">
-                            <span class="">MIS SERVICIOS</span>
-                            <em class="bi bi-arrow-right"></em>
-                            </a>
-                        </div>
+                        src="assets/img/profile/pexels-julia-m-cameron-4144294.jpg"
+                        alt="Mujer frente a un computador"
+                        width="800"
+                        height="533"
+                        fetchpriority="high"
+                        data-aos="fade-in">
+                    </picture>
+                    <!-- width="1000"
+                    height="667" 
+                    loading="lazy"
+                    -->
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <h1>María José Villasante</h1>
+                    <h2>Soy <span class="typed" data-typed-items="Tech Strategist, Desarrolladora, Ingeniera Civil Industrial, Programadora"></span><span class="typed-cursor typed-cursor--blink"></span></h2>
+                    <div class="social-links">
+                        <a href="https://github.com/MariaJoseVillasante" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visitar perfil de GitHub de María José Villasante, se abre en una nueva pestaña">
+                            <em class="bi bi-github"></em>
+                        </a>
+                        <a href="https://vosolutions.cl/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visitar sitio web de VOSolutions, se abre en una nueva pestaña">
+                            <em class="bi bi-globe" aria-hidden="true"></em>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mariajosevillasantetapies/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visitar perfil de LinkedIn de María José Villasante, se abre en una nueva pestaña">
+                            <em class="bi bi-linkedin" aria-hidden="true"></em>
+                        </a>
+                        <a href="https://twitter.com/MJVillasante"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visitar perfil de X de María José Villasante, se abre en una nueva pestaña">
+                            <em class="bi bi-twitter-x" aria-hidden="true"></em>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-5" data-aos="zoom-out">
-                    <div class="visual-content">
-                        <div class="fluid-shape">
-                            <picture>
-                                <source srcset="assets/img/profile/perfil.avif" type="image/avif">
-                                <source srcset="assets/img/profile/perfil.webp" type="image/webp">
-                                <img 
-                                    src="assets/img/profile/perfil.png" 
-                                    alt="Foto de María José Villasante con anteojos" 
-                                    width="230"
-                                    height="270"
-                                    class="fluid-img" 
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="stats-card">
-                            <div class="stats-number">
-                                <h2>Ver</h2>
+            </section>
+            <!-- fin hero -->
+            <!-- Sobre Mi  -->
+            <section id="sobre_mi" class="sobre_mi section">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-7 content-col" data-aos="fade-up">
+                        <div class="content">
+                            <div class="agency-name">
                             </div>
-                            <div class="stats-label">
-                                <p>Publicaciones</p>
+                            <div class="main-heading">
+                                <h2>Lo que me inspira:</h2><h2>Crecimiento y Estrategia Digital</h2>
                             </div>
-                            <div class="stats-arrow">
-                                <a href="#publicaciones">
-                                    <span class="visually-hidden">Ver publicaciones</span>
-                                    <em class="bi bi-arrow-up-right" aria-hidden="true"></em>
+                            <div class="divider"></div>
+                            <div class="description">
+                                <p>Mi propósito es empoderar a emprendedores y pymes para que alcancen su máximo potencial en el entorno digital, mediante el desarrollo de soluciones web innovadoras y estrategias digitales efectivas.&nbsp;</p>
+                                <div><br></div>
+                                <div>&nbsp;Mi objetivo es impulsar su éxito a través de tecnologías vanguardistas y enfoques estratégicos que generen un impacto tangible en sus negocios, permitiéndoles competir y crecer en el mundo digital con confianza y autonomía.</div>
+                                <p></p>
+                            </div>
+                            <div class="cta-button">
+                                <a href="#servicios"  aria-label="Ir a la sección Servicios" class="btn">
+                                <span>MIS SERVICIOS</span>
+                                <em class="bi bi-arrow-right" aria-hidden="true"></em>
                                 </a>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-5" data-aos="zoom-out">
+                        <div class="visual-content">
+                            <div class="fluid-shape">
+                                <picture>
+                                    <source srcset="assets/img/profile/perfil.avif" type="image/avif">
+                                    <source srcset="assets/img/profile/perfil.webp" type="image/webp">
+                                    <img 
+                                        src="assets/img/profile/perfil.png" 
+                                        alt="Foto de María José Villasante con anteojos" 
+                                        width="230"
+                                        height="270"
+                                        class="fluid-img" 
+                                        loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stats-number">
+                                    <h2>Ver</h2>
+                                </div>
+                                <div class="stats-label">
+                                    <p>Publicaciones</p>
+                                </div>
+                                <div class="stats-arrow">
+                                    <a href="#publicaciones">
+                                        <span class="visually-hidden">Ver publicaciones</span>
+                                        <em class="bi bi-arrow-up-right" aria-hidden="true"></em>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                </div>
-            </div>
-        </section><!-- /Sobre Mi  -->
-        
-            <!-- insignias digitales -->
-        <section id="clients-2" class="clients-2 section">
-        <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Insignias Digitales</h2>
-                <div> </div>
-            </div><!-- End Section Title -->
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper init-swiper">
-                <script type="application/json" class="swiper-config">
-                    {
-                    "loop": true,
-                    "speed": 600,
-                    "autoplay": {
-                        "delay": 5000
-                    },
-                    "slidesPerView": "auto",
-                    "pagination": {
-                        "el": ".swiper-pagination",
-                        "type": "bullets",
-                        "clickable": true
-                    },
-                    "breakpoints": {
-                        "320": {
-                        "slidesPerView": 2,
-                        "spaceBetween": 40
+            </section><!-- /Sobre Mi  -->
+            
+                <!-- insignias digitales -->
+            <section id="clients-2" class="clients-2 section">
+            <!-- Section Title -->
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>Insignias Digitales</h2>
+                    <div> </div>
+                </div><!-- End Section Title -->
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                        "loop": true,
+                        "speed": 600,
+                        "autoplay": {
+                            "delay": 5000
                         },
-                        "480": {
-                        "slidesPerView": 3,
-                        "spaceBetween": 60
+                        "slidesPerView": "auto",
+                        "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
                         },
-                        "640": {
-                        "slidesPerView": 4,
-                        "spaceBetween": 80
-                        },
-                        "992": {
-                        "slidesPerView": 6,
-                        "spaceBetween": 120
+                        "breakpoints": {
+                            "320": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 40
+                            },
+                            "480": {
+                            "slidesPerView": 3,
+                            "spaceBetween": 60
+                            },
+                            "640": {
+                            "slidesPerView": 4,
+                            "spaceBetween": 80
+                            },
+                            "992": {
+                            "slidesPerView": 6,
+                            "spaceBetween": 120
+                            }
                         }
-                    }
-                    }
-                </script>
-                <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide"><a href="https://www.credly.com/badges/fbe39c60-8e16-44d6-8418-a442aee38406/public_url" aria-label="link a Insignia de Google UX Design Professional Certificate(v.3)." target="_blank"><img src="assets/img/insignias/google-ux-design-professional-certificate-v-3.png" class="img-fluid" alt="link a Insignia de Google UX Design Professional Certificate(v.3)." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.credly.com/badges/4a4dfa4e-cbed-4df3-856d-3205251ee218/public_url" aria-label="link a Insignia de artificial intelligence fundamentals." target="_blank"><img src="assets/img/insignias/artificial-intelligence-fundamentals.png" class="img-fluid" alt="link a Insignia de artificial intelligence fundamentals." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.credly.com/badges/fd849d8b-f0a9-469a-81f5-f4ca4b916025/public_url" aria-label="link a Insignia de agile explorer." target="_blank"><img src="assets/img/insignias/agile-explorer.png" class="img-fluid" alt="link a Insignia de agile explorer." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.credly.com/badges/ff6143a1-f18b-4910-ae22-b1b86c35bb3d/public_url" aria-label="link a Insignia de data fundamentals." target="_blank"><img src="assets/img/insignias/data-fundamentals.png" class="img-fluid" alt="link a Insignia de data fundamentals." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.credly.com/badges/0a16dfbc-c902-4fb0-aa89-457dc332fdaf/public_url" aria-label="link a Insignia de certificado de ciberseguridad de google." target="_blank"><img src="assets/img/insignias/certificado-de-ciberseguridad-de-google.png" class="img-fluid" alt="link a Insignia de certificado de ciberseguridad de google." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.acreditta.com/credential/661abe58-b679-4343-8d9c-5a906d1edb2d?utm_source=copy&resource_type=badge&resource=661abe58-b679-4343-8d9c-5a906d1edb2d" aria-label="llink a Insignia de product owner."  target="_blank"><img src="assets/img/insignias/product-o.webp" class="img-fluid" alt="link a Insignia de product owner." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.acreditta.com/credential/e093471f-32a7-4c95-8f14-4ac9f9ff44b0?utm_source=copy&resource_type=badge&resource=e093471f-32a7-4c95-8f14-4ac9f9ff44b0" aria-label="link a Insignia de agile explorer, top 100 pioneros." target="_blank"><img src="assets/img/insignias/top-100-pioneros.webp" class="img-fluid" alt="link a Insignia de agile explorer, top 100 pioneros." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.credly.com/badges/82573da1-3f39-41d6-b5eb-7809454d82ae/public_url" aria-label="link a Insignia de certificado de soporte de ti de google" target="_blank"><img src="assets/img/insignias/certificado-de-soporte-de-ti-de-google.png" class="img-fluid" alt="link a Insignia de certificado de soporte de ti de google" width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.credly.com/badges/e20b8f70-f45d-4a9b-9329-f96947435286/public_url" aria-label="link a Insignia de emprendimiento digital con tecnologias web." target="_blank"><img src="assets/img/insignias/emprendimiento-digital-con-tecnologias-web.png" class="img-fluid" alt="link a Insignia de emprendimiento digital con tecnologias web." width="200" height="200" loading="lazy"></a></div>
-                    <div class="swiper-slide"><a href="https://www.linkedin.com/posts/mariajosevillasantetapies_rubyonrails-rubyonrailsdeveloper-womenintech-activity-6999024978784305152-7pDO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" aria-label="link a Insignia de AWS." target="_blank"><img src="assets/img/insignias/Insignia_E-Camp_ED-04.png" class="img-fluid" alt="link a Insignia de AWS." width="200" height="200" loading="lazy"></a></div>
-                </div>
-                <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section><!-- /insignias digitales -->
-        <!-- Servicios Section -->
-    <section id="servicios" class="servicios section">
-        <!-- Section Title -->
-        <div class="container section-title">
-            <h2>desarrollos destacados</h2>
-            <div><span>servicios de</span> <span class="description-title">desarrollo</span></div>
-        </div><!-- End Section Title -->
-        <div class="container">
-            <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="program-card">
-                    <div class="program-img">
-                        <picture>
-                            <source srcset="assets/img/servicios/desarrolloWeb.avif" type="image/avif">
-                            <source srcset="assets/img/servicios/desarrolloWeb.webp" type="image/webp">
-                            <img 
-                                src="assets/img/servicios/desarrolloWeb.jpg" 
-                                alt="Foto de computador, Notebook y laptop." 
-                                class="img-fluid" width="800" height="500" loading="lazy">
-                        </picture>
-                        <div class="program-overlay">
-                            <span class="btn-explore" aria-hidden="true">Pronto ver mas</span>
+                        }
+                    </script>
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide">
+                            <a href="https://www.credly.com/badges/fbe39c60-8e16-44d6-8418-a442aee38406/public_url" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver insignia Google UX Design Professional Certificate en Credly, se abre en una nueva pestaña">
+                                <img src="assets/img/insignias/google-ux-design-professional-certificate-v-3.png" 
+                                    class="img-fluid" 
+                                    alt="Insignia de Google UX Design Professional Certificate" width="200" height="200" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.credly.com/badges/4a4dfa4e-cbed-4df3-856d-3205251ee218/public_url" 
+                                aria-label="Ver Insignia de artificial intelligence fundamentals, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <img src="assets/img/insignias/artificial-intelligence-fundamentals.png" class="img-fluid" alt="Insignia de artificial intelligence fundamentals." width="200" height="200" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.credly.com/badges/fd849d8b-f0a9-469a-81f5-f4ca4b916025/public_url" 
+                                aria-label="Ver Insignia de agile explorer, se abre en una nueva pestaña" 
+                                rel="noopener noreferrer"
+                                target="_blank">
+                            <img src="assets/img/insignias/agile-explorer.png" class="img-fluid" alt="Insignia de agile explorer." width="200" height="200" loading="lazy"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.credly.com/badges/ff6143a1-f18b-4910-ae22-b1b86c35bb3d/public_url" 
+                                aria-label="Ver Insignia de data fundamentals, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                            <img src="assets/img/insignias/data-fundamentals.png" class="img-fluid" alt="Insignia de data fundamentals." width="200" height="200" loading="lazy"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.credly.com/badges/0a16dfbc-c902-4fb0-aa89-457dc332fdaf/public_url" 
+                                aria-label="Ver Insignia de certificado de ciberseguridad de google, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <img src="assets/img/insignias/certificado-de-ciberseguridad-de-google.png" class="img-fluid" alt="Insignia de certificado de ciberseguridad de google." width="200" height="200" loading="lazy"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.acreditta.com/credential/661abe58-b679-4343-8d9c-5a906d1edb2d?utm_source=copy&resource_type=badge&resource=661abe58-b679-4343-8d9c-5a906d1edb2d" 
+                                aria-label="Ver Insignia de product owner, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <img src="assets/img/insignias/product-o.webp" class="img-fluid" alt="Insignia de product owner." width="200" height="200" loading="lazy"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.acreditta.com/credential/e093471f-32a7-4c95-8f14-4ac9f9ff44b0?utm_source=copy&resource_type=badge&resource=e093471f-32a7-4c95-8f14-4ac9f9ff44b0" 
+                                aria-label="Ver Insignia de agile explorer, top 100 pioneros, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <img src="assets/img/insignias/top-100-pioneros.webp" class="img-fluid" alt="Insignia de agile explorer, top 100 pioneros." width="200" height="200" loading="lazy"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.credly.com/badges/82573da1-3f39-41d6-b5eb-7809454d82ae/public_url" 
+                                aria-label="Ver Insignia de certificado de soporte de ti de google, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <img src="assets/img/insignias/certificado-de-soporte-de-ti-de-google.png" class="img-fluid" alt="Insignia de certificado de soporte de ti de google" width="200" height="200" loading="lazy"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.credly.com/badges/e20b8f70-f45d-4a9b-9329-f96947435286/public_url" 
+                                aria-label="Ver Insignia de emprendimiento digital con tecnologias web, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <img src="assets/img/insignias/emprendimiento-digital-con-tecnologias-web.png" class="img-fluid" alt="Insignia de emprendimiento digital con tecnologias web." width="200" height="200" loading="lazy"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_rubyonrails-rubyonrailsdeveloper-womenintech-activity-6999024978784305152-7pDO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" 
+                                aria-label="Ver Insignia de AWS, se abre en una nueva pestaña"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <img src="assets/img/insignias/Insignia_E-Camp_ED-04.png" class="img-fluid" alt="Insignia de AWS." width="200" height="200" loading="lazy"></a>
                         </div>
                     </div>
-                    <div class="program-content">
-                        <h3>Páginas y Applicaciones Web</h3>
-                        <p>
-                        Puedes tener una Página o Aplicación Web totalmente a tu medida y con lo que necesites. ¿Sabes la diferencia?
-                        </p>
-                        <div class="program-meta">
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Program Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="program-card">
-                    <div class="program-img">
-                        <picture>
-                            <source srcset="assets/img/servicios/ciberseguridad.avif" type="image/avif">
-                            <source srcset="assets/img/servicios/ciberseguridad.webp" type="image/webp">
-                            <img 
-                                src="assets/img/servicios/ciberseguridad.jpg" 
-                                alt="Foto de un notebook, un liblo, un celular y un mouse encadenados." 
-                                class="img-fluid" width="800" height="500" loading="lazy">
-                        </picture>
-                        <div class="program-overlay">
-                            <a class="btn-explore" aria-hidden="true">Pronto ver mas</a>
-                        </div>
-                    </div>
-                    <div class="program-content">
-                        <h3>Ciberseguridad</h3>
-                        <p>Capacitarse y actuar frente a los riesgos de la Ciberseguridad es importante y responsabilidad de todos.</p>
-                        <div class="program-meta">
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Program Item -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="program-card">
-                    <div class="program-img">
-                        <picture>
-                            <source srcset="assets/img/servicios/sistemasDePago.avif" type="image/avif">
-                            <source srcset="assets/img/servicios/sistemasDePago.webp" type="image/webp">
-                            <img 
-                                src="assets/img/servicios/sistemasDePago.jpg" 
-                                alt="Foto de una persona con muchos billetes." 
-                                class="img-fluid" width="800" height="500" loading="lazy">
-                        </picture>
-                        <div class="program-overlay">
-                        <span class="btn-explore" aria-hidden="true">Pronto ver mas</span>
-                        </div>
-                    </div>
-                    <div class="program-content">
-                        <h3>Sistemas de Pago</h3>
-                        <p>Tus clientes pueden pagar de manera segura a través de tu página. La información es encriptada.</p>
-                        <div class="program-meta">
-                        </div>
+                    <div class="swiper-pagination"></div>
                     </div>
                 </div>
-            </div><!-- End Program Item -->
-            <div class="col-lg-4 col-md-6" >
-                <div class="program-card">
-                    <div class="program-img">
-                        <picture>
-                            <source srcset="assets/img/servicios/votaciones.avif" type="image/avif">
-                            <source srcset="assets/img/servicios/votaciones.webp" type="image/webp">
-                            <img 
-                                src="assets/img/servicios/votaciones.jpg" 
-                                alt="foto en blanco y negro de una persona depositando su voto en una urna." 
-                                class="img-fluid" width="800" height="500" loading="lazy">
-                        </picture>
-                        <div class="program-overlay">
-                        <span class="btn-explore"  aria-hidden="true">Pronto ver mas</span>
+            </section><!-- /insignias digitales -->
+            <!-- Servicios Section -->
+        <section id="servicios" class="servicios section">
+            <!-- Section Title -->
+            <div class="container section-title">
+                <h2>desarrollos destacados</h2>
+                <div><span>servicios de</span> <span class="description-title">desarrollo</span></div>
+            </div><!-- End Section Title -->
+            <div class="container">
+                <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <picture>
+                                <source srcset="assets/img/servicios/desarrolloWeb.avif" type="image/avif">
+                                <source srcset="assets/img/servicios/desarrolloWeb.webp" type="image/webp">
+                                <img 
+                                    src="assets/img/servicios/desarrolloWeb.jpg" 
+                                    alt="Foto de computador, Notebook y laptop." 
+                                    class="img-fluid" width="800" height="500" loading="lazy">
+                            </picture>
+                            <div class="program-overlay">
+                                <span class="btn-explore" aria-hidden="true">Pronto ver más</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="program-content">
-                        <h3>Votaciones Online</h3>
-                        <p>Puedes hacer votaciones secretas online, personalizar la modalidad de la elección como quieras.</p>
-                        <div class="program-meta">
-
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Program Item -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="program-card">
-                    <div class="program-img">
-                        <picture>
-                            <source srcset="assets/img/servicios/digitalizacion2.avif" type="image/avif">
-                            <source srcset="assets/img/servicios/digitalizacion2.webp" type="image/webp">
-                            <img 
-                                src="assets/img/servicios/digitalizacion2.jpg" 
-                                alt="Foto de muchas carpetas ordenadas por su letra." 
-                                class="img-fluid" width="800" height="500" loading="lazy">
-                        </picture>
-                        <div class="program-overlay">
-                        <span class="btn-explore" aria-hidden="true">Pronto ver mas</span>
-                        </div>
-                    </div>
-                    <div class="program-content">
-                        <h3>Digitalización de Procesos</h3>
-                        <p>Automatizar tus procesos te permite reducir errores y tiempo de trabajo. Elimina tareas repetitivas.</p>
-                        <div class="program-meta">
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Program Item -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="program-card">
-                    <div class="program-img">
-                        <picture>
-                            <source srcset="assets/img/servicios/users.avif" type="image/avif">
-                            <source srcset="assets/img/servicios/users.webp" type="image/webp">
-                            <img src="assets/img/servicios/users.jpg" alt="Foto de una persona ingresando a su cuenta en un notebook." class="img-fluid" width="800" height="500" loading="lazy">
-                        </picture>
-                        <div class="program-overlay">
-                        <span class="btn-explore" aria-hidden="true">Pronto ver mas</span>
-                        </div>
-                    </div>
-                    <div class="program-content">
-                        <h3>Control de Usuarios</h3>
-                        <p>Ten usuarios con distintos niveles de accesos para cuidar la seguridad de los datos.</p>
-                        <div class="program-meta">
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Program Item -->
-            </div>
-        </div>
-    </section><!-- /Servicios Section -->
-    <!-- Mini Soluciones Section -->
-    <section id="mini_soluciones" class="mini_soluciones section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Nuevo</h2>
-            <div><span>Revisa las</span> <span class="description-title">Mini Soluciones</span></div>
-        </div><!-- End Section Title -->
-        <!-- data-aos="fade-up" data-aos-delay="100" -->
-        <div class="container">
-            <div class="service-header">
-                <div class="row align-items-center">
-                    <div class="col-lg-8 col-md-12">
-                        <div class="service-intro">
-                            <h2 class="service-heading">
-                            <div>Herramientas Digitales</div>
-                            <div><span>mejoras de eficiencia</span></div>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="service-summary">
+                        <div class="program-content">
+                            <h3>Páginas y Applicaciones Web</h3>
                             <p>
-                            Las mini soluciones son pequeñas herramientas digitales diseñadas para resolver problemas específicos de manera rápida y eficiente.&nbsp;</p>
-                            <div>Cada una está pensada para mejorar la productividad, facilitar cálculos complejos o proporcionar información relevante en tiempo real.&nbsp; Se vienen mas... </div>
-                            <p></p>
-                            <a href="#contacto" aria-label="Contacto" class="service-btn">
-                            ¿Sugerencias?
-                            <em class="bi bi-arrow-right"></em>
-                        </a>
+                            Puedes tener una Página o Aplicación Web totalmente a tu medida y con lo que necesites. ¿Sabes la diferencia?
+                            </p>
+                            <div class="program-meta">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-card position-relative z-1">
-                    <div class="service-icon">
-                        <em class="bi bi-fork-knife" aria-hidden="true"></em>
+                </div><!-- End Program Item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <picture>
+                                <source srcset="assets/img/servicios/ciberseguridad.avif" type="image/avif">
+                                <source srcset="assets/img/servicios/ciberseguridad.webp" type="image/webp">
+                                <img 
+                                    src="assets/img/servicios/ciberseguridad.jpg" 
+                                    alt="Foto de un notebook, un liblo, un celular y un mouse encadenados." 
+                                    class="img-fluid" width="800" height="500" loading="lazy">
+                            </picture>
+                            <div class="program-overlay">
+                                <span class="btn-explore" aria-hidden="true">Pronto ver más</span>
+                            </div>
+                        </div>
+                        <div class="program-content">
+                            <h3>Ciberseguridad</h3>
+                            <p>Capacitarse y actuar frente a los riesgos de la Ciberseguridad es importante y responsabilidad de todos.</p>
+                            <div class="program-meta">
+                            </div>
+                        </div>
                     </div>
-                    <span href="que-comer.html" aria-label="Ir a qué comer" class="card-action d-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
-                        <em class="bi bi-arrow-up-right"></em>
-                    </span>
-                    <h3>
-                        <a href="que-comer.html" class="stretched-link">
-                        Que <span>Comer</span>
-                        </a>
-                    </h3>
-                    <p>
-                    Necesitas ayuda para decidir qué cocinar esta semana y una lista de lo que necesitas comprar en el supermercado. En base a una dieta con carne, legumbres, pescado, pollo y verduras.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" >
-                <div class="service-card position-relative z-1">
-                    <div class="service-icon">
-                        <em class="bi bi-calculator" aria-hidden="true"></em>
+                </div><!-- End Program Item -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <picture>
+                                <source srcset="assets/img/servicios/sistemasDePago.avif" type="image/avif">
+                                <source srcset="assets/img/servicios/sistemasDePago.webp" type="image/webp">
+                                <img 
+                                    src="assets/img/servicios/sistemasDePago.jpg" 
+                                    alt="Foto de una persona con muchos billetes." 
+                                    class="img-fluid" width="800" height="500" loading="lazy">
+                            </picture>
+                            <div class="program-overlay">
+                            <span class="btn-explore" aria-hidden="true">Pronto ver más</span>
+                            </div>
+                        </div>
+                        <div class="program-content">
+                            <h3>Sistemas de Pago</h3>
+                            <p>Tus clientes pueden pagar de manera segura a través de tu página. La información es encriptada.</p>
+                            <div class="program-meta">
+                            </div>
+                        </div>
                     </div>
-                    <span href="calculadora-proteinas.html" aria-label="Ir a Calculadora de proteínas" class="card-action d-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
-                        <em class="bi bi-arrow-up-right"></em>
-                    </span>
-                    <h3>
-                        <a href="calculadora-proteinas.html" class="stretched-link">
-                            Calculadora de <span>proteinas</span>
-                        </a>
-                    </h3>
-                    <p>
-                        Permite personalizar objetivos de ingesta diaria de proteinas según tu peso, esta calculado como 1,3 por kg, pero puedes modificar tu meta. Agregas cuanto has comido hoy y te lo calculará automáticamente.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <div class="service-card position-relative z-1">
-                    <div class="service-icon">
-                        <em class="bi bi-currency-dollar" aria-hidden="true"></em>
-                    </div>
-                    <span href="valores-economicos.html" aria-label="Ir a Valores económicos" class="card-action d-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
-                        <em class="bi bi-arrow-up-right"></em>
-                    </span>
-                    <h3>
-                        <a href="valores-economicos.html" class="stretched-link">
-                            Boletas de <span>Honorarios</span>
-                        </a>
-                    </h3>
-                    <p>
-                        Visualiza el valor del dolar, UF y otros indicadores al día de hoy. También puedes calcular el valor en pesos según lo que cobres en UF en tu boleta, para que te dé el valor líquido que quieres.
-                    </p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section><!-- /Mini Soluciones Section -->
-        <!-- Publicaciones Section -->
-    <section id="publicaciones" class="publicaciones section">
-        <!-- Section Title -->
-        <div class="container section-title">
-            <h2>Blog Posts</h2>
-            <div><span>Últimas</span> <span class="description-title">Publicaciones</span></div>
-        </div><!-- End Section Title -->
-        <div class="container" >
-            <div class="row gy-4">  
-            <!-- publicacion: agregar aal iframe class="container-fluid" y height="350" -->
-            <!-- inicio publicacion -->
-            <div class="col-lg-4">
-                <article class="position-relative h-100">
-                <div class="post-img position-relative overflow-hidden">
-                    <picture>
-                        <source srcset="assets/img/blog/mujer-trabajando-en-notebook.avif" type="image/avif">
-                        <source srcset="assets/img/blog/mujer-trabajando-en-notebook.webp" type="image/webp">
-                        <img src="assets/img/blog/mujer-trabajando-en-notebook.jpg" class="img-fluid" alt="Mujer trabajando en notebook." width="1000" height="500" loading="lazy">
-                    </picture>
-                </div>
-                <div class="meta d-flex align-items-end">
-                    <span class="post-date"><span>15</span>Junio</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-person"></em> <span class="ps-2">María José</span>
-                    </div>
-                        <span class="px-3 text-black text-opacity-75">/</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
-                    </div>
-                </div>
-                <div class="post-content d-flex flex-column">
-                    <h3 class="post-title">¿Tu página web realmente representa a tu negocio o sientes que no está a la altura de lo que ofreces?</h3>
-                    <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_dise%C3%B1o-y-programaci%C3%B3n-web-activity-7340128475128750080-NBCl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link" aria-label="Ir a publicación linkedin" target="_blank"><span>Ir a publicación LinkedIn</span><em class="bi bi-arrow-right"></em></a>
-                </div>
-                </article>
-            </div><!-- End post list item -->
-            <!-- End post list item -->
-            <div class="col-lg-4">
-                <article class="position-relative h-100">
-                <div class="post-img position-relative overflow-hidden">
-                    <picture>
-                        <source srcset="assets/img/blog/diploma-de-certificado-con-confetis-doradas.avif" type="image/avif">
-                        <source srcset="assets/img/blog/diploma-de-certificado-con-confetis-doradas.webp" type="image/webp">
-                        <img 
-                            src="assets/img/blog/diploma-de-certificado-con-confetis-doradas.jpg" 
-                            class="img-fluid" 
-                            alt="diploma-de-certificado-con-confetis-doradas." width="1000" height="500" loading="lazy">
-                    </picture>
-                </div>
-                <div class="meta d-flex align-items-end">
-                    <span class="post-date"><span>6</span>Junio</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-person"></em> <span class="ps-2">María José</span>
-                    </div>
-                        <span class="px-3 text-black text-opacity-75">/</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
-                    </div>
-                </div>
-                <div class="post-content d-flex flex-column">
-                    <h3 class="post-title">¿Quieres tener una página web profesional pero piensas que es demasiado complicado o costoso?</h3>
-                    <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_aprende-wordpress-de-forma-sencilla-activity-7336504595545837568-SC9I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link" aria-label="Ir a publicación linkedin" target="_blank"><span>Ir a publicación LinkedIn</span><em class="bi bi-arrow-right"></em></a>
-                </div>
-                </article>
-            </div><!-- End post list item -->
-            <!-- End post list item -->
-            <div class="col-lg-4">
-                <article class="position-relative h-100">
-                <div class="post-img position-relative overflow-hidden">
-                    <picture>
-                        <source srcset="assets/img/blog/education-is-the-mo.avif" type="image/avif">
-                        <source srcset="assets/img/blog/education-is-the-mo.webp" type="image/webp">
-                        <img 
-                            src="assets/img/blog/education-is-the-mo.png" 
-                            alt="Personas trabajando en el computador.`" 
-                            class="img-fluid" width="1000" height="500" loading="lazy">
-                    </picture>
-                </div>
-                <div class="meta d-flex align-items-end">
-                    <span class="post-date"><span>28</span>Mayo</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-person"></em> <span class="ps-2">María José</span>
-                    </div>
-                        <span class="px-3 text-black text-opacity-75">/</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
-                    </div>
-                </div>
-                <div class="post-content d-flex flex-column">
-                    <h3 class="post-title">Muchas personas me han preguntado de dónde saco tantos cursos gratis</h3>
-                    <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_educaciaejngratuita-talentodigital-freecodecamp-activity-7334183050831949826-BOLk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link" aria-label="Ir a publicación linkedin" target="_blank"><span>Ir a publicación LinkedIn</span><em class="bi bi-arrow-right"></em></a>
-                </div>
-                </article>
-            </div><!-- End post list item -->
-            <div class="col-lg-4">
-                <article class="position-relative h-100">
-                <div class="post-img position-relative overflow-hidden">
-                    <picture>
-                        <source
-                            type="image/avif"
-                            srcset="
-                                assets/img/blog/estudiantes-gorro-400.avif 400w,
-                                assets/img/blog/estudiantes-gorro-800.avif 800w,
-                                assets/img/blog/estudiantes-gorro-graduacion.avif 1000w"
-                            sizes="(max-width: 600px) 100vw, 600px">
+                </div><!-- End Program Item -->
+                <div class="col-lg-4 col-md-6" >
+                    <div class="program-card">
+                        <div class="program-img">
+                            <picture>
+                                <source srcset="assets/img/servicios/votaciones.avif" type="image/avif">
+                                <source srcset="assets/img/servicios/votaciones.webp" type="image/webp">
+                                <img 
+                                    src="assets/img/servicios/votaciones.jpg" 
+                                    alt="foto en blanco y negro de una persona depositando su voto en una urna." 
+                                    class="img-fluid" width="800" height="500" loading="lazy">
+                            </picture>
+                            <div class="program-overlay">
+                            <span class="btn-explore"  aria-hidden="true">Pronto ver más</span>
+                            </div>
+                        </div>
+                        <div class="program-content">
+                            <h3>Votaciones Online</h3>
+                            <p>Puedes hacer votaciones secretas online, personalizar la modalidad de la elección como quieras.</p>
+                            <div class="program-meta">
 
-                        <source
-                            type="image/webp"
-                            srcset="
-                                assets/img/blog/estudiantes-gorro-400.webp 400w,
-                                assets/img/blog/estudiantes-gorro-800.webp 800w,
-                                assets/img/blog/estudiantes-gorro-graduacion.webp 1000w"
-                            sizes="(max-width: 600px) 100vw, 600px">
-
-                        <img
-                            src="assets/img/blog/estudiantes-gorro-graduacion.jpg"
-                            alt="Estudiantes graduados lanzando al aire el gorro de graduación."
-                            width="1000"
-                            height="500"
-                            loading="lazy"
-                            class="img-fluid">
-                    </picture>
-                </div>
-                <div class="meta d-flex align-items-end">
-                    <span class="post-date"><span>22</span>Mayo</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-person"></em> <span class="ps-2">María José</span>
+                            </div>
+                        </div>
                     </div>
-                        <span class="px-3 text-black text-opacity-75">/</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
+                </div><!-- End Program Item -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <picture>
+                                <source srcset="assets/img/servicios/digitalizacion2.avif" type="image/avif">
+                                <source srcset="assets/img/servicios/digitalizacion2.webp" type="image/webp">
+                                <img 
+                                    src="assets/img/servicios/digitalizacion2.jpg" 
+                                    alt="Foto de muchas carpetas ordenadas por su letra." 
+                                    class="img-fluid" width="800" height="500" loading="lazy">
+                            </picture>
+                            <div class="program-overlay">
+                            <span class="btn-explore" aria-hidden="true">Pronto ver más</span>
+                            </div>
+                        </div>
+                        <div class="program-content">
+                            <h3>Digitalización de Procesos</h3>
+                            <p>Automatizar tus procesos te permite reducir errores y tiempo de trabajo. Elimina tareas repetitivas.</p>
+                            <div class="program-meta">
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Program Item -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="program-card">
+                        <div class="program-img">
+                            <picture>
+                                <source srcset="assets/img/servicios/users.avif" type="image/avif">
+                                <source srcset="assets/img/servicios/users.webp" type="image/webp">
+                                <img src="assets/img/servicios/users.jpg" alt="Foto de una persona ingresando a su cuenta en un notebook." class="img-fluid" width="800" height="500" loading="lazy">
+                            </picture>
+                            <div class="program-overlay">
+                            <span class="btn-explore" aria-hidden="true">Pronto ver más</span>
+                            </div>
+                        </div>
+                        <div class="program-content">
+                            <h3>Control de Usuarios</h3>
+                            <p>Ten usuarios con distintos niveles de accesos para cuidar la seguridad de los datos.</p>
+                            <div class="program-meta">
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Program Item -->
+                </div>
+            </div>
+        </section><!-- /Servicios Section -->
+        <!-- Mini Soluciones Section -->
+        <section id="mini_soluciones" class="mini_soluciones section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Nuevo</h2>
+                <div><span>Revisa las</span> <span class="description-title">Mini Soluciones</span></div>
+            </div><!-- End Section Title -->
+            <!-- data-aos="fade-up" data-aos-delay="100" -->
+            <div class="container">
+                <div class="service-header">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="service-intro">
+                                <h2 class="service-heading">
+                                <div>Herramientas Digitales</div>
+                                <div><span>mejoras de eficiencia</span></div>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="service-summary">
+                                <p>
+                                Las mini soluciones son pequeñas herramientas digitales diseñadas para resolver problemas específicos de manera rápida y eficiente.&nbsp;</p>
+                                <div>Cada una está pensada para mejorar la productividad, facilitar cálculos complejos o proporcionar información relevante en tiempo real.&nbsp; Se vienen mas... </div>
+                                <p></p>
+                                <a href="#contacto" aria-label="Ir a la sección Contacto" class="service-btn">
+                                ¿Sugerencias?
+                                <em class="bi bi-arrow-right" aria-hidden="true"></em>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="post-content d-flex flex-column">
-                    <h3 class="post-title">¿Alguna vez te has preguntado cómo funcionan las interacciones en una página web?</h3>
-                    <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_programaci%C3%B3n-con-javascript-activity-7333243107028733954-0rwS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link"  target="_blank"><span>Ir a publicación LinkedIn</span><em class="bi bi-arrow-right"></em></a>
-                </div>
-                </article>
-            </div><!-- End post list item -->
-            <div class="col-lg-4">
-                <article class="position-relative h-100">
-                <div class="post-img position-relative overflow-hidden">
-                    <picture>
-                        <source srcset="assets/img/logo/logolmorada.avif" type="image/avif">
-                        <source srcset="assets/img/blog/logolmorada.webp" type="image/webp">
-                        <img src="assets/img/logo/logolmorada.png" class="img-fluid" alt="Logo MJVT." width="1000" height="500" loading="lazy">
-                    </picture>
-                </div>
-                <div class="meta d-flex align-items-end">
-                    <span class="post-date"><span>18</span>Mayo</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-person"></em> <span class="ps-2">María José</span>
-                    </div>
-                        <span class="px-3 text-black text-opacity-75">/</span>
-                    <div class="d-flex align-items-center">
-                        <em class="bi bi-folder2"></em> <span class="ps-2">Página Web</span>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card position-relative z-1">
+                        <div class="service-icon">
+                            <em class="bi bi-fork-knife" aria-hidden="true"></em>
+                        </div>
+                        <span class="card-action d-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
+                            <em class="bi bi-arrow-up-right" aria-hidden="true"></em>
+                        </span>
+                        <h3>
+                            <a href="que-comer.html" class="stretched-link">
+                            Qué <span>Comer</span>
+                            </a>
+                        </h3>
+                        <p>
+                        Necesitas ayuda para decidir qué cocinar esta semana y una lista de lo que necesitas comprar en el supermercado. En base a una dieta con carne, legumbres, pescado, pollo y verduras.
+                        </p>
                     </div>
                 </div>
-                <div class="post-content d-flex flex-column">
-                    <h3 class="post-title">¡Estoy feliz de compartir una gran noticia! ¡Ya está disponible mi nueva página web! ✨</h3>
-                    <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_nuevaweb-diseaehoweb-estrategiadigital-activity-7331280225374248960-FXUj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link"  target="_blank"><span>Ir a publicación LinkedIn</span><em class="bi bi-arrow-right"></em></a>
+                <div class="col-lg-4 col-md-6" >
+                    <div class="service-card position-relative z-1">
+                        <div class="service-icon">
+                            <em class="bi bi-calculator" aria-hidden="true"></em>
+                        </div>
+                        <span class="card-action d-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
+                            <em class="bi bi-arrow-up-right" aria-hidden="true"></em>
+                        </span>
+                        <h3>
+                            <a href="calculadora-proteinas.html" class="stretched-link">
+                                Calculadora de <span>proteínas</span>
+                            </a>
+                        </h3>
+                        <p>
+                            Permite personalizar objetivos de ingesta diaria de proteinas según tu peso, esta calculado como 1,3 por kg, pero puedes modificar tu meta. Agregas cuanto has comido hoy y te lo calculará automáticamente.
+                        </p>
+                    </div>
                 </div>
-                </article>
-            </div><!-- End post list item -->
-            <div class="col-lg-4">
-                <article class="position-relative h-100">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card position-relative z-1">
+                        <div class="service-icon">
+                            <em class="bi bi-currency-dollar" aria-hidden="true"></em>
+                        </div>
+                        <span class="card-action d-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
+                            <em class="bi bi-arrow-up-right" aria-hidden="true"></em>
+                        </span>
+                        <h3>
+                            <a href="valores-economicos.html" class="stretched-link">
+                                Valores económicos <span>boletas de honorarios</span>
+                            </a>
+                        </h3>
+                        <p>
+                            Visualiza el valor del dolar, UF y otros indicadores al día de hoy. También puedes calcular el valor en pesos según lo que cobres en UF en tu boleta, para que te dé el valor líquido que quieres.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section><!-- /Mini Soluciones Section -->
+            <!-- Publicaciones Section -->
+        <section id="publicaciones" class="publicaciones section">
+            <!-- Section Title -->
+            <div class="container section-title">
+                <h2>Blog Posts</h2>
+                <div><span>Últimas</span> <span class="description-title">Publicaciones</span></div>
+            </div><!-- End Section Title -->
+            <div class="container" >
+                <div class="row gy-4">  
+                <!-- publicacion: agregar aal iframe class="container-fluid" y height="350" -->
+                <!-- inicio publicacion -->
+                <div class="col-lg-4">
+                    <article class="position-relative h-100">
                     <div class="post-img position-relative overflow-hidden">
                         <picture>
-                            <source srcset="assets/img/blog/publico-en-seminario.avif" type="image/avif">
-                            <source srcset="assets/img/blog/publico-en-seminario.webp" type="image/webp">
-                            <img src="assets/img/blog/publico-en-seminario.jpg" class="img-fluid" alt="Público sentado em un seminario." width="1000" height="500" loading="lazy">
+                            <source srcset="assets/img/blog/mujer-trabajando-en-notebook.avif" type="image/avif">
+                            <source srcset="assets/img/blog/mujer-trabajando-en-notebook.webp" type="image/webp">
+                            <img src="assets/img/blog/mujer-trabajando-en-notebook.jpg" class="img-fluid" alt="Mujer trabajando en notebook." width="1000" height="500" loading="lazy">
                         </picture>
                     </div>
                     <div class="meta d-flex align-items-end">
-                        <span class="post-date"><span>15</span>Mayo</span>
+                        <span class="post-date"><span>15</span>Junio</span>
                         <div class="d-flex align-items-center">
                             <em class="bi bi-person"></em> <span class="ps-2">María José</span>
                         </div>
                             <span class="px-3 text-black text-opacity-75">/</span>
                         <div class="d-flex align-items-center">
-                            <em class="bi bi-folder2"></em> <span class="ps-2">Evento</span>
+                            <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
                         </div>
                     </div>
                     <div class="post-content d-flex flex-column">
-                        <h3 class="post-title">¡Así se vivió el Fintech Forum Chile 2025! "Donde la innovación se conecta con el futuro financiero"</h3>
-                        <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_ff25-fintechforum2025-innovaciaejnfinanciera-activity-7328875577258500096-BL9s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" class="readmore stretched-link"  target="_blank"><span>Ir a publicación LinkedIn</span><em class="bi bi-arrow-right"></em></a>
+                        <h3 class="post-title">¿Tu página web realmente representa a tu negocio o sientes que no está a la altura de lo que ofreces?</h3>
+                        <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_dise%C3%B1o-y-programaci%C3%B3n-web-activity-7340128475128750080-NBCl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" 
+                            class="readmore stretched-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Ir a publicación en LinkedIn, se abre en una nueva pestaña">
+                            <span>Ir a publicación LinkedIn</span>
+                            <span class="visually-hidden">, se abre en una nueva pestaña</span>
+                            <em class="bi bi-arrow-right" aria-hidden="true"></em>
+                        </a>
                     </div>
-                </article>
-            </div><!-- End post list item -->
-            </div>
-        </div>
-    </section><!-- /Publicaciones Section -->
-    <!-- Contacto Section -->
-        <section id="contacto" class="contacto section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Contacto</h2>
-            <div><span>formas de </span> <span class="description-title">Contacto</span></div>
-        </div><!-- End Section Title -->
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="content">
-                        <div class="section-category mb-3"></div>
-                            <h2 class="display-5 mb-4">¡Hola!</h2>
-                            <h3 class="lead mb-4">Cualquier inquietud que tengas no dudes en contactarme.
-                                Puedes llenar el formulario, mandarme un mail o escribirme en alguna de mis redes sociales, y te responderé a la brevedad. ¡Ya estamos en contacto!</h3>
-                            <div class="contact-info mt-5">
-                                <address class="info-item d-flex mb-3">
-                                    <em class="bi bi-envelope-at me-3"></em>
-                                    <a href="mailto:hola@mariajosevillasante.cl">hola@mariajosevillasante.cl</a>
-                                </address>
-                                <div class="info-item d-flex mb-3">
-                                    <a href="https://github.com/MariaJoseVillasante" aria-label="To Github" target="_blank"><em class="bi bi-github me-3"></em></a>
-                                    <span>@mariajosevillasante</span>
-                                </div>
-                                <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
-                                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies/" aria-label="to LinkedIn" target="_blank"><em class="bi bi-linkedin me-3"></em></a>
-                                    <span>@mariajosevillasante</span>
-                                </div>
-                                <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
-                                    <a href="https://twitter.com/MJVillasante" target="_blank" aria-label="to Twitter"><em class="bi bi-twitter-x me-3"></em></a>
-                                    <span>@MJVillasante</span>
-                                </div>
+                    </article>
+                </div><!-- End post list item -->
+                <!-- End post list item -->
+                <div class="col-lg-4">
+                    <article class="position-relative h-100">
+                    <div class="post-img position-relative overflow-hidden">
+                        <picture>
+                            <source srcset="assets/img/blog/diploma-de-certificado-con-confetis-doradas.avif" type="image/avif">
+                            <source srcset="assets/img/blog/diploma-de-certificado-con-confetis-doradas.webp" type="image/webp">
+                            <img 
+                                src="assets/img/blog/diploma-de-certificado-con-confetis-doradas.jpg" 
+                                class="img-fluid" 
+                                alt="diploma-de-certificado-con-confetis-doradas." width="1000" height="500" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="meta d-flex align-items-end">
+                        <span class="post-date"><span>6</span>Junio</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-person"></em> <span class="ps-2">María José</span>
+                        </div>
+                            <span class="px-3 text-black text-opacity-75">/</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
                         </div>
                     </div>
+                    <div class="post-content d-flex flex-column">
+                        <h3 class="post-title">¿Quieres tener una página web profesional pero piensas que es demasiado complicado o costoso?</h3>
+                        <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_aprende-wordpress-de-forma-sencilla-activity-7336504595545837568-SC9I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" 
+                            class="readmore stretched-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Ir a publicación en LinkedIn, se abre en una nueva pestaña">
+                            <span>Ir a publicación LinkedIn</span>
+                            <span class="visually-hidden">, se abre en una nueva pestaña</span>
+                            <em class="bi bi-arrow-right" aria-hidden="true"></em>
+                        </a>
+                    </div>
+                    </article>
+                </div><!-- End post list item -->
+                <!-- End post list item -->
+                <div class="col-lg-4">
+                    <article class="position-relative h-100">
+                    <div class="post-img position-relative overflow-hidden">
+                        <picture>
+                            <source srcset="assets/img/blog/education-is-the-mo.avif" type="image/avif">
+                            <source srcset="assets/img/blog/education-is-the-mo.webp" type="image/webp">
+                            <img 
+                                src="assets/img/blog/education-is-the-mo.png" 
+                                alt="Personas trabajando en el computador.`" 
+                                class="img-fluid" width="1000" height="500" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="meta d-flex align-items-end">
+                        <span class="post-date"><span>28</span>Mayo</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-person"></em> <span class="ps-2">María José</span>
+                        </div>
+                            <span class="px-3 text-black text-opacity-75">/</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
+                        </div>
+                    </div>
+                    <div class="post-content d-flex flex-column">
+                        <h3 class="post-title">Muchas personas me han preguntado de dónde saco tantos cursos gratis</h3>
+                        <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_educaciaejngratuita-talentodigital-freecodecamp-activity-7334183050831949826-BOLk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" 
+                            class="readmore stretched-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Ir a publicación en LinkedIn, se abre en una nueva pestaña">
+                            <span>Ir a publicación LinkedIn</span>
+                            <span class="visually-hidden">, se abre en una nueva pestaña</span>
+                            <em class="bi bi-arrow-right" aria-hidden="true"></em>                        
+                        </a>
+                    </div>
+                    </article>
+                </div><!-- End post list item -->
+                <div class="col-lg-4">
+                    <article class="position-relative h-100">
+                    <div class="post-img position-relative overflow-hidden">
+                        <picture>
+                            <source
+                                type="image/avif"
+                                srcset="
+                                    assets/img/blog/estudiantes-gorro-400.avif 400w,
+                                    assets/img/blog/estudiantes-gorro-800.avif 800w,
+                                    assets/img/blog/estudiantes-gorro-graduacion.avif 1000w"
+                                sizes="(max-width: 600px) 100vw, 600px">
+
+                            <source
+                                type="image/webp"
+                                srcset="
+                                    assets/img/blog/estudiantes-gorro-400.webp 400w,
+                                    assets/img/blog/estudiantes-gorro-800.webp 800w,
+                                    assets/img/blog/estudiantes-gorro-graduacion.webp 1000w"
+                                sizes="(max-width: 600px) 100vw, 600px">
+
+                            <img
+                                src="assets/img/blog/estudiantes-gorro-graduacion.jpg"
+                                alt="Estudiantes graduados lanzando al aire el gorro de graduación."
+                                width="1000"
+                                height="500"
+                                loading="lazy"
+                                class="img-fluid">
+                        </picture>
+                    </div>
+                    <div class="meta d-flex align-items-end">
+                        <span class="post-date"><span>22</span>Mayo</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-person"></em> <span class="ps-2">María José</span>
+                        </div>
+                            <span class="px-3 text-black text-opacity-75">/</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-folder2"></em> <span class="ps-2">Estudios</span>
+                        </div>
+                    </div>
+                    <div class="post-content d-flex flex-column">
+                        <h3 class="post-title">¿Alguna vez te has preguntado cómo funcionan las interacciones en una página web?</h3>
+                        <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_programaci%C3%B3n-con-javascript-activity-7333243107028733954-0rwS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" 
+                            class="readmore stretched-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Ir a publicación en LinkedIn, se abre en una nueva pestaña">
+                            <span>Ir a publicación LinkedIn</span>
+                            <span class="visually-hidden">, se abre en una nueva pestaña</span>
+                            <em class="bi bi-arrow-right" aria-hidden="true"></em>                    
+                        </a>
+                    </div>
+                    </article>
+                </div><!-- End post list item -->
+                <div class="col-lg-4">
+                    <article class="position-relative h-100">
+                    <div class="post-img position-relative overflow-hidden">
+                        <picture>
+                            <source srcset="assets/img/logo/logolmorada.avif" type="image/avif">
+                            <source srcset="assets/img/blog/logolmorada.webp" type="image/webp">
+                            <img src="assets/img/logo/logolmorada.png" class="img-fluid" alt="Logo MJVT." width="1000" height="500" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="meta d-flex align-items-end">
+                        <span class="post-date"><span>18</span>Mayo</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-person"></em> <span class="ps-2">María José</span>
+                        </div>
+                            <span class="px-3 text-black text-opacity-75">/</span>
+                        <div class="d-flex align-items-center">
+                            <em class="bi bi-folder2"></em> <span class="ps-2">Página Web</span>
+                        </div>
+                    </div>
+                    <div class="post-content d-flex flex-column">
+                        <h3 class="post-title">¡Estoy feliz de compartir una gran noticia! ¡Ya está disponible mi nueva página web! ✨</h3>
+                        <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_nuevaweb-diseaehoweb-estrategiadigital-activity-7331280225374248960-FXUj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" 
+                            class="readmore stretched-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Ir a publicación en LinkedIn, se abre en una nueva pestaña">
+                            <span>Ir a publicación LinkedIn</span>
+                            <span class="visually-hidden">, se abre en una nueva pestaña</span>
+                            <em class="bi bi-arrow-right" aria-hidden="true"></em>                        
+                        </a>
+                    </div>
+                    </article>
+                </div><!-- End post list item -->
+                <div class="col-lg-4">
+                    <article class="position-relative h-100">
+                        <div class="post-img position-relative overflow-hidden">
+                            <picture>
+                                <source srcset="assets/img/blog/publico-en-seminario.avif" type="image/avif">
+                                <source srcset="assets/img/blog/publico-en-seminario.webp" type="image/webp">
+                                <img src="assets/img/blog/publico-en-seminario.jpg" class="img-fluid" alt="Público sentado em un seminario." width="1000" height="500" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="meta d-flex align-items-end">
+                            <span class="post-date"><span>15</span>Mayo</span>
+                            <div class="d-flex align-items-center">
+                                <em class="bi bi-person"></em> <span class="ps-2">María José</span>
+                            </div>
+                                <span class="px-3 text-black text-opacity-75">/</span>
+                            <div class="d-flex align-items-center">
+                                <em class="bi bi-folder2"></em> <span class="ps-2">Evento</span>
+                            </div>
+                        </div>
+                        <div class="post-content d-flex flex-column">
+                            <h3 class="post-title">¡Así se vivió el Fintech Forum Chile 2025! "Donde la innovación se conecta con el futuro financiero"</h3>
+                            <a href="https://www.linkedin.com/posts/mariajosevillasantetapies_ff25-fintechforum2025-innovaciaejnfinanciera-activity-7328875577258500096-BL9s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAApiRwIBI8ql843Tbl72VXXM0pASJBjkSZA" 
+                                class="readmore stretched-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ir a publicación en LinkedIn, se abre en una nueva pestaña">
+                                <span>Ir a publicación LinkedIn</span>
+                                <span class="visually-hidden">, se abre en una nueva pestaña</span>
+                                <em class="bi bi-arrow-right" aria-hidden="true"></em>                        
+                            </a>
+                        </div>
+                    </article>
+                </div><!-- End post list item -->
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-form card">
-                        <div class="card-body p-4 p-lg-5">
-                            <form  action="https://formsubmit.co/07209e018a1f7fad06770ae123690175" method="POST" class="php-email-form">
-                            <div class="row gy-4">
-                                <input type="hidden" name="_next" value="https://mariajosevillasante.github.io/mi_pagina/thanks.html" target="_blank">
-                                <input type="hidden" name="_subject" value="New submission!">
-                                <div class="col-12">
-                                    <label for="name">Nombre</label>
-                                    <input type="text" name="name" title="Name" id="name" class="form-control" aria-label="nombre" placeholder="Tu Nombre" required>
-                                </div>
-                                <div class="col-12 ">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" title="email" name="email" id="email" placeholder="Tu Email" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="subject">Asunto</label>
-                                    <input type="text" class="form-control" title="Asunto" name="subject" id="subject" placeholder="Asunto" required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="message">Mensaje</label>
-                                    <textarea class="form-control" name="message" title="Mensaje" id="message" rows="6" placeholder="Mensaje" required></textarea>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-submit w-100">Enviar Mensaje</button>
+            </div>
+        </section><!-- /Publicaciones Section -->
+        <!-- Contacto Section -->
+        <section id="contacto" class="contacto section light-background">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contacto</h2>
+                <div><span>formas de </span> <span class="description-title">Contacto</span></div>
+            </div><!-- End Section Title -->
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="content">
+                            <div class="section-category mb-3"></div>
+                                <h2 class="display-5 mb-4">¡Hola!</h2>
+                                <h3 class="lead mb-4">Cualquier inquietud que tengas no dudes en contactarme.
+                                    Puedes llenar el formulario, mandarme un mail o escribirme en alguna de mis redes sociales, y te responderé a la brevedad. ¡Ya estamos en contacto!</h3>
+                                <div class="contact-info mt-5">
+                                    <address class="info-item d-flex mb-3">
+                                        <em class="bi bi-envelope-at me-3"></em>
+                                        <a href="mailto:hola@mariajosevillasante.cl">hola@mariajosevillasante.cl</a>
+                                    </address>
+                                    <div class="info-item d-flex mb-3">
+                                        <a href="https://github.com/MariaJoseVillasante" 
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visitar perfil de GitHub de María José Villasante, se abre en una nueva pestaña">
+                                            <em class="bi bi-github me-3"></em>
+                                        </a>
+                                        <span>@mariajosevillasante</span>
+                                    </div>
+                                    <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
+                                        <a href="https://www.linkedin.com/in/mariajosevillasantetapies/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visitar perfil de LinkedIn de María José Villasante, se abre en una nueva pestaña">
+                                            <em class="bi bi-linkedin" aria-hidden="true"></em>
+                                        </a>
+                                        <span>@mariajosevillasante</span>
+                                    </div>
+                                    <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
+                                        <a href="https://twitter.com/MJVillasante"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Visitar perfil de X de María José Villasante, se abre en una nueva pestaña">
+                                            <em class="bi bi-twitter-x" aria-hidden="true"></em>
+                                        </a>
+                                        <span>@MJVillasante</span>
+                                    </div>
                                 </div>
                             </div>
-                            </form>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-form card">
+                                <div class="card-body p-4 p-lg-5">
+                                    <form  action="https://formsubmit.co/07209e018a1f7fad06770ae123690175" method="POST" class="php-email-form">
+                                    <div class="row gy-4">
+                                        <input type="hidden" name="_next" value="https://mariajosevillasante.github.io/mi_pagina/thanks.html" target="_blank">
+                                        <input type="hidden" name="_subject" value="New submission!">
+                                        <div class="col-12">
+                                            <label for="name">Nombre</label>
+                                            <input type="text" name="name" title="Name" id="name" class="form-control" aria-label="nombre" placeholder="Tu Nombre" required>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" title="email" name="email" id="email" placeholder="Tu Email" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="subject">Asunto</label>
+                                            <input type="text" class="form-control" title="Asunto" name="subject" id="subject" placeholder="Asunto" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="message">Mensaje</label>
+                                            <textarea class="form-control" name="message" title="Mensaje" id="message" rows="6" placeholder="Mensaje" required></textarea>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-submit w-100">Enviar Mensaje</button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section><!-- /Contacto Section -->
-    </main>
-        
+            </section><!-- /Contacto Section -->
+        </main>
         <!-- inicio Footer -->
         <footer id="footer" class="footer position-relative dark-background">
             <div class="container">
@@ -815,33 +959,48 @@
                     <p>Con <em class="bi bi-suit-heart"></em><span></span>&nbsp; por <a href="https://mariajosevillasante.cl/" aria-label="a la página www.mariajosevillasante.cl">MJVT</a></p>
                 </div>
                 <div class="social-links d-flex justify-content-center">
-                    <a href="https://github.com/MariaJoseVillasante" title="Github icon" target="_blank"><em class="bi bi-github"></em></a>
-                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies" title="LinkedIn icon" target="_blank"><em class="bi bi-linkedin"></em></a>
-                    <a href="https://twitter.com/MJVillasante" title="Twitter icon" target="_blank"><em class="bi bi-twitter-x"></em></a>
-                    <a href="https://vosolutions.cl/" title="globe icon" target="_blank"><em class="bi bi-globe"></em></a>
+                    <a href="https://github.com/MariaJoseVillasante" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visitar perfil de GitHub de María José Villasante, se abre en una nueva pestaña">
+                        <em class="bi bi-github" aria-hidden="true"></em>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariajosevillasantetapies/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visitar perfil de LinkedIn de María José Villasante, se abre en una nueva pestaña">
+                        <em class="bi bi-linkedin" aria-hidden="true"></em>
+                    </a>
+                    <a href="https://twitter.com/MJVillasante"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visitar perfil de X de María José Villasante, se abre en una nueva pestaña">
+                        <em class="bi bi-twitter-x" aria-hidden="true"></em>
+                    </a>
+                    <a href="https://vosolutions.cl/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visitar sitio web de VOSolutions, se abre en una nueva pestaña">
+                        <em class="bi bi-globe" aria-hidden="true"></em>
+                    </a>
                 </div>
             </div>
         </footer>
         <!-- fin Footer -->
-        
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" title="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
             <span class="visually-hidden">Subir</span>
             <em class="bi bi-arrow-up-short"></em>
         </a>
-
         <!-- Preloader -->
         <div id="preloader"></div>
-
         <!-- Vendor JS Files -->
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
         <script src="assets/vendor/aos/aos.js" defer></script>
         <script src="assets/vendor/typed.js/typed.umd.js"  defer></script>
         <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
         <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-        
         <!-- link al archivo js (nuestros script deben ser lo último)-->
         <script src="assets/js/main.min.js" defer></script>
-
     </body>
 </html>
