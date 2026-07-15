@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { nombre: 'Scoop de proteína', proteina: 25, tipo: 'scoop' },
     { nombre: 'Yogurt protein', proteina: 10, tipo: 'unidad' },
     { nombre: 'Taza Arroz', proteina: 5, tipo: 'unidad' },
+    { nombre: 'Atún', proteina: 0.25, tipo: 'gramos' },
     { nombre: 'Camarones', proteina: 0.24, tipo: 'gramos' },
     { nombre: 'Carne de res', proteina: 0.26, tipo: 'gramos' },
     { nombre: 'Choclo', proteina: 0.031, tipo: 'gramos' },

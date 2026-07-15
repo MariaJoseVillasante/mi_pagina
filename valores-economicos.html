@@ -1,302 +1,350 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO -->
-    <title>Calculadora de Honorarios en UF y CLP | Indicadores Económicos</title>
-    <meta name="description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real. Herramienta accesible para visualizar datos y tomar decisiones informadas.">
-    <meta name="author" content="María José Villasante">
-    <!-- Etiqueta canonical -->
-    <link rel="canonical" href="https://mariajosevillasante.cl/valores-economicos.html" />
-    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
-    <meta property="og:title" content="Calcula el valor de tus boletas de honorarios. De María José Villasante" />
-    <meta property="og:description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real." />
-    <meta property="og:image" content="https://mariajosevillasante.cl/assets/img/logo/logolnegra.png" />
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:url" content="https://mariajosevillasante.cl/valores-economicos.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CL" />
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="María José Villasante - Calcula tus boletas de honorarios, con UF de hoy">
-    <meta name="twitter:description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real.">
-    <meta name="twitter:image" content="https://mariajosevillasante.cl/assets/img/logo/logolnegra.png">
-    <meta name="twitter:url" content="https://mariajosevillasante.cl/valores-economicos.html">
-    <meta name="twitter:site" content="@MJVillasante">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/logo/logolmorada.png" type="image/x-icon">
-    <!-- Google Fonts optimizado -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"></noscript>
-    <!-- CSS Vendor (solo lo necesario en primera carga) -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/main.min.css">
-    <!-- CSS diferido -->
-    <link rel="stylesheet" href="assets/vendor/aos/aos.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-        <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-        <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
-    </noscript>
-    <script src="assets/js/noindex-query.js"></script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Calculadora de Boleta de Honorarios",
-            "url": "https://mariajosevillasante.cl/valores-economicos.html",
-            "applicationCategory": "FinanceApplication",
-            "operatingSystem": "Web",
-            "description": "Calculadora para estimar el monto bruto o líquido de una boleta de honorarios en Chile, actualizada a la fecha de hoy",
-            "creator": {
-                "@type": "Person",
-                "name": "María José Villasante",
-                "url": "https://mariajosevillasante.cl"
-            },
-            "offers": {
-                "@type": "Offer",
-                "price": "0.00",
-                "priceCurrency": "CLP"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO -->
+        <title>Calculadora de Honorarios en UF y CLP | Indicadores Económicos</title>
+        <meta name="description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real. Herramienta accesible para visualizar datos y tomar decisiones informadas.">
+        <meta name="author" content="María José Villasante">
+        <!-- Etiqueta canonical -->
+        <link rel="canonical" href="https://mariajosevillasante.cl/valores-economicos.html" />
+        <!-- Open Graph (Facebook, LinkedIn, WhatsApp, etc.) -->
+        <meta property="og:title" content="Calcula el valor de tus boletas de honorarios. De María José Villasante" />
+        <meta property="og:description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real." />
+        <meta property="og:image" content="https://mariajosevillasante.cl/assets/img/logo/logolnegra.png" />
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:url" content="https://mariajosevillasante.cl/valores-economicos.html" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_CL" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="María José Villasante - Calcula tus boletas de honorarios, con UF de hoy">
+        <meta name="twitter:description" content="Calcula honorarios en UF y CLP y consulta indicadores económicos en tiempo real.">
+        <meta name="twitter:image" content="https://mariajosevillasante.cl/assets/img/logo/logolnegra.png">
+        <meta name="twitter:url" content="https://mariajosevillasante.cl/valores-economicos.html">
+        <meta name="twitter:site" content="@MJVillasante">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="assets/img/logo/logolmorada.png" type="image/x-icon">
+        <!-- Google Fonts optimizado -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"></noscript>
+        <!-- CSS Vendor (solo lo necesario en primera carga) -->
+        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/main.min.css">
+        <!-- CSS diferido -->
+        <link rel="stylesheet" href="assets/vendor/aos/aos.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+            <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+            <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+        </noscript>
+        <script src="assets/js/noindex-query.js"></script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Calculadora de Boleta de Honorarios",
+                "url": "https://mariajosevillasante.cl/valores-economicos.html",
+                "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Web",
+                "description": "Calculadora para estimar el monto bruto o líquido de una boleta de honorarios en Chile, actualizada a la fecha de hoy",
+                "creator": {
+                    "@type": "Person",
+                    "name": "María José Villasante",
+                    "url": "https://mariajosevillasante.cl"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0.00",
+                    "priceCurrency": "CLP"
+                }
             }
-        }
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
-    <script src="assets/js/google-analytics.js" defer></script>
-</head>
-
-<body class="index-page">
-        <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-            
-            <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-                <picture>
-                    <source srcset="assets/img/logo/logolblanca.avif" type="image/avif">
-                    <source srcset="assets/img/logo/logolblanca.webp" type="image/webp">
-                    <img
-                        src="assets/img/logo/logolblanca.png"
-                        alt="Logo MJVT con el nombre María José Villasante y diseño de estrategia digital."
-                        width="100"
-                        height="50" 
-                        loading="lazy">
-                </picture>
-            </a>
-    <!-- inicio navbar hecha con bootstrap -->
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="/#hero" class="active">Home</a></li>
-                    <li><a href="/#sobre_mi">Sobre mi</a></li>
-                    <li><a href="/#servicios">Servicios</a></li>
-                    <li class="dropdown"><a href="/#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
-                            <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
-                            <li><a href="/valores-economicos.html" aria-label="Boleta de Honorarios">Boleta de Honorarios</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/#publicaciones">Publicaciones</a></li>
-                </ul>
-                <em class="mobile-nav-toggle d-xl-none bi bi-list"></em>
-            </nav>
-            <a class="btn-getstarted" href="/#contacto">Contacto</a>
-        </div>
-    </header>
-    <!-- fin navbar hecha con bootstrap -->
-    <main class="main">
-        <!-- inicio título -->
-        <div class="page-title">
-            <div class="breadcrumbs">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/#hero"><em class="bi bi-house"></em> Home</a></li>
-                        <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
-                        <li class="breadcrumb-item active current">Valores Económicos</li>
-                    </ol>
+        </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
+        <script src="assets/js/google-analytics.js" defer></script>
+    </head>
+    <body class="index-page">
+        <a class="skip-link" href="#main">Saltar al contenido principal</a>
+            <header id="header" class="header d-flex align-items-center fixed-top">
+            <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+                
+                <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+                    <picture>
+                        <source srcset="assets/img/logo/logolblanca.avif" type="image/avif">
+                        <source srcset="assets/img/logo/logolblanca.webp" type="image/webp">
+                        <img
+                            src="assets/img/logo/logolblanca.png"
+                            alt="Logo MJVT con el nombre María José Villasante y diseño de estrategia digital."
+                            width="100"
+                            height="50" 
+                            loading="lazy">
+                    </picture>
+                </a>
+                <!-- inicio navbar hecha con bootstrap -->
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="/#hero" class="active">Home</a></li>
+                        <li><a href="/#sobre_mi">Sobre mi</a></li>
+                        <li><a href="/#servicios">Servicios</a></li>
+                        <li class="dropdown"><a href="/#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><i class="bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i></a>
+                            <ul>
+                                <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
+                                <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
+                                <li><a href="/valores-economicos.html" aria-label="Boleta de Honorarios">Boleta de Honorarios</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/#publicaciones">Publicaciones</a></li>
+                    </ul>
+                    <em class="mobile-nav-toggle d-xl-none bi bi-list"></em>
                 </nav>
+                <a class="btn-getstarted" href="/#contacto">Contacto</a>
             </div>
-            <div class="title-wrapper">
-                <h1>Valores Económicos en Chile</h1>
-                <p class="px-5">Visualiza el valor del dólar, <abbr title="Unidad de Fomento">UF</abbr> y otros indicadores al día de hoy. También puedes calcular el valor en pesos según lo que cobres en <abbr title="Unidad de Fomento">UF</abbr> en tu boleta, para que te dé el valor líquido que quieres.</p>
-            </div>
-        </div>
-        <!-- fin título -->
-        <!--  inicia indicadores económicos -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Valores Económicos</h2>
-            <div><span>indicadores económicos</span> <span class="description-title">de hoy</span></div>
-        </div>
-        <section id="pricing-2" class="pricing-2 section">
-            <slot type="section-title"></slot>
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div class="row gy-4 gx-lg-5">
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor de la <abbr>UF</abbr> es</h3>
-                        <h4 id="UF"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor del Dólar observado es</h3>
-                        <h4 id="DolarO"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor del Dólar acuerdo es</h3>
-                        <h4 id="DolarA"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor actual del Euro es </h3>
-                        <h4 id="Euro"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor actual del <abbr title="Índice de precios al consumidor">IPC</abbr> es </h3>
-                        <h4 id="IPC"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor actual de la <abbr title="Unidad Tributaria Mensual">UTM</abbr> es </h3>
-                        <h4 id="UTM"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor actual del <abbr title="Índice de Valor Promedio">IVP</abbr> es </h3>
-                        <h4 id="IVP"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="col-lg-6">
-                    <div class="pricing-item d-flex justify-content-between">
-                        <h3>El valor actual del <abbr title="Índicador Mensual de Actividad Económica">IMACEC</abbr> es</h3>
-                        <h4 id="Imacec"></h4>
-                    </div>
-                </div><!-- End Pricing Item -->
+        </header>
+        <!-- fin navbar hecha con bootstrap -->
+        <main id="main" class="main" tabindex="-1">
+            <!-- inicio título -->
+            <div class="page-title">
+                <div class="breadcrumbs">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/#hero"><em class="bi bi-house" aria-hidden="true"></em> Home</a></li>
+                            <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
+                            <li class="breadcrumb-item active current">Valores Económicos</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="title-wrapper">
+                    <h1>Valores Económicos en Chile</h1>
+                    <p class="px-5">Visualiza el valor del dólar, <abbr title="Unidad de Fomento">UF</abbr> y otros indicadores al día de hoy. También puedes calcular el valor en pesos según lo que cobres en <abbr title="Unidad de Fomento">UF</abbr> en tu boleta, para que te dé el valor líquido que quieres.</p>
                 </div>
             </div>
-            </section>       
-    <!-- inicio calculadora de boletas -->
-    <div class="container section-title" data-aos="fade-up">
-        <h2>calculadora de</h2>
-        <div><span>boleta de</span> <span class="description-title">honorarios</span></div>
-    </div>
-    <section id="ecommerce-cart-2" class="ecommerce-cart-2 section">
-        <slot type="section-title"></slot>
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="ecommerce-cart-3">
-            <div class="row g-4">
-                <!-- Cart Summary Column -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <!-- fin título -->
+            <!--  inicia indicadores económicos -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Valores Económicos</h2>
+                <div><span>indicadores económicos</span> <span class="description-title">de hoy</span></div>
+            </div>
+            <section id="pricing-2" class="pricing-2 section">
+                <slot type="section-title"></slot>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row gy-4 gx-lg-5">
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Unidad de Fomento</h3>
+                                <p>
+                                    El valor de la <abbr title="Unidad de Fomento">UF</abbr> es
+                                    <strong id="UF" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Dólar Observado</h3>
+                                <p>
+                                    El valor del Dólar observado es
+                                    <strong id="DolarO" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Dolar Acuerdo</h3>
+                                <p>
+                                    El valor del Dólar acuerdo es
+                                    <strong id="DolarA" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Euro</h3>
+                                <p>
+                                    El valor del Euro es
+                                    <strong id="Euro" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Índice de Precios al Consumidor</h3>
+                                <p>
+                                    El valor del <abbr title="Índice de Precios al Consumidor">IPC</abbr> es
+                                    <strong id="IPC" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Unidad Tributaria Mensual</h3>
+                                <p>
+                                    El valor de la <abbr title="Unidad Tributaria Mensual">UTM</abbr> es
+                                    <strong id="UTM" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Índice de Valor Promedio</h3>
+                                <p>
+                                    El valor del <abbr title="Índice de Valor Promedio">IVP</abbr> es
+                                    <strong id="IVP" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    <div class="col-lg-6">
+                        <div class="pricing-item d-flex justify-content-between">
+                            <div class="indicador-card">
+                                <h3>Índicador Mensual de Actividad Económica</h3>
+                                <p>
+                                    El valor del <abbr title="Índicador Mensual de Actividad Económica">IMACEC</abbr> es
+                                    <strong id="Imacec" aria-live="polite">Cargando...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Pricing Item -->
+                    </div>
+                </div>
+                </section>       
+        <!-- inicio calculadora de boletas -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>calculadora de</h2>
+            <div><span>boleta de</span> <span class="description-title">honorarios</span></div>
+        </div>
+        <section id="ecommerce-cart-2" class="ecommerce-cart-2 section">
+            <slot type="section-title"></slot>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="ecommerce-cart-3">
+                <div class="row g-4">
+                    <!-- Cart Summary Column -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cart-summary">
+                            <h3 class="summary-title">Boleta de Honorarios</h3>
+                            <div class="promo-code my-4">
+                                <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 15,25% (desde el 1 de enero de 2026), a partir de la cantidad en <abbr>UF</abbr> o pesos Chilenos que escribas.</p>
+                                <p>1- Elige si quieres ingresar el monto en pesos o <abbr>UF</abbr>.</p>
+                                <p>2- Escribe el monto que quieras calcular. Haz clic en "Calcular"</p>
+                                <p>3- La calculadora te dará el valor en pesos al día de hoy en <abbr>UF</abbr> que escribiste.</p>
+                                <p>4- La calculadora te dará el valor en pesos al día de hoy en pesos que escribiste.</p>
+                                <p>5- La calculadora te dará el valor de la retención del 15,25%</p>
+                                <p>6- La calculadora te dará el valor neto</p>
+                                <label for="unidadSeleccionada" class="form-label">
+                                    Selecciona la unidad en la que quieres calcular:
+                                </label>
+                                <select id="unidadSeleccionada" class="form-control">
+                                    <option value="UF">UF</option>
+                                    <option value="CLP">Pesos chilenos</option>
+                                </select>
+                                <div id="campoUF">
+                                    <label for="cantidadUF">Cantidad en UF:</label>
+                                    <input type="number" id="cantidadUF" min="0" step="0.01" class="form-control" placeholder="Cantidad de UF">
+                                </div>
+                                <div id="campoCLP" style="display: none;">
+                                    <label for="cantidadCLP">Cantidad en CLP:</label>
+                                    <input type="number" id="cantidadCLP" min="0" step="100" class="form-control" placeholder="Cantidad en CLP">
+                                </div>
+                                <button id="btnCalcularBoleta" class="btn btn-apply" type="button">Calcular</button>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Cantidad en <abbr>UF</abbr></span>
+                                <span class="summary-value" id="ufDisplay">0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Valor en CLP</span>
+                                <span class="summary-value" id="valorCLP">0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Retención (15,25%)</span>
+                                <span class="summary-value" id="retencion">0</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-item total">
+                                <span class="summary-label">Valor Neto</span>
+                                <span class="summary-value" id="valorNeto">0</span>
+                            </div>
+                            <div class="payment-methods mt-4">
+                                <div class="d-flex justify-content-center">
+                                    <em class="bi bi-credit-card payment-icon" aria-hidden="true"></em>
+                                    <em class="bi bi-paypal payment-icon" aria-hidden="true"></em>
+                                    <em class="bi bi-wallet2 payment-icon" aria-hidden="true"></em>
+                                    <em class="bi bi-bank payment-icon" aria-hidden="true"></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Cart Summary Column -->
+                    <!-- Cart Summary Column -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="cart-summary">
-                        <h3 class="summary-title">Boleta de Honorarios</h3>
+                        <h3 class="summary-title">Calculadora de Monto Bruto</h3>
                         <div class="promo-code my-4">
-                            <p>Esta calculadora permite determinar cuánto será el monto líquido de tu boleta de honorarios, después de la retención del 15,25% (desde el 1 de enero de 2026), a partir de la cantidad en <abbr>UF</abbr> o pesos Chilenos que escribas.</p>
-                            <p>1- Elige si quieres ingresar el monto en pesos o <abbr>UF</abbr>.</p>
-                            <p>2- Escribe el monto que quieras calcular. Haz clic en "Calcular"</p>
-                            <p>3- La calculadora te dará el valor en pesos al día de hoy en <abbr>UF</abbr> que escribiste.</p>
-                            <p>4- La calculadora te dará el valor en pesos al día de hoy en pesos que escribiste.</p>
-                            <p>5- La calculadora te dará el valor de la retención del 15,25%</p>
-                            <p>6- La calculadora te dará el valor neto</p>
-                            <label for="unidadSeleccionada" class="form-label">
-                                Selecciona la unidad en la que quieres calcular:
-                            </label>
-                            <select id="unidadSeleccionada" class="form-control">
-                                <option value="UF">UF</option>
-                                <option value="CLP">Pesos chilenos</option>
-                            </select>
-                            <div id="campoUF">
-                                <label for="cantidadUF">Cantidad en UF:</label>
-                                <input type="number" id="cantidadUF" min="0" step="0.01" class="form-control" placeholder="Cantidad de UF">
+                            <p>Esta calculadora permite determinar cuánto debe ser el monto bruto de tu boleta de honorarios para que, después de la retención del 15,25%, recibas el monto exacto que deseas líquido.</p>
+                            <p>1- Ingresas el monto líquido que deseas recibir en <abbr>UF</abbr> o en pesos chilenos. Fíjate de anotarlos sólo en la casilla correcta. Haz clic en "Calcular"  </p>
+                            <p>2- La calculadora aplica la fórmula Monto Neto / 0.8475 para agregar el 15,25% de retención.  </p>
+                            <p>3- Automáticamente muestra el monto bruto que debes colocar en la boleta para recibir el pago deseado.  </p>
+                        <div class="input-group">
+                            <label for="montoNetoUF">Monto líquido deseado en UF</label>
+                            <input 
+                                type="number" 
+                                id="montoNetoUF" 
+                                min="0" 
+                                step="0.01" onchange="calcularMontoBruto()" 
+                                class="form-control" 
+                                placeholder="Monto líquido UF">
+                            <button id="btnCalcularMontoBrutoUF" class="btn btn-apply" type="button">Calcular monto bruto en UF</button>
+                        </div>
+                        </div>
+                        <div class="promo-code my-4">
+                            <div class="input-group">
+                                <label for="montoNetoCLP">Monto líquido deseado en pesos chilenos</label>
+                                <input type="number" id="montoNetoCLP" min="0" step="100" class="form-control" placeholder="Monto líquido $">
+                                <button id="btnCalcularMontoBrutoCLP" class="btn btn-apply" type="button">Calcular monto bruto en pesos</button>
                             </div>
-                            <div id="campoCLP" style="display: none;">
-                                <label for="cantidadCLP">Cantidad en CLP:</label>
-                                <input type="number" id="cantidadCLP" min="0" step="100" class="form-control" placeholder="Cantidad en CLP">
-                            </div>
-                            <button id="btnCalcularBoleta" class="btn btn-apply" type="button">Calcular</button>
-                        </div>
+                        </div>            
                         <div class="summary-item">
-                            <span class="summary-label">Cantidad en <abbr>UF</abbr></span>
-                            <span class="summary-value" id="ufDisplay">0</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-label">Valor en CLP</span>
-                            <span class="summary-value" id="valorCLP">0</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-label">Retención (15,25%)</span>
-                            <span class="summary-value" id="retencion">0</span>
+                        <span class="summary-label">Para recibir ese monto líquido, tu boleta debe ser de:</span>
                         </div>
                         <div class="summary-divider"></div>
                         <div class="summary-item total">
-                            <span class="summary-label">Valor Neto</span>
-                            <span class="summary-value" id="valorNeto">0</span>
+                        <span class="summary-value" id="montoBruto">0</span>
                         </div>
                         <div class="payment-methods mt-4">
                             <div class="d-flex justify-content-center">
-                                <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
-                                <em class="bi bi-paypal payment-icon" title="PayPal"></em>
-                                <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
-                                <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
+                                <em class="bi bi-credit-card payment-icon" aria-hidden="true"></em>
+                                <em class="bi bi-paypal payment-icon" aria-hidden="true"></em>
+                                <em class="bi bi-wallet2 payment-icon" aria-hidden="true"></em>
+                                <em class="bi bi-bank payment-icon" aria-hidden="true"></em>
                             </div>
                         </div>
                     </div>
-                </div> <!-- Cart Summary Column -->
-                <!-- Cart Summary Column -->
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="cart-summary">
-                    <h3 class="summary-title">Calculadora de Monto Bruto</h3>
-                    <div class="promo-code my-4">
-                        <p>Esta calculadora permite determinar cuánto debe ser el monto bruto de tu boleta de honorarios para que, después de la retención del 15,25%, recibas el monto exacto que deseas líquido.</p>
-                        <p>1- Ingresas el monto líquido que deseas recibir en <abbr>UF</abbr> o en pesos chilenos. Fíjate de anotarlos sólo en la casilla correcta. Haz clic en "Calcular"  </p>
-                        <p>2- La calculadora aplica la fórmula Monto Neto / 0.8475 para agregar el 15,25% de retención.  </p>
-                        <p>3- Automáticamente muestra el monto bruto que debes colocar en la boleta para recibir el pago deseado.  </p>
-                    <div class="input-group">
-                        <input type="number" id="montoNetoUF" min="0" step="0.01" onchange="calcularMontoBruto()" class="form-control" placeholder="Monto líquido UF" aria-label="Promo code">
-                        <button id="btnCalcularMontoBrutoUF" class="btn btn-apply" type="button">Calcular</button>
-                    </div>
-                    </div>
-                    <div class="promo-code my-4">
-                        <div class="input-group">
-                            <input type="number" id="montoNetoCLP" min="0" step="100" class="form-control" placeholder="Monto líquido $" aria-label="Promo code">
-                            <button id="btnCalcularMontoBrutoUF" class="btn btn-apply" type="button">Calcular</button>
-                        </div>
-                    </div>            
-                    <div class="summary-item">
-                    <span class="summary-label">Para recibir ese monto líquido, tu boleta debe ser de:</span>
-                    </div>
-                    <div class="summary-divider"></div>
-                    <div class="summary-item total">
-                    <span class="summary-value" id="montoBruto">0</span>
-                    </div>
-                    <div class="payment-methods mt-4">
-                        <div class="d-flex justify-content-center">
-                            <em class="bi bi-credit-card payment-icon" title="Credit Card"></em>
-                            <em class="bi bi-paypal payment-icon" title="PayPal"></em>
-                            <em class="bi bi-wallet2 payment-icon" title="Digital Wallet"></em>
-                            <em class="bi bi-bank payment-icon" title="Bank Transfer"></em>
-                        </div>
-                    </div>
+                    </div> <!-- Cart Summary Column -->
                 </div>
-                </div> <!-- Cart Summary Column -->
+                </div>
             </div>
-            </div>
-        </div>
-        </section>
-        </script>
-</main>
+            </section>
+            </script>
+    </main>
     <!-- inicio Footer -->
         <footer id="footer" class="footer position-relative dark-background">
             <div class="container">
@@ -331,10 +379,13 @@
                 </div>
             </div>
         </footer>
-    <!-- fin footer -->
+        <!-- fin footer -->
         <!-- Scroll Top -->
-        <a href="#" id="scroll-top" title="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-            <span class="visually-hidden">Subir</span>
+        <a href="#main" 
+            id="scroll-top" 
+            class="scroll-top d-flex align-items-center justify-content-center"
+            aria-label="Volver al inicio del contenido">
+            <span class="visually-hidden">Volver al inicio del contenido</span>
             <em class="bi bi-arrow-up-short" aria-hidden="true"></em>
         </a>
         <!-- Preloader -->

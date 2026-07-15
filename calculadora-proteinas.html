@@ -72,8 +72,8 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0ETPFC8LH"></script>
         <script src="assets/js/google-analytics.js" defer></script>
     </head>
-
     <body class="index-page"> 
+        <a class="skip-link" href="#main">Saltar al contenido principal</a>
         <header id="header" class="header d-flex align-items-center fixed-top">
             <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
                 <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -94,7 +94,7 @@
                             <li><a href="/#hero" class="active">Home</a></li>
                             <li><a href="/#sobre_mi">Sobre mi</a></li>
                             <li><a href="/#servicios">Servicios</a></li>
-                            <li class="dropdown"><a href="/#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><em class="bi bi-chevron-down toggle-dropdown"></em></a>
+                            <li class="dropdown"><a href="/#mini_soluciones" aria-label="Mini Soluciones"><span>Mini Soluciones</span><em class="bi bi-chevron-down toggle-dropdown" aria-hidden="true"></em></a>
                                 <ul>
                                     <li><a href="/que-comer.html" aria-label="Que comer">Que comer</a></li>
                                     <li><a href="/calculadora-proteinas.html" aria-label="Calculadora de Proteínas">Calculadora de proteínas</a></li>
@@ -109,13 +109,13 @@
             </div>
         </header>
         <!-- fin navbar hecha con bootstrap -->
-        <main class="main">
+        <main id="main" class="main" tabindex="-1">
             <!-- inicio título -->
             <div class="page-title">
                 <div class="breadcrumbs">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/#hero"><em class="bi bi-house"></em> Home</a></li>
+                            <li class="breadcrumb-item"><a href="/#hero"><em class="bi bi-house" aria-hidden="true"></em> Home</a></li>
                             <li class="breadcrumb-item"><a href="/#mini_soluciones">Mini Soluciones</a></li>
                             <li class="breadcrumb-item active current">CalculoProteinas</li>
                         </ol>
@@ -189,41 +189,41 @@
                                 </div>
                             </div>
                         </div>
-                    <!-- fin commerce cart -->
-                    <!-- Cart Summary Column -->
-                    <div class="col-lg-4 mt-5" data-aos="fade-up" data-aos-delay="200">
-                        <div class="cart-summary">
+                        <!-- fin commerce cart -->
+                        <!-- Cart Summary Column -->
+                        <div class="col-lg-4 mt-5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="cart-summary">
+                                <div class="promo-code my-4">
+                                <h3 class="summary-title">Peso en kg:</h3>
+                                <div class="input-group">
+                                    <label for="peso" class="visually-hidden">Ingrese su peso en kilogramos</label>
+                                    <!-- <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()" min="0" step="1" class="form-control"> -->
+                                    <input type="number" id="peso" placeholder="Ingrese su peso (kg)" min="0" step="1" class="form-control">
+                                    <button class="btn btn-apply" type="button" aria-label="Calcular proteínas recomendadas según el peso">Calcular</button>
+                                </div>
+                            </div>
                             <div class="promo-code my-4">
-                            <h3 class="summary-title">Peso en kg:</h3>
-                            <div class="input-group">
-                                <label for="peso" class="visually-hidden">Ingrese su peso en kilogramos</label>
-                                <!-- <input type="number" id="peso" placeholder="Ingrese su peso (kg)" oninput="actualizarMetaProteinas()" min="0" step="1" class="form-control"> -->
-                                <input type="number" id="peso" placeholder="Ingrese su peso (kg)" min="0" step="1" class="form-control">
-                                <button class="btn btn-apply" type="button">Calcular</button>
+                                <h3 class="summary-title">Proteínas objetivo:</h3>
+                                <div class="input-group">
+                                    <label for="proteinasObjetivo" class="visually-hidden">Ingrese su meta de proteínas</label>
+                                    <!-- <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()" min="0" step="1" class="form-control"> -->
+                                    <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" min="0" step="1" class="form-control">
+                                    <div id="metaProteinas" aria-live="polite"></div>
+                                    <button class="btn btn-apply" type="button" aria-label="Calcular avance según la meta de proteínas">Calcular</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="promo-code my-4">
-                            <h3 class="summary-title">Proteinas objetivo:</h3>
-                            <div class="input-group">
-                                <label for="proteinasObjetivo" class="visually-hidden">Ingrese su meta de proteínas</label>
-                                <!-- <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" oninput="calcularProteinas()" min="0" step="1" class="form-control"> -->
-                                <input type="number" id="proteinasObjetivo" placeholder="Proteínas objetivo" min="0" step="1" class="form-control">
-                                <div id="metaProteinas" aria-live="polite"></div>
-                                <button class="btn btn-apply" type="button">Calcular</button>
+                            <div class="summary-divider"></div>
+                            <div class="summary-item total">
+                                <span class="summary-label">Total:</span>
+                                <span id="resultado" class="summary-value"> 0 g</span>
+                                </div>
                             </div>
+                            <!-- fin cart summary -->
                         </div>
-                        <div class="summary-divider"></div>
-                        <div class="summary-item total">
-                            <span class="summary-label">Total:</span>
-                            <span id="resultado" class="summary-value"> 0 g</span>
-                            </div>
-                        </div>
-                        <!-- fin cart summary -->
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
         <!-- inicio Footer -->
         <footer id="footer" class="footer position-relative dark-background">
@@ -261,8 +261,11 @@
         </footer>
         <!-- fin footer -->
         <!-- Scroll Top -->
-        <a href="#" id="scroll-top" title="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-            <span class="visually-hidden">Subir</span>
+        <a href="#main" 
+            id="scroll-top" 
+            class="scroll-top d-flex align-items-center justify-content-center"
+            aria-label="Volver al inicio del contenido">
+            <span class="visually-hidden">Volver al inicio del contenido</span>
             <em class="bi bi-arrow-up-short" aria-hidden="true"></em>
         </a>
         <!-- Preloader -->
