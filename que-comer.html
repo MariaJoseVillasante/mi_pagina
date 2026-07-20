@@ -73,7 +73,9 @@
     <script src="assets/js/google-analytics.js" defer></script>
   </head>
   <body class="que-comer-page">
-    <a class="skip-link" href="#main">Saltar al contenido principal</a>
+    <div class="skip-links">
+      <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    </div>
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -109,7 +111,7 @@
     </div>
   </header>
   <!-- fin navbar hecha con bootstrap -->
-  <main id="main" class="main" tabindex="-1">      
+  <main id="contenido-principal" class="main" tabindex="-1" role="main">      
   <!-- Page Title -->
       <div class="page-title position-relative">
         <div class="breadcrumbs">
@@ -193,7 +195,7 @@
   </footer>
     <!-- fin footer -->
     <!-- Scroll Top -->
-    <a href="#main" 
+    <a href="#contenido-principal" 
         id="scroll-top" 
         class="scroll-top d-flex align-items-center justify-content-center"
         aria-label="Volver al inicio del contenido">
