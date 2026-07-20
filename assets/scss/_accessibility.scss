@@ -18,15 +18,17 @@ select:focus-visible {
 /* Skip link: permite saltar directamente al contenido principal */
 .skip-links {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: -9999px;
   z-index: 100000;
 }
 
+.skip-links:focus-within {
+  left: 10px;
+}
+
 .skip-link {
-  position: absolute;
-  top: 10px;
-  left: -9999px;
+  display: inline-block;
   background: #ffffff;
   color: #111111;
   padding: 10px 14px;
@@ -38,7 +40,6 @@ select:focus-visible {
 
 .skip-link:focus,
 .skip-link:focus-visible {
-  left: 10px;
   outline: 3px solid #111111;
   outline-offset: 3px;
 }
