@@ -17,10 +17,11 @@ select:focus-visible {
 
 /* Skip link: permite saltar directamente al contenido principal */
 .skip-link {
-  position: absolute;
-  top: 10px;
-  left: -9999px;
-  z-index: 9999;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  transform: translateY(-150%);
+  z-index: 10000;
   background: #ffffff;
   color: #111111;
   padding: 10px 14px;
@@ -31,7 +32,7 @@ select:focus-visible {
 
 .skip-link:focus,
 .skip-link:focus-visible {
-  left: 10px;
+  transform: translateY(0);
   outline: 3px solid #111111;
   outline-offset: 3px;
 }
